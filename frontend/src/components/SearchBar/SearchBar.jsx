@@ -15,8 +15,8 @@ export default function SearchBar() {
           placeholder="Developpeur JavaScript, php, python ?"
           value={searchValue}
           onChange={handleSearchValue}
-        ></input>
-        <button>Search</button>
+        />
+        <button type="button">Search</button>
       </div>
     </Style>
   );
