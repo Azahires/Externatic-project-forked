@@ -1,13 +1,11 @@
-import Home from "./pages/Home/Home";
 import "reset-css";
+import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 import Style from "./style";
 
-function App() {
+export default function App() {
   return (
     <Style>
-      <Home />
+      <BurgerMenu />
     </Style>
   );
 }
-
-export default App;
