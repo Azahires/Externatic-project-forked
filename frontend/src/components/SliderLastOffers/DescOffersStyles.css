@@ -2,8 +2,8 @@ span.line {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15%;
-  height: 2px;
+  width: 20%;
+  height: 3px;
   margin: 0 auto;
   background: black;
 }

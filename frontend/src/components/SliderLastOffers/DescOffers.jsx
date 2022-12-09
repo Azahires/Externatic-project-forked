@@ -5,7 +5,7 @@ function DescOffers() {
   return (
     <div>
       <p className="desc">NOS DERNIERES OFFRES</p>
-      <span className="line" />
+      <p className="line">-</p>
     </div>
   );
 }
