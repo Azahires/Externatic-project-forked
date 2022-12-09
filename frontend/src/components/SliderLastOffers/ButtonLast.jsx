@@ -1,13 +1,13 @@
 import React from "react";
-import "./ButtonLastStyle.css";
+import Styles from "./ButtonLastStyle";
 
 function ButtonLast() {
   return (
-    <div>
+    <Styles>
       <button type="button" className="Button-1">
         Voir toutes nos offres...
       </button>
-    </div>
+    </Styles>
   );
 }
 
