@@ -1,11 +1,12 @@
+import Offers from "@pages/Offers/Offers";
 import "reset-css";
-import Home from "./pages/Home/Home";
+
 import Style from "./style";
 
 function App() {
   return (
     <Style>
-      <Home />
+      <Offers />
     </Style>
   );
 }

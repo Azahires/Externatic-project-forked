@@ -1,15 +1,13 @@
-import { useState } from "react";
 import Style from "./style";
 
-export default function SearchBar() {
-  const [searchValue, setSearchValue] = useState("");
+export default function SearchBar({searchValue, setSearchValue}) {
   const handleSearchValue = (e) => {
     setSearchValue(e.target.value);
   };
 
   return (
     <Style>
-      <div>
+      <form>
         <input
           type="text"
           placeholder="Developpeur JavaScript, php, python ?"
@@ -17,7 +15,7 @@ export default function SearchBar() {
           onChange={handleSearchValue}
         />
         <button type="button">Search</button>
-      </div>
+      </form>
     </Style>
   );
 }
