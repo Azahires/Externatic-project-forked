@@ -7,9 +7,16 @@ export default function DisplayOffers() {
   const [offers, setOffers] = useState([]);
   useEffect(() => {
     axios.get("http://localhost:5000/offers").then(({ data }) => {
-      setOffers(data);
+      const data2 = data;
+      for (let i = 0; i < data2.length; i += 1) {
+        data2[i].publicationdate = new Date(
+          data2[i].publicationdate
+        ).toLocaleDateString("fr");
+      }
+      setOffers(data2);
     });
   }, []);
+
   return (
     <Style>
       {offers.map((offer) => {
@@ -19,6 +26,7 @@ export default function DisplayOffers() {
             contracttype={offer.contracttype}
             publicationdate={offer.publicationdate}
             location={offer.location}
+            id={offer.id}
             key={offer.id}
           />
         );

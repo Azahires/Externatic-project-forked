@@ -1,11 +1,18 @@
 import "reset-css";
-import SearchBar from "@components/SearchBar/SearchBar";
+import Offers from "@pages/Offers/Offers";
+import { Routes, Route } from "react-router-dom";
+import Home from "@pages/Home/Home";
+import Offer from "@pages/Offer/Offer";
 import Style from "./style";
 
 function App() {
   return (
     <Style>
-      <SearchBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/offers" element={<Offers />} />
+        <Route path="/offers/:id" element={<Offer />} />
+      </Routes>
     </Style>
   );
 }
