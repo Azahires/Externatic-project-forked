@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
+import { useNavigate } from "react-router-dom";
 import Style, {
   BurgerMenuContainer,
   LeftSection,
@@ -16,6 +17,7 @@ export default function BurgerMenu() {
   const closeSideBar = () => {
     setOpen(false);
   };
+  const navigate = useNavigate();
 
   return (
     <BurgerMenuContainer>
@@ -32,6 +34,7 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
+                navigate("/");
               }}
             >
               Accueil
@@ -40,6 +43,7 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
+                navigate("/signin");
               }}
             >
               S'inscrire
@@ -48,6 +52,7 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
+                navigate("/login");
               }}
             >
               Se connecter
@@ -56,6 +61,7 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
+                navigate("/offers");
               }}
             >
               Nos offres d'emploi
@@ -64,6 +70,7 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
+                navigate("/about");
               }}
             >
               Qui sommes-nous ?
@@ -77,10 +84,22 @@ export default function BurgerMenu() {
         </a>
       </MiddleSection>
       <RightSection>
-        <button type="button" className="S'inscrire">
+        <button
+          type="button"
+          className="S'inscrire"
+          onClick={() => {
+            navigate("/signin");
+          }}
+        >
           S'inscrire
         </button>
-        <button type="button" className="Se connecter">
+        <button
+          type="button"
+          className="Se connecter"
+          onClick={() => {
+            navigate("/login");
+          }}
+        >
           Se connecter
         </button>
       </RightSection>
