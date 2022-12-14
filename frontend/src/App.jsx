@@ -18,7 +18,7 @@ export default function App() {
         <Route path="/offers" element={<Offers />} />
         <Route path="/offers/:id" element={<Offer />} />
         <Route path="/about" element={<Whoweare />} />
-        <Route path="/singin" element={<Registration />} />
+        <Route path="/signin" element={<Registration />} />
         <Route path="/login" element={<Connexion />} />
       </Routes>
     </Style>

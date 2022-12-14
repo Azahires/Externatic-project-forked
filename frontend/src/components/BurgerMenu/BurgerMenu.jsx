@@ -84,10 +84,22 @@ export default function BurgerMenu() {
         </a>
       </MiddleSection>
       <RightSection>
-        <button type="button" className="S'inscrire">
+        <button
+          type="button"
+          className="S'inscrire"
+          onClick={() => {
+            navigate("/signin");
+          }}
+        >
           S'inscrire
         </button>
-        <button type="button" className="Se connecter">
+        <button
+          type="button"
+          className="Se connecter"
+          onClick={() => {
+            navigate("/login");
+          }}
+        >
           Se connecter
         </button>
       </RightSection>
