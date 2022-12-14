@@ -13,8 +13,8 @@ import Style from "./style";
 export default function App() {
   return (
     <Style>
-      <PresentationHP />
       <BurgerMenu />
+      <PresentationHP />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/offers" element={<Offers />} />

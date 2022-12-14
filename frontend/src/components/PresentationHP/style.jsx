@@ -6,7 +6,7 @@ export default styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 150px;
     margin-left: 50px;
     padding: 20px;
     border-radius: 5px;
@@ -64,7 +64,7 @@ export default styled.div`
   }
   .typing-demo {
     color: #c91961;
-    width: 39%;
+    width: 42%;
     animation: typing 2s steps(25), blink 0.6s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
