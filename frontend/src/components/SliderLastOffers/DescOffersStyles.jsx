@@ -1,18 +1,13 @@
 import styled from "styled-components";
 
 export default styled.div`
-  input {
-    width: 50rem;
-  }
-
-  button {
-    width: 10rem;
-    margin-left: 0.1rem;
-  }
-
-  div {
+  span.line {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    align-items: center;
+    width: 20%;
+    height: 3px;
+    margin: 0 auto;
+    background: plum;
   }
 `;
