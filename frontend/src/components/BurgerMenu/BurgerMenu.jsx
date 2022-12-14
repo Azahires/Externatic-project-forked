@@ -32,7 +32,6 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
-                // navigate("/");
               }}
             >
               Accueil
@@ -41,7 +40,6 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
-                // navigate("/game");
               }}
             >
               S'inscrire
@@ -50,7 +48,6 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
-                // navigate("/game");
               }}
             >
               Se connecter
@@ -59,7 +56,6 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
-                // navigate("/score");
               }}
             >
               Nos offres d'emploi
@@ -68,7 +64,6 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
-                // navigate("/score");
               }}
             >
               Qui sommes-nous ?

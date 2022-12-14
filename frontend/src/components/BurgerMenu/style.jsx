@@ -59,7 +59,6 @@ export const BurgerMenuContainer = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
   width: 100vw;
   height: 60px;
-  /* box-shadow: 0 1px 3px #c91961; */
   display: flex;
   align-items: center;
   justify-content: space-between;

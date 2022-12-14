@@ -19,9 +19,6 @@
     "concurrently": "^7.0.0",
     "husky": "^7.0.0"
   },
-  "dependencies": {
-    "react-burger-menu": "^3.0.8"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WildCodeSchool/2022-09-JS-Lille-project-3-g2-externatic.git"
