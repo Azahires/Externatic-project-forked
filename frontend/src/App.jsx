@@ -1,11 +1,11 @@
 import "reset-css";
-import SearchBar from "@components/SearchBar/SearchBar";
+import Home from "./pages/Home/Home";
 import Style from "./style";
 
 function App() {
   return (
     <Style>
-      <SearchBar />
+      <Home />
     </Style>
   );
 }
