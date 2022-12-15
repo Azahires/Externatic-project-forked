@@ -1,30 +1,38 @@
 import styled from "styled-components";
 
 export default styled.div`
-  margin: 1rem;
+  width: 33vw;
+  height: 25vh;
+  min-height: 200px;
   border: 5px solid black;
-  width: 30vw;
-  height: 20vh;
-  padding: 1rem;
-  text-align: center;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  h2 {
-    font-family: "JostBold";
-    font-size: 1.2rem;
-  }
+  margin: 1rem;
   :hover {
-    color: #c91961;
     border: 5px solid #c91961;
     p:last-of-type {
       background-color: #c91961;
     }
   }
-  p:last-of-type {
-    background-color: black;
-    color: white;
-    padding: 0.5rem;
-    margin: -1rem;
+  a {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    :hover {
+      color: #c91961;
+    }
+    h2 {
+      font-family: "JostBold";
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    p:last-of-type {
+      background-color: black;
+      padding: 0.5rem;
+
+      color: white;
+    }
   }
 `;
