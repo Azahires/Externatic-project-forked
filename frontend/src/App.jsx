@@ -6,15 +6,11 @@ import Offer from "@pages/Offer/Offer";
 import Whoweare from "@pages/Whoweare/Whoweare";
 import Registration from "@pages/Registration/Registration";
 import Connexion from "@pages/Connexion/Connexion";
-import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
-import PresentationHP from "./components/PresentationHP/PresentationHP";
 import Style from "./style";
 
 export default function App() {
   return (
     <Style>
-      <BurgerMenu />
-      <PresentationHP />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/offers" element={<Offers />} />

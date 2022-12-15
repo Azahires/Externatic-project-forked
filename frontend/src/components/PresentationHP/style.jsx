@@ -4,16 +4,16 @@ export default styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
   .presentationContainer {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 150px;
-    margin-left: 50px;
+    margin: auto;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 3px 3px 25px black;
-    border: 3px solid #c91961;
-    width: 615px;
-    height: 170px;
+    border: 5px solid #c91961;
+    width: 38vw;
+    height: 20vh;
     font-family: "Jost", sans-serif;
     background-color: whitesmoke;
   }
@@ -29,15 +29,15 @@ export default styled.div`
     color: #c91961;
   }
   .presentationButton {
-    display: block;
-    width: 12.5rem;
-    height: 2.5rem;
+    width: 12vw;
+    height: 5vh;
     line-height: 2.5rem;
     font-size: 1.125rem;
     font-weight: bold;
     text-decoration: none;
     color: #c91961;
-    border: 2px solid #c91961;
+    border: 3px solid #c91961;
+    border-radius: 5px;
     letter-spacing: 0.125rem;
     text-align: center;
     position: relative;
@@ -62,28 +62,11 @@ export default styled.div`
   .presentationButton:hover:after {
     width: 100%;
   }
-  .typing-demo {
-    color: #c91961;
-    width: 42%;
-    animation: typing 2s steps(25), blink 0.6s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-size: 1.5rem;
-    padding-bottom: 2rem;
-    font-weight: bold;
+  h1 {
+    font-size: 2rem;
     text-transform: uppercase;
-  }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
+    color: #c91961;
+    font-weight: bold;
+    margin-bottom: 1rem;
   }
 `;
