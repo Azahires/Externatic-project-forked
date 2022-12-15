@@ -5,7 +5,6 @@ import Style from "./style";
 
 export default function Offers() {
   const [searchValue, setSearchValue] = useState("");
-  console.log({searchValue})
   return (
     <Style>
       <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />

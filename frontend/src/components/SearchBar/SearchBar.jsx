@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import Style from "./style";
 
-export default function SearchBar({searchValue, setSearchValue}) {
+export default function SearchBar({ searchValue, setSearchValue }) {
   const handleSearchValue = (e) => {
     setSearchValue(e.target.value);
   };
@@ -19,3 +20,8 @@ export default function SearchBar({searchValue, setSearchValue}) {
     </Style>
   );
 }
+
+SearchBar.propTypes = {
+  searchValue: PropTypes.string.isRequired,
+  setSearchValue: PropTypes.string.isRequired,
+};
