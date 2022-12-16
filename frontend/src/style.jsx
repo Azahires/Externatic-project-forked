@@ -13,3 +13,5 @@ export default styled.div`
   }
   font-family: "Jost";
 `;
+
+export const mainColor = "#c91961";
