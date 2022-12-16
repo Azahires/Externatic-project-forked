@@ -11,7 +11,7 @@ export default function PresentationHP() {
           informatique. Notre cabinet de recrutement s’appuie sur des méthodes
           authentiques, où l’humain est tout simplement indispensable.
         </p>
-        <a href="/" className="presentationButton">
+        <a href="/about" className="presentationButton">
           <span>En savoir plus</span>
         </a>
       </div>
