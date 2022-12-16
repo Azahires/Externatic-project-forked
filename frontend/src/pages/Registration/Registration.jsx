@@ -29,6 +29,7 @@ export default function Registration() {
       <input
         type="password"
         placeholder="Mot de passe"
+        // eslint-disable-next-line react/jsx-props-no-spreading
         {...register("Mot de passe", { required: true, max: 50, min: 8 })}
       />
       <input className="btn" type="submit" value="S'enregistrer" />
