@@ -24,7 +24,7 @@ export default styled.form`
     background-color: #c91961;
     color: black;
   }
-  input:hover{
-    background-color#c91961;
+  input:hover {
+    background-color: #c91961;
   }
 `;
