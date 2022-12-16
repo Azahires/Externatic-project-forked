@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Style from "./style";
+import Style from "./Style";
 
 export default function SearchBar({ searchValue, setSearchValue }) {
   const handleSearchValue = (e) => {
@@ -15,7 +15,7 @@ export default function SearchBar({ searchValue, setSearchValue }) {
           value={searchValue}
           onChange={handleSearchValue}
         />
-        <button type="button">Search</button>
+        <button className="searchButton" type="button">Search</button>
       </form>
     </Style>
   );

@@ -1,12 +1,11 @@
 import React from "react";
-import Styles from "./DescOffersStyles";
+import Style from "./DescOffersStyles";
 
 function DescOffers() {
   return (
-    <Styles>
-      <p className="desc">NOS DERNIERES OFFRES</p>
-      <p className="line">-</p>
-    </Styles>
+    <Style>
+      <p className="desc">NOS DERNIÈRES OFFRES</p>
+    </Style>
   );
 }
 

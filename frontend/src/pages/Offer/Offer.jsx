@@ -7,13 +7,15 @@ export default function Offer() {
   const [offer, setOffer] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    axios.get(`http://localhost:5000/offers/${id}`).then(({ data }) => {
-      const data2 = data;
-      data2.publicationdate = new Date(
-        data2.publicationdate
-      ).toLocaleDateString("fr");
-      setOffer(data2);
-    });
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/offers/${id}`)
+      .then(({ data }) => {
+        const data2 = data;
+        data2.publicationdate = new Date(
+          data2.publicationdate
+        ).toLocaleDateString("fr");
+        setOffer(data2);
+      });
   }, []);
   return (
     <Style>
@@ -21,9 +23,9 @@ export default function Offer() {
         <div id="offerinfo">
           <h1>{offer.title}</h1>
           <h2>
-            {offer.contracttype} - {offer.location}
+            {offer.contract_type} - {offer.location}
           </h2>
-          <h2>Date de publication: {offer.publicationdate}</h2>
+          <h2>Date de publication: {offer.publication_date}</h2>
         </div>
         <p>{offer.description}</p>
       </div>

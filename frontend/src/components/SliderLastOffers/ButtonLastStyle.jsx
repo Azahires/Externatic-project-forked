@@ -1,21 +1,28 @@
 import styled from "styled-components";
 
 export default styled.div`
-  .Button-1 {
-    margin: auto;
+  .flex-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 5vh;
-    width: 20vw;
-    text-align: center;
-    font-size: 1rem;
-    border-radius: 10px;
-    border-color: rgba(240, 248, 255, 0);
-    background-color: plum;
     margin-top: 3rem;
   }
-  p {
-    color: aliceblue;
+
+  button {
+    width: 20rem;
+    margin-left: 0.1rem;
+    font-family: "Jost", sans-serif;
+    padding: 8px 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 2px solid #c91961;
+    background-color: #c91961;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  button:hover {
+    background-color: white;
+    color: #c91961;
   }
 `;
