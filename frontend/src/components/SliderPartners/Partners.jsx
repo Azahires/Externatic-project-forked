@@ -26,19 +26,19 @@ function Partners() {
   return (
     <div>
       <Carousel responsive={responsive}>
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
-        <PartnersSlider />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2022/10/Decath-tech.png" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2021/03/allovoisins-1.png" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2021/03/showroom-1.png" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2021/03/IKKS-1.png" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2021/03/manitou.png" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2021/03/mdm-1.png" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2021/03/iadvize.png" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2021/03/lengow-1.png" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2022/08/klaxoon-.jpg" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2022/08/groupama.jpg" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2022/08/maincare.jpg" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2022/08/lumiplan.jpg" />
+        <PartnersSlider url="https://www.externatic.fr/wp-content/uploads/2022/03/GIE-iris.png" />
       </Carousel>
     </div>
   );

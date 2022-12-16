@@ -1,5 +1,5 @@
-import "reset-css";
 import Offers from "@pages/Offers/Offers";
+import "reset-css";
 import { Routes, Route } from "react-router-dom";
 import Home from "@pages/Home/Home";
 import Offer from "@pages/Offer/Offer";

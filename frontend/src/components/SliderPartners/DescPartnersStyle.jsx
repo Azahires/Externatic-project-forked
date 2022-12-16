@@ -6,16 +6,9 @@ export default styled.div`
     justify-content: center;
     align-items: center;
     color: black;
+    margin-top: 3rem;
   }
-  .line {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 12%;
-    height: 2px;
-    margin: 0 auto;
-    background: rgb(20, 20, 20);
-  }
+
   p {
     color: black;
   }

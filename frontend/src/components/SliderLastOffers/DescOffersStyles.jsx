@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export default styled.div`
-  span.line {
+  .desc {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20%;
-    height: 3px;
-    margin: 0 auto;
-    background: plum;
+    color: black;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    color: black;
   }
 `;

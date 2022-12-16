@@ -1,12 +1,13 @@
 import React from "react";
-import "./DescPartnersStyle";
+import Style from "./DescPartnersStyle";
 
 function DescPartnes() {
   return (
-    <div>
-      <p className="desc">NOS PARTENAIRES</p>
-      <p className="line">-</p>
-    </div>
+    <Style>
+      <div>
+        <p className="desc">NOS PARTENAIRES</p>
+      </div>
+    </Style>
   );
 }
 
