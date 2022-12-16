@@ -5,9 +5,9 @@ function ButtonLast() {
   return (
     <Styles>
       <div className="flex-container">
-      <button type="button" className="Button-1">
-        Voir toutes nos offres
-      </button>
+        <button type="button" className="Button-1">
+          Voir toutes nos offres
+        </button>
       </div>
     </Styles>
   );

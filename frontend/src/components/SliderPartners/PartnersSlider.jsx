@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Styles from "./PartnersSliderStyle";
 
 export default function PartnersSlider({ url }) {
@@ -8,3 +9,7 @@ export default function PartnersSlider({ url }) {
     </Styles>
   );
 }
+
+PartnersSlider.propTypes = {
+  url: PropTypes.string.isRequired,
+};

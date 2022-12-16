@@ -15,7 +15,9 @@ export default function SearchBar({ searchValue, setSearchValue }) {
           value={searchValue}
           onChange={handleSearchValue}
         />
-        <button className="searchButton" type="button">Search</button>
+        <button className="searchButton" type="button">
+          Search
+        </button>
       </form>
     </Style>
   );
