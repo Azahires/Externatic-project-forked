@@ -1,28 +1,19 @@
-import LoginHP from "../../components/LoginHP/LoginHP";
-import PresentationHP from "../../components/PresentationHP/PresentationHP";
+import DisplayOffers from "@components/DisplayOffers/DisplayOffers";
 import Partners from "../../components/SliderPartners/Partners";
-import LastOffers from "../../components/SliderLastOffers/LastOffers";
 import ButtonLast from "../../components/SliderLastOffers/ButtonLast";
 import DescPartnes from "../../components/SliderPartners/DescPartnes";
 import DescOffers from "../../components/SliderLastOffers/DescOffers";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import Style from "./style";
 
 export default function Home() {
   return (
     <div>
       <SearchBar />
-      <Style>
-        <div className="blockContainer">
-          <PresentationHP />
-          <LoginHP />
-        </div>
-      </Style>
+      <DescOffers />
+      <DisplayOffers />
+      <ButtonLast />
       <DescPartnes />
       <Partners />
-      <DescOffers />
-      <LastOffers />
-      <ButtonLast />
     </div>
   );
 }

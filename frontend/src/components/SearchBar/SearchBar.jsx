@@ -1,23 +1,29 @@
-import { useState } from "react";
-import Style from "./style";
+import PropTypes from "prop-types";
+import Style from "./Style";
 
-export default function SearchBar() {
-  const [searchValue, setSearchValue] = useState("");
+export default function SearchBar({ searchValue, setSearchValue }) {
   const handleSearchValue = (e) => {
     setSearchValue(e.target.value);
   };
 
   return (
     <Style>
-      <div>
+      <form>
         <input
           type="text"
           placeholder="Developpeur JavaScript, php, python ?"
           value={searchValue}
           onChange={handleSearchValue}
         />
-        <button type="button">Search</button>
-      </div>
+        <button className="searchButton" type="button">
+          Search
+        </button>
+      </form>
     </Style>
   );
 }
+
+SearchBar.propTypes = {
+  searchValue: PropTypes.string.isRequired,
+  setSearchValue: PropTypes.string.isRequired,
+};
