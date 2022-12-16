@@ -25,6 +25,6 @@ export default styled.form`
     color: black;
   }
   input:hover{
-    background-color#c91961
+    background-color#c91961;
   }
 `;
