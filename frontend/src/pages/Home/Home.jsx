@@ -1,4 +1,3 @@
-import BurgerMenu from "../../components/BurgerMenu/BurgerMenu";
 import LoginHP from "../../components/LoginHP/LoginHP";
 import PresentationHP from "../../components/PresentationHP/PresentationHP";
 import Partners from "../../components/SliderPartners/Partners";
@@ -12,7 +11,6 @@ import Style from "./style";
 export default function Home() {
   return (
     <div>
-      <BurgerMenu />
       <SearchBar />
       <Style>
         <div className="blockContainer">
