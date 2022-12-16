@@ -36,7 +36,6 @@ export default styled.div`
     font-size: 1.125rem;
     font-weight: bold;
     text-decoration: none;
-    /* color: #c91961; */
     color: #fff;
     background-color: #c91961;
     border: 3px solid #c91961;
@@ -56,7 +55,6 @@ export default styled.div`
     left: 0;
     width: 0;
     height: 100%;
-    /* background: #c91961; */
     background: #fff;
     transition: all 0.35s;
   }
