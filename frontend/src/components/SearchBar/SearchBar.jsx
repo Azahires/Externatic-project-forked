@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Style from "./Style";
+import Style from "./style";
 
 export default function SearchBar({ searchValue, setSearchValue }) {
   const handleSearchValue = (e) => {
