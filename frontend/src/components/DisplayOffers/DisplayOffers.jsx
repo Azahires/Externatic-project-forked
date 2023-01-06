@@ -1,10 +1,13 @@
 import OfferCard from "@components/OfferCard/OfferCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import latinize from "latinize";
 import Style from "./style";
+import { SearchContext } from "../../contexts/SearchContext";
 
 export default function DisplayOffers() {
   const [offers, setOffers] = useState([]);
+  const { searchValue } = useContext(SearchContext);
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/offers`).then(({ data }) => {
       const data2 = data;
@@ -19,18 +22,24 @@ export default function DisplayOffers() {
 
   return (
     <Style>
-      {offers.map((offer) => {
-        return (
-          <OfferCard
-            title={offer.title}
-            contracttype={offer.contract_type}
-            publicationdate={offer.publication_date}
-            location={offer.location}
-            id={offer.id}
-            key={offer.id}
-          />
-        );
-      })}
+      {offers
+        .filter((offer) => {
+          return latinize(offer.title.toLowerCase()).includes(
+            searchValue.toLowerCase()
+          );
+        })
+        .map((offer) => {
+          return (
+            <OfferCard
+              title={offer.title}
+              contracttype={offer.contract_type}
+              publicationdate={offer.publication_date}
+              location={offer.location}
+              id={offer.id}
+              key={offer.id}
+            />
+          );
+        })}
     </Style>
   );
 }

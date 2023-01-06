@@ -1,9 +1,13 @@
+import { useContext } from "react";
+import latinize from "latinize";
+import { SearchContext } from "../../contexts/SearchContext";
+import Style from "./Style";
 import PropTypes from "prop-types";
-import Style from "./style";
 
-export default function SearchBar({ searchValue, setSearchValue }) {
+export default function SearchBar() {
+  const { searchValue, setSearchValue } = useContext(SearchContext);
   const handleSearchValue = (e) => {
-    setSearchValue(e.target.value);
+    setSearchValue(latinize(e.target.value));
   };
 
   return (
@@ -22,8 +26,3 @@ export default function SearchBar({ searchValue, setSearchValue }) {
     </Style>
   );
 }
-
-SearchBar.propTypes = {
-  searchValue: PropTypes.string.isRequired,
-  setSearchValue: PropTypes.string.isRequired,
-};
