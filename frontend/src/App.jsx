@@ -7,6 +7,7 @@ import Whoweare from "@pages/Whoweare/Whoweare";
 import Registration from "@pages/Registration/Registration";
 import Connexion from "@pages/Connexion/Connexion";
 import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
+import MySpace from "@pages/MySpace/MySpace";
 import Style from "./style";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/about" element={<Whoweare />} />
         <Route path="/signin" element={<Registration />} />
         <Route path="/login" element={<Connexion />} />
+        <Route path="/account" element={<MySpace />} />
       </Routes>
     </Style>
   );
