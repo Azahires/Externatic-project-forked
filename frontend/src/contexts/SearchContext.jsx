@@ -5,6 +5,7 @@ const SearchContext = createContext();
 
 function SearchProvider({ children }) {
   const [searchValue, setSearchValue] = useState("");
+
   const context = useMemo(
     () => ({
       searchValue,

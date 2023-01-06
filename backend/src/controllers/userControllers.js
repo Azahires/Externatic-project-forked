@@ -1,3 +1,4 @@
+const jwt = require("jsonwebtoken");
 const models = require("../models");
 
 const browse = (req, res) => {
@@ -58,7 +59,10 @@ const add = (req, res) => {
   models.user
     .insert(user)
     .then(([result]) => {
-      res.location(`/users/${result.insertId}`).sendStatus(201);
+      user.id = result.insertId;
+      delete user.hashedPassword;
+      const token = jwt.sign(user, process.env.JWT_SECRET);
+      res.status(201).send({ user, token });
     })
     .catch((err) => {
       console.error(err);

@@ -1,17 +1,24 @@
-import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import useApi from "@services/useApi";
 import Style from "./style";
 
 export default function Registration() {
   const { register, handleSubmit } = useForm();
   const [error, setError] = useState("noerror");
   const navigate = useNavigate();
-  const onSubmit = (data) => {
-    axios
-      .post(`http://localhost:5000/users`, data)
-      .then(() => {
+  const api = useApi();
+  const dispatch = useDispatch();
+
+  const onSubmit = (form) => {
+    api
+      .post("/users", form)
+      .then(({ data }) => {
+        const { token, user } = data;
+        api.defaults.headers.authorization = `Bearer ${token}`;
+        dispatch({ type: "USER_LOGIN", payload: { ...user, token } });
         navigate("/account");
       })
       .catch(() => {
