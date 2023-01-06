@@ -36,7 +36,7 @@ export default function Connexion() {
       />
       <input className="btn-1" type="submit" value="Se connecter" />
       <p className={error}>
-        Veuillez vérifier l'email et le mot de passe saisis.
+        Veuillez vérifier l'email et/ou le mot de passe saisis.
       </p>
     </Style>
   );
