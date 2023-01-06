@@ -10,7 +10,6 @@ export default styled.div`
     margin: auto;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 3px 3px 25px black;
     border: 5px solid #c91961;
     width: 38vw;
     height: 20vh;
