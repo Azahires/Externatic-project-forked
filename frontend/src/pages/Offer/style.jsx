@@ -44,7 +44,7 @@ export default styled.div`
       font-size: 1.6rem;
       text-align: left;
       width: 100%;
-      margin: 3.5rem 0 1.9rem 0;
+      margin: 2rem 0 0 0;
       padding: 0.5rem 1rem;
       border-top: 2px dashed ${mainColor};
       border-bottom: 2px dashed ${mainColor};
@@ -58,8 +58,21 @@ export default styled.div`
       font-size: 1.2rem;
       margin:1rem 0;
     }
-    p:last-of-type {
-      margin-bottom: 2rem;
+    b{
+      font-family:"JostBold";
+    }
+    b::before{
+      content:"";
+    }
+    li{
+      list-style-type: '- ';
+      margin-top:0.5rem;
+      box-sizing: border-box;
+    }
+    br{
+      content: "";
+    display: block;
+    margin: 1rem 0;
     }
 
     .firstcontainer {

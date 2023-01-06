@@ -2,6 +2,7 @@ import { useContext } from "react";
 import latinize from "latinize";
 import { SearchContext } from "../../contexts/SearchContext";
 import Style from "./Style";
+import PropTypes from "prop-types";
 
 export default function SearchBar() {
   const { searchValue, setSearchValue } = useContext(SearchContext);
