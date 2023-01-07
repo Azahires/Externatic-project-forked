@@ -18,6 +18,7 @@ export default function BurgerMenu() {
     setOpen(false);
   };
   const navigate = useNavigate();
+  const hLogOut = () => {};
 
   return (
     <BurgerMenuContainer>
@@ -101,6 +102,9 @@ export default function BurgerMenu() {
           }}
         >
           Se connecter
+        </button>
+        <button type="button" className="Se connecter" onClick={hLogOut}>
+          Deconnexion
         </button>
       </RightSection>
     </BurgerMenuContainer>

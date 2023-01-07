@@ -3,11 +3,11 @@ import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import latinize from "latinize";
 import Style from "./style";
-import { SearchContext } from "../../contexts/SearchContext";
+import { Context } from "../../contexts/Context";
 
 export default function DisplayOffers() {
   const [offers, setOffers] = useState([]);
-  const { searchValue } = useContext(SearchContext);
+  const { searchValue } = useContext(Context);
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/offers`).then(({ data }) => {
       const data2 = data;

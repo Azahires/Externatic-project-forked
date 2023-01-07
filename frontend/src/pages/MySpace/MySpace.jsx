@@ -1,12 +1,13 @@
-import { useSelector } from "react-redux";
+import { useContext } from "react";
 import Style from "./style";
+import { Context } from "../../contexts/Context";
 
 export default function MySpace() {
-  const profile = useSelector((state) => state);
+  const { userInfo } = useContext(Context);
   return (
     <Style>
       <h1>
-        Welcome {profile.user.firstname} {profile.user.lastname}
+        Welcome {userInfo.lastname} {userInfo.firstname}
       </h1>
     </Style>
   );

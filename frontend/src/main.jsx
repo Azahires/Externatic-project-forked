@@ -1,20 +1,16 @@
 import { BrowserRouter } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Provider } from "react-redux";
-import store from "@services/reducers";
-import SearchProvider from "./contexts/SearchContext";
+import Provider from "./contexts/Context";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider>
       <BrowserRouter>
-        <SearchProvider>
-          <App />
-        </SearchProvider>
+        <App />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

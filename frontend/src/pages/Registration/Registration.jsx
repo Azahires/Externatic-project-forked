@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useState, useContext } from "react";
 import useApi from "@services/useApi";
+import { Context } from "../../contexts/Context";
 import Style from "./style";
 
 export default function Registration() {
@@ -10,7 +10,7 @@ export default function Registration() {
   const [error, setError] = useState("noerror");
   const navigate = useNavigate();
   const api = useApi();
-  const dispatch = useDispatch();
+  const { setUserInfo } = useContext(Context);
 
   const onSubmit = (form) => {
     api
@@ -18,7 +18,7 @@ export default function Registration() {
       .then(({ data }) => {
         const { token, user } = data;
         api.defaults.headers.authorization = `Bearer ${token}`;
-        dispatch({ type: "USER_LOGIN", payload: { ...user, token } });
+        setUserInfo(user);
         navigate("/account");
       })
       .catch(() => {
