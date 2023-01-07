@@ -81,6 +81,12 @@ export const LeftSection = styled.div`
     cursor: pointer;
     padding-bottom: 2rem;
   }
+  .visible {
+    display: inherit !important;
+  }
+  .hidden {
+    display: none !important;
+  }
 `;
 
 export const MiddleSection = styled.div`
@@ -114,5 +120,19 @@ export const RightSection = styled.div`
   button:hover {
     background-color: white;
     color: #c91961;
+  }
+  .visible {
+    display: inherit;
+  }
+  .hidden {
+    display: none;
+  }
+  p {
+    margin: auto 0;
+    font-size: 1.2rem;
+    color: #c91961;
+    em {
+      font-style: italic;
+    }
   }
 `;

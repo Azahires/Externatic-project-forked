@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { slide as Menu } from "react-burger-menu";
 import { useNavigate } from "react-router-dom";
+import useApi from "@services/useApi";
+import { Context } from "../../contexts/Context";
 import Style, {
   BurgerMenuContainer,
   LeftSection,
@@ -11,6 +13,8 @@ import externaticLogo from "../../assets/externatic.svg";
 
 export default function BurgerMenu() {
   const [isOpen, setOpen] = useState(false);
+  const { userInfo, setUserInfo } = useContext(Context);
+  const api = useApi();
   const handleIsOpen = () => {
     setOpen(!isOpen);
   };
@@ -18,7 +22,16 @@ export default function BurgerMenu() {
     setOpen(false);
   };
   const navigate = useNavigate();
-  const hLogOut = () => {};
+  const hLogOut = () => {
+    api.defaults.headers.authorization = null;
+    setUserInfo({
+      lastname: null,
+      firstname: null,
+      email: null,
+      id: null,
+    });
+    navigate("/");
+  };
 
   return (
     <BurgerMenuContainer>
@@ -44,8 +57,19 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
+                navigate("/account");
+              }}
+              className={userInfo.email ? "visible" : "hidden"}
+            >
+              Mon espace
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                closeSideBar();
                 navigate("/signin");
               }}
+              className={!userInfo.email ? "visible" : "hidden"}
             >
               S'inscrire
             </button>
@@ -55,6 +79,7 @@ export default function BurgerMenu() {
                 closeSideBar();
                 navigate("/login");
               }}
+              className={!userInfo.email ? "visible" : "hidden"}
             >
               Se connecter
             </button>
@@ -85,9 +110,12 @@ export default function BurgerMenu() {
         </a>
       </MiddleSection>
       <RightSection>
+        <p className={userInfo.email ? "visible" : "hidden"}>
+          Connecté en tant que {userInfo.firstname} {userInfo.lastname}{" "}
+        </p>
         <button
           type="button"
-          className="S'inscrire"
+          className={!userInfo.email ? "visible" : "hidden"}
           onClick={() => {
             navigate("/signin");
           }}
@@ -96,14 +124,18 @@ export default function BurgerMenu() {
         </button>
         <button
           type="button"
-          className="Se connecter"
+          className={!userInfo.email ? "visible" : "hidden"}
           onClick={() => {
             navigate("/login");
           }}
         >
           Se connecter
         </button>
-        <button type="button" className="Se connecter" onClick={hLogOut}>
+        <button
+          type="button"
+          className={userInfo.email ? "visible" : "hidden"}
+          onClick={hLogOut}
+        >
           Deconnexion
         </button>
       </RightSection>

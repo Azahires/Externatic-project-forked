@@ -27,12 +27,18 @@ function Provider({ children }) {
 
 export default Provider;
 export { Context };
+const UserInfoShape = {
+  lastname: propTypes.string,
+  firstname: propTypes.string,
+  email: propTypes.string,
+  id: propTypes.number,
+};
 
 Provider.propTypes = {
   children: propTypes.shape({
     searchValue: propTypes.string,
     setSearchValue: propTypes.string,
-    userInfo: propTypes.objectOf(propTypes.object()),
-    setUserInfo: propTypes.objectOf(propTypes.object()),
+    userInfo: propTypes.shape(UserInfoShape),
+    setUserInfo: propTypes.shape(UserInfoShape),
   }).isRequired,
 };
