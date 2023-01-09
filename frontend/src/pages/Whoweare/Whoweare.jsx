@@ -1,5 +1,10 @@
+import PresentationElementTop from "@components/PresentationElementTop/PresentationElementTop";
 import Style from "./style";
 
 export default function Whoweare() {
-  return <Style>Whoweare</Style>;
+  return (
+    <Style>
+      <PresentationElementTop />
+    </Style>
+  );
 }
