@@ -11,6 +11,7 @@ function Provider({ children }) {
     email: null,
     id: null,
   });
+  const [mySpace, setMySpace] = useState("profile");
 
   const context = useMemo(
     () => ({
@@ -18,14 +19,17 @@ function Provider({ children }) {
       setSearchValue,
       userInfo,
       setUserInfo,
+      mySpace,
+      setMySpace,
     }),
-    [searchValue, setSearchValue, userInfo, setUserInfo]
+    [searchValue, setSearchValue, userInfo, setUserInfo, mySpace, setMySpace]
   );
 
   return <Context.Provider value={context}>{children}</Context.Provider>;
 }
 
 export default Provider;
+
 export { Context };
 const UserInfoShape = {
   lastname: propTypes.string,
@@ -40,5 +44,7 @@ Provider.propTypes = {
     setSearchValue: propTypes.string,
     userInfo: propTypes.shape(UserInfoShape),
     setUserInfo: propTypes.shape(UserInfoShape),
+    mySpace: propTypes.string,
+    setMySpace: propTypes.string,
   }).isRequired,
 };

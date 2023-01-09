@@ -8,4 +8,10 @@ export default styled.div`
     font-weight: bold;
     color: #c91961;
   }
+  .visible {
+    display: initial;
+  }
+  .hidden {
+    display: none;
+  }
 `;
