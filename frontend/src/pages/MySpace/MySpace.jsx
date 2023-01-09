@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import Style from "./style";
 import { Context } from "../../contexts/Context";
+import Style from "./style";
 
 export default function MySpace() {
   const { userInfo } = useContext(Context);

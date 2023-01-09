@@ -82,7 +82,7 @@ export const LeftSection = styled.div`
     padding-bottom: 2rem;
   }
   .visible {
-    display: inherit !important;
+    display: inherit !important; /* Validated by LB */
   }
   .hidden {
     display: none !important;
