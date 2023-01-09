@@ -1,6 +1,6 @@
 import OfferCard from "@components/OfferCard/OfferCard";
 import { useState, useEffect, useContext } from "react";
-import axios from "axios";
+import useApi from "@services/useApi";
 import latinize from "latinize";
 import Style from "./style";
 import { Context } from "../../contexts/Context";
@@ -8,8 +8,9 @@ import { Context } from "../../contexts/Context";
 export default function DisplayOffers() {
   const [offers, setOffers] = useState([]);
   const { searchValue } = useContext(Context);
+  const api = useApi();
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_BACKEND_URL}/offers`).then(({ data }) => {
+    api.get(`${import.meta.env.VITE_BACKEND_URL}/offers`).then(({ data }) => {
       const data2 = data;
       for (let i = 0; i < data2.length; i += 1) {
         data2[i].publication_date = new Date(
