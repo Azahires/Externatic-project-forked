@@ -6,10 +6,16 @@ const Context = createContext();
 function Provider({ children }) {
   const [searchValue, setSearchValue] = useState("");
   const [userInfo, setUserInfo] = useState({
+    id: null,
     lastname: null,
     firstname: null,
     email: null,
-    id: null,
+    phonenumber: null,
+    linkedinlink: null,
+    githublink: null,
+    city: null,
+    postalcode: null,
+    CV: null,
   });
   const [mySpace, setMySpace] = useState("profile");
 
@@ -32,10 +38,16 @@ export default Provider;
 
 export { Context };
 const UserInfoShape = {
+  id: propTypes.number,
   lastname: propTypes.string,
   firstname: propTypes.string,
   email: propTypes.string,
-  id: propTypes.number,
+  phonenumber: propTypes.string,
+  linkedinlink: propTypes.string,
+  githublink: propTypes.string,
+  city: propTypes.string,
+  postalcode: propTypes.number,
+  CV: propTypes.string,
 };
 
 Provider.propTypes = {

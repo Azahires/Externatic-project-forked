@@ -1,17 +1,13 @@
 import styled from "styled-components";
 
 export default styled.div`
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 10vh;
-    font-weight: bold;
-    color: #c91961;
-  }
+  margin: 3vh auto 0 auto;
+  width: 80%;
   .visible {
     display: initial;
   }
   .hidden {
     display: none;
   }
+  border: 3px solid #c91961;
 `;

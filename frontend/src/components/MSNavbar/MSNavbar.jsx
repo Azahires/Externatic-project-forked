@@ -3,35 +3,36 @@ import { Context } from "../../contexts/Context";
 import Style from "./style";
 
 export default function MSNavbar() {
-  const { setMySpace } = useContext(Context);
+  const { mySpace, setMySpace } = useContext(Context);
   return (
     <Style>
-      <nav>
-        <button
-          type="button"
-          onClick={() => {
-            setMySpace("profile");
-          }}
-        >
-          Profil
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            setMySpace("favorites");
-          }}
-        >
-          Favoris
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            setMySpace("applications");
-          }}
-        >
-          Candidatures
-        </button>
-      </nav>
+      <button
+        type="button"
+        onClick={() => {
+          setMySpace("profile");
+        }}
+        className={mySpace === "profile" ? "active" : "passive"}
+      >
+        <span>Profil</span>
+      </button>
+      <button
+        type="button"
+        onClick={() => {
+          setMySpace("favorites");
+        }}
+        className={mySpace === "favorites" ? "active" : "passive"}
+      >
+        Favoris
+      </button>
+      <button
+        type="button"
+        onClick={() => {
+          setMySpace("applications");
+        }}
+        className={mySpace === "applications" ? "active" : "passive"}
+      >
+        Candidatures
+      </button>
     </Style>
   );
 }
