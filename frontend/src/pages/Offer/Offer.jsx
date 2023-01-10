@@ -9,7 +9,7 @@ export default function Offer() {
   const api = useApi();
   useEffect(() => {
     api
-      .get(`${import.meta.env.VITE_BACKEND_URL}/offers/${id}`)
+      .get(`/offers/${id}`)
       .then(({ data }) => {
         const data2 = data;
         data2.publication_date = new Date(
