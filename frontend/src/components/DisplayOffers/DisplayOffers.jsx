@@ -10,7 +10,7 @@ export default function DisplayOffers() {
   const { searchValue } = useContext(Context);
   const api = useApi();
   useEffect(() => {
-    api.get(`${import.meta.env.VITE_BACKEND_URL}/offers`).then(({ data }) => {
+    api.get("/offers").then(({ data }) => {
       const data2 = data;
       for (let i = 0; i < data2.length; i += 1) {
         data2[i].publication_date = new Date(
