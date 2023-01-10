@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import latinize from "latinize";
-import { SearchContext } from "../../contexts/SearchContext";
-import Style from "./Style";
-import PropTypes from "prop-types";
+import { Context } from "../../contexts/Context";
+import Style from "./style";
 
 export default function SearchBar() {
-  const { searchValue, setSearchValue } = useContext(SearchContext);
+  const { searchValue, setSearchValue } = useContext(Context);
   const handleSearchValue = (e) => {
     setSearchValue(latinize(e.target.value));
   };

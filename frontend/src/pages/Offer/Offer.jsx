@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import useApi from "@services/useApi";
 import Style from "./style";
 
 export default function Offer() {
   const [offer, setOffer] = useState({});
   const { id } = useParams();
+  const api = useApi();
   useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/offers/${id}`)
+    api
+      .get(`/offers/${id}`)
       .then(({ data }) => {
         const data2 = data;
         data2.publication_date = new Date(
