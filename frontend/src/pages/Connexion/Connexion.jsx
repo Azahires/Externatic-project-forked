@@ -14,7 +14,7 @@ export default function Connexion() {
 
   const onSubmit = (form) => {
     api
-      .post(`http://localhost:5000/login`, form)
+      .post("/login", form)
       .then(({ data }) => {
         const { token, user } = data;
         api.defaults.headers.authorization = `Bearer ${token}`;
