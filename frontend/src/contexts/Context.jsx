@@ -14,8 +14,10 @@ function Provider({ children }) {
     linkedinlink: null,
     githublink: null,
     city: null,
+    activeSearch: null,
     postalcode: null,
     CV: null,
+    avatar: null,
   });
   const [mySpace, setMySpace] = useState("profile");
 
@@ -47,7 +49,9 @@ const UserInfoShape = {
   githublink: propTypes.string,
   city: propTypes.string,
   postalcode: propTypes.number,
+  activeSearch: propTypes.number,
   CV: propTypes.string,
+  avatar: propTypes.string,
 };
 
 Provider.propTypes = {

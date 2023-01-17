@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useState, useContext, useRef } from "react";
 import useApi from "@services/useApi";
 import { Context } from "../../contexts/Context";
+
 import Style from "./style";
 
 export default function MSProfile() {
@@ -10,7 +11,8 @@ export default function MSProfile() {
   const [error, setError] = useState("noerror");
   const api = useApi();
   const { userInfo, setUserInfo } = useContext(Context);
-  const inputRef = useRef();
+  const avatarRef = useRef();
+  const CVRef = useRef();
   const [modification, setModification] = useState("nomodification");
   const hChange = (evt) => {
     const { name, value } = evt.target;
@@ -19,16 +21,47 @@ export default function MSProfile() {
     setError("noerror");
     setModification("nomodification");
   };
-
   const onSubmit = (form) => {
+    const formData = {
+      ...form,
+      postalcode: parseInt(form.postalcode, 10),
+      activeSearch: parseInt(form.activeSearch, 10),
+    };
     api
-      .put(`/users/${userInfo.id}`, form)
-      .then(() => {
+      .put(`/users/${userInfo.id}`, formData)
+      .then(({ data }) => {
         setModification("modification");
+        setUserInfo({ ...userInfo, activeSearch: data });
       })
       .catch(() => {
         setError("error");
       });
+    if (avatarRef.current.files[0]) {
+      const avatarform = new FormData();
+      avatarform.append("avatar", avatarRef.current.files[0]);
+      api
+        .post("/avatar", avatarform)
+        .then(({ data }) => {
+          setModification("modification");
+          setUserInfo({ ...userInfo, avatar: data });
+        })
+        .catch(() => {
+          setError("error");
+        });
+    }
+    if (CVRef.current.files[0]) {
+      const CV = new FormData();
+      CV.append("CV", CVRef.current.files[0]);
+      api
+        .post("/cv", CV)
+        .then(({ data }) => {
+          setModification("modification");
+          setUserInfo({ ...userInfo, CV: data });
+        })
+        .catch(() => {
+          setError("error");
+        });
+    }
   };
 
   return (
@@ -37,6 +70,13 @@ export default function MSProfile() {
       className={mySpace === "profile" ? "visible" : "hidden"}
       encType="multipart/form-data"
     >
+      <p>Ajouter un avatar:</p>
+      <input
+        type="file"
+        name="avatar"
+        placeholder="Votre photo"
+        ref={avatarRef}
+      />
       <input
         type="text"
         placeholder="Nom"
@@ -101,7 +141,49 @@ export default function MSProfile() {
         value={userInfo.githublink || ""}
         onChange={hChange}
       />
-      <input type="file" name="CV" placeholder="Votre CV" ref={inputRef} />
+      <fieldset>
+        <legend>Vous êtes:</legend>
+        <div>
+          <input
+            type="radio"
+            id="activeSearch"
+            name="activeSearch"
+            value="1"
+            onClick={() => {
+              setUserInfo({ ...userInfo, activeSearch: true });
+            }}
+            checked={userInfo.activeSearch}
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            {...register("activeSearch", { required: false })}
+          />
+          <label htmlFor="activeSearch">En recherche active d'un poste</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="passiveSearch"
+            name="activeSearch"
+            value="0"
+            onClick={() => {
+              setUserInfo({ ...userInfo, activeSearch: false });
+            }}
+            checked={!userInfo.activeSearch}
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            {...register("activeSearch", { required: false })}
+          />
+          <label htmlFor="passiveSearch">Ouvert aux opportunités</label>
+        </div>
+      </fieldset>
+      <textarea
+        type="textarea"
+        placeholder="Courte biographie"
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...register("biography", { required: false })}
+        value={userInfo.biography || ""}
+        onChange={hChange}
+      />
+      <p>Télécharger un CV:</p>
+      <input type="file" name="CV" placeholder="Votre CV" ref={CVRef} />
       <input className="btn" type="submit" value="Modifier son profil" />
       <p className={error}>
         Une erreur est survenue, veuillez vérifier les champs et vous assurez

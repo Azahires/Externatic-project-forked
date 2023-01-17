@@ -1,9 +1,11 @@
 const express = require("express");
 const multer = require("multer");
-
-const upload = multer({ dest: "../public/assets/uploads/" });
+const fs = require("fs");
+const { v4: uuidv4 } = require("uuid");
 
 const router = express.Router();
+const uploadCV = multer({ dest: "uploads/CV" });
+const uploadavatar = multer({ dest: "uploads/avatar" });
 
 const offerControllers = require("./controllers/offerControllers");
 const userControllers = require("./controllers/userControllers");
@@ -27,12 +29,29 @@ router.delete("/offers/:id", offerControllers.destroy);
 router.get("/users", userControllers.browse);
 router.get("/users/:id", userControllers.read);
 router.post("/users", validateUserCreation, hashPassword, userControllers.add);
-router.put(
-  "/users/:id",
-  validateUserModification,
-  upload.single("CV"),
-  userControllers.edit
-);
+router.post("/avatar", uploadavatar.single("avatar"), (req, res) => {
+  const { originalname } = req.file;
+  const { filename } = req.file;
+  const newname = `${uuidv4()}-${originalname}`;
+  fs.rename(
+    `uploads/avatar/${filename}`,
+    `uploads/avatar/${newname}`,
+    (err) => {
+      if (err) throw err;
+      res.send(newname);
+    }
+  );
+});
+router.post("/cv", uploadCV.single("CV"), (req, res) => {
+  const { originalname } = req.file;
+  const { filename } = req.file;
+  const newname = `${uuidv4()}-${originalname}`;
+  fs.rename(`uploads/CV/${filename}`, `uploads/CV/${newname}`, (err) => {
+    if (err) throw err;
+    res.send(newname);
+  });
+});
+router.put("/users/:id", validateUserModification, userControllers.edit);
 router.delete("/users/:id", userControllers.destroy);
 
 router.post("/login", verifyUser, verifyPassword);
