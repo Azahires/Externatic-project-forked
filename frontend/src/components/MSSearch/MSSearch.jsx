@@ -1,5 +1,12 @@
+import { useContext } from "react";
+import { Context } from "../../contexts/Context";
 import Style from "./style";
 
 export default function MSSearch() {
-  return <Style>MSSearch</Style>;
+  const { mySpace } = useContext(Context);
+  return (
+    <Style className={mySpace === "search" ? "visible" : "hidden"}>
+      MSSearch
+    </Style>
+  );
 }
