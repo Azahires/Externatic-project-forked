@@ -27,8 +27,8 @@ export default styled.div`
 
   form {
     display: flex;
-    justify-content: center;
+    justify-content: center
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 `;
