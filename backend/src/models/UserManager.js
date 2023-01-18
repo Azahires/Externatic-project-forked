@@ -19,11 +19,22 @@ class UserManager extends AbstractManager {
     );
   }
 
-  // update à modifier
   update(user) {
     return this.connection.query(
-      `update ${this.table} set title = ? where id = ?`,
-      [user.title, user.id]
+      `update ${this.table} set lastname= ?, firstname=?, email= ?, phonenumber=?, linkedinlink=?, githublink=?, city=?, postalcode=?, activeSearch=?, biography=?  where id = ?`,
+      [
+        user.lastname,
+        user.firstname,
+        user.email,
+        user.phonenumber,
+        user.linkedinlink,
+        user.githublink,
+        user.city,
+        user.postalcode,
+        user.activeSearch,
+        user.biography,
+        user.id,
+      ]
     );
   }
 }
