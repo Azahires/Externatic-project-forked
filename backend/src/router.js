@@ -30,8 +30,7 @@ router.get("/users", userControllers.browse);
 router.get("/users/:id", userControllers.read);
 router.post("/users", validateUserCreation, hashPassword, userControllers.add);
 router.post("/avatar", uploadavatar.single("avatar"), (req, res) => {
-  const { originalname } = req.file;
-  const { filename } = req.file;
+  const { originalname, filename } = req.file;
   const newname = `${uuidv4()}-${originalname}`;
   fs.rename(
     `uploads/avatar/${filename}`,
@@ -43,8 +42,7 @@ router.post("/avatar", uploadavatar.single("avatar"), (req, res) => {
   );
 });
 router.post("/cv", uploadCV.single("CV"), (req, res) => {
-  const { originalname } = req.file;
-  const { filename } = req.file;
+  const { originalname, filename } = req.file;
   const newname = `${uuidv4()}-${originalname}`;
   fs.rename(`uploads/CV/${filename}`, `uploads/CV/${newname}`, (err) => {
     if (err) throw err;

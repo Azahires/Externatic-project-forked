@@ -20,25 +20,6 @@ export default styled.nav`
     font-family: "JostBold";
     margin: 0;
   }
-  /* button:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #fff;
-    transition: all 0.35s;
-  }
-  button:hover {
-    color: #c91961;
-  }
-  button:hover:after {
-    width: 100%;
-  }
-  span {
-    position: relative;
-    z-index: 2;
-  } */
   .active {
     background-color: #fff;
     color: #c91961;
