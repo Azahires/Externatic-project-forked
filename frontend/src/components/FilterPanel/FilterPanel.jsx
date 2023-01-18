@@ -1,23 +1,19 @@
-import Style from "./style";
 import Centered from "@components/Centered/Centered";
+import Style from "./style";
 
 export default function FilterPanel() {
   return (
     <Style>
       <Centered>
         <form>
-          <input type="checkbox" id="filter-cdd" value="CDD"></input>
-          <label for="filters">CDD</label>
-          <input type="checkbox" id="filter-cdi" value="CDI"></input>
-          <label for="filters">CDI</label>
-          <input
-            type="checkbox"
-            id="filter-alternance"
-            value="Alternance"
-          ></input>
-          <label for="filters">Alternance</label>
-          <input type="checkbox" id="filter-stage" value="Stage"></input>
-          <label for="filters">Stage</label>
+          <input type="checkbox" id="filter-cdd" value="CDD" />
+          <label htmlFor="filters">CDD</label>
+          <input type="checkbox" id="filter-cdi" value="CDI" />
+          <label htmlFor="filters">CDI</label>
+          <input type="checkbox" id="filter-alternance" value="Alternance" />
+          <label htmlFor="filters">Alternance</label>
+          <input type="checkbox" id="filter-stage" value="Stage" />
+          <label htmlFor="filters">Stage</label>
 
           {/* <label for="distance"> Distance maximale </label> */}
 

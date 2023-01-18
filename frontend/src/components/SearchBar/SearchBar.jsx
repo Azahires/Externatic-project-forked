@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import latinize from "latinize";
+import Centered from "@components/Centered/Centered";
 import { SearchContext } from "../../contexts/SearchContext";
 import Style from "./Style";
-import PropTypes from "prop-types";
-import Centered from "@components/Centered/Centered";
 
 export default function SearchBar() {
   const { searchValue, setSearchValue } = useContext(SearchContext);
