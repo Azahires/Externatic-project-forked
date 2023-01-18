@@ -8,15 +8,13 @@ export default function Offer() {
   const { id } = useParams();
   const api = useApi();
   useEffect(() => {
-    api
-      .get(`/offers/${id}`)
-      .then(({ data }) => {
-        const data2 = data;
-        data2.publication_date = new Date(
-          data2.publication_date
-        ).toLocaleDateString("fr");
-        setOffer(data2);
-      });
+    api.get(`/offers/${id}`).then(({ data }) => {
+      const data2 = data;
+      data2.publication_date = new Date(
+        data2.publication_date
+      ).toLocaleDateString("fr");
+      setOffer(data2);
+    });
   }, []);
   return (
     <Style>
