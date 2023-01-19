@@ -55,17 +55,6 @@ export default function FilterPanel() {
           />
           <label htmlFor="filters">Stage</label>
 
-          {/* <label for="distance"> Distance maximale </label> */}
-
-          {/* <select name="disatnce-max" id="selector">
-            <option value="">Sélectionne ta distance maximale</option>
-            <option value="5">5 Km</option>
-            <option value="10">10 Km</option>
-            <option value="25">25 Km</option>
-            <option value="50">50 Km</option>
-            <option value="100">100 Km</option>
-            <option value="all">Indifférent</option>
-          </select> */}
         </form>
       </Centered>
     </Style>
