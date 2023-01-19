@@ -4,10 +4,7 @@ import { Context } from "../../contexts/Context";
 import Style from "./style";
 
 export default function FilterPanel() {
-  const { filterCdd, setFilterCdd } = useContext(Context);
-  const { filterCdi, setFilterCdi } = useContext(Context);
-  const { filterAlternance, setFilterAlternance } = useContext(Context);
-  const { filterInternship, setFilterInternship } = useContext(Context);
+  const { filterCdd, setFilterCdd, filterCdi, setFilterCdi, filterAlternance, setFilterAlternance, filterInternship, setFilterInternship } = useContext(Context);
 
   const hCddChange = (event) => {
     setFilterCdd(event.target.checked);
