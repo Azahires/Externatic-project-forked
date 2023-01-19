@@ -7,11 +7,13 @@ import { Context } from "../../contexts/Context";
 
 export default function DisplayOffers() {
   const [offers, setOffers] = useState([]);
-  const { searchValue } = useContext(Context);
-  const { filterCdd } = useContext(Context);
-  const { filterCdi } = useContext(Context);
-  const { filterAlternance } = useContext(Context);
-  const { filterInternship } = useContext(Context);
+  const {
+    searchValue,
+    filterCdd,
+    filterCdi,
+    filterAlternance,
+    filterInternship,
+  } = useContext(Context);
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/offers`).then(({ data }) => {
       const data2 = data;

@@ -4,10 +4,16 @@ import { Context } from "../../contexts/Context";
 import Style from "./style";
 
 export default function FilterPanel() {
-  const { filterCdd, setFilterCdd } = useContext(Context);
-  const { filterCdi, setFilterCdi } = useContext(Context);
-  const { filterAlternance, setFilterAlternance } = useContext(Context);
-  const { filterInternship, setFilterInternship } = useContext(Context);
+  const {
+    filterCdd,
+    setFilterCdd,
+    filterCdi,
+    setFilterCdi,
+    filterAlternance,
+    setFilterAlternance,
+    filterInternship,
+    setFilterInternship,
+  } = useContext(Context);
 
   const hCddChange = (event) => {
     setFilterCdd(event.target.checked);
@@ -57,18 +63,6 @@ export default function FilterPanel() {
             value="Stage"
           />
           <label htmlFor="filters">Stage</label>
-
-          {/* <label for="distance"> Distance maximale </label> */}
-
-          {/* <select name="disatnce-max" id="selector">
-            <option value="">Sélectionne ta distance maximale</option>
-            <option value="5">5 Km</option>
-            <option value="10">10 Km</option>
-            <option value="25">25 Km</option>
-            <option value="50">50 Km</option>
-            <option value="100">100 Km</option>
-            <option value="all">Indifférent</option>
-          </select> */}
         </form>
       </Centered>
     </Style>
