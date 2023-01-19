@@ -1,17 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import SearchProvider from "./contexts/SearchContext";
+import Provider from "./contexts/Context";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <SearchProvider>
+    <Provider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </SearchProvider>
+    </Provider>
   </React.StrictMode>
 );
