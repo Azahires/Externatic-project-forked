@@ -7,9 +7,11 @@ import { Context } from "../../contexts/Context";
 
 export default function DisplayOffers() {
   const [offers, setOffers] = useState([]);
-  const { searchValue } = useContext(Context);
-  const api = useApi();
-  useEffect(() => {
+  const { searchValue, filterCdd, filterCdi, filterAlternance, filterInternship } = useContext(Context);
+
+const api = useApi();
+
+useEffect(() => {
     api.get("/offers").then(({ data }) => {
       const data2 = data;
       for (let i = 0; i < data2.length; i += 1) {
@@ -25,6 +27,38 @@ export default function DisplayOffers() {
     <Style>
       {offers
         .filter((offer) => {
+          if (filterCdd === true) {
+            return (
+              offer.contract_type === "CDD" &&
+              latinize(offer.title.toLowerCase()).includes(
+                searchValue.toLowerCase()
+              )
+            );
+          }
+          if (filterCdi === true) {
+            return (
+              offer.contract_type === "CDI" &&
+              latinize(offer.title.toLowerCase()).includes(
+                searchValue.toLowerCase()
+              )
+            );
+          }
+          if (filterAlternance === true) {
+            return (
+              offer.contract_type === "Alternance" &&
+              latinize(offer.title.toLowerCase()).includes(
+                searchValue.toLowerCase()
+              )
+            );
+          }
+          if (filterInternship === true) {
+            return (
+              offer.contract_type === "Stage" &&
+              latinize(offer.title.toLowerCase()).includes(
+                searchValue.toLowerCase()
+              )
+            );
+          }
           return latinize(offer.title.toLowerCase()).includes(
             searchValue.toLowerCase()
           );
