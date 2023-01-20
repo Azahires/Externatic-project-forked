@@ -12,6 +12,13 @@ function Provider({ children }) {
   const [filterCdi, setFilterCdi] = useState(false);
   const [filterAlternance, setFilterAlternance] = useState(false);
   const [filterInternship, setFilterInternship] = useState(false);
+
+  /* useState du composant UserGeolocation */
+  const [userCoordinates, setUserCoordinates] = useState({
+    latitude: null,
+    longitude: null,
+  });
+
   const context = useMemo(
     () => ({
       searchValue,
@@ -24,6 +31,8 @@ function Provider({ children }) {
       setFilterAlternance,
       filterInternship,
       setFilterInternship,
+      userCoordinates,
+      setUserCoordinates,
     }),
     [
       searchValue,
@@ -36,6 +45,8 @@ function Provider({ children }) {
       setFilterAlternance,
       filterInternship,
       setFilterInternship,
+      userCoordinates,
+      setUserCoordinates,
     ]
   );
 

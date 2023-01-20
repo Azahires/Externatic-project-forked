@@ -1,5 +1,5 @@
 import Centered from "@components/Centered/Centered";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "../../contexts/Context";
 import Style from "./style";
 
@@ -13,7 +13,22 @@ export default function FilterPanel() {
     setFilterAlternance,
     filterInternship,
     setFilterInternship,
+    setUserCoordinates,
   } = useContext(Context);
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setUserCoordinates({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        });
+      },
+      () => {
+        console.error("We are not allowed to locate you!");
+      }
+    );
+  }, []);
 
   const hCddChange = (event) => {
     setFilterCdd(event.target.checked);
