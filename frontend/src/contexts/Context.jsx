@@ -18,6 +18,7 @@ function Provider({ children }) {
     postalcode: null,
     CV: null,
     avatar: null,
+    biography: null,
   });
   const [mySpace, setMySpace] = useState("profile");
 
@@ -52,6 +53,7 @@ const UserInfoShape = {
   activeSearch: propTypes.number,
   CV: propTypes.string,
   avatar: propTypes.string,
+  biography: propTypes.string,
 };
 
 Provider.propTypes = {
