@@ -7,11 +7,17 @@ import { Context } from "../../contexts/Context";
 
 export default function DisplayOffers() {
   const [offers, setOffers] = useState([]);
-  const { searchValue, filterCdd, filterCdi, filterAlternance, filterInternship } = useContext(Context);
+  const {
+    searchValue,
+    filterCdd,
+    filterCdi,
+    filterAlternance,
+    filterInternship,
+  } = useContext(Context);
 
-const api = useApi();
+  const api = useApi();
 
-useEffect(() => {
+  useEffect(() => {
     api.get("/offers").then(({ data }) => {
       const data2 = data;
       for (let i = 0; i < data2.length; i += 1) {

@@ -4,7 +4,6 @@ import { createContext, useMemo, useState } from "react";
 const Context = createContext();
 
 function Provider({ children }) {
-
   /* useState du composant searchBar */
   const [searchValue, setSearchValue] = useState("");
 
@@ -14,7 +13,12 @@ function Provider({ children }) {
   const [filterAlternance, setFilterAlternance] = useState(false);
   const [filterInternship, setFilterInternship] = useState(false);
 
-  const [searchValue, setSearchValue] = useState("");
+  /* useState du composant UserGeolocation */
+  const [userCoordinates, setUserCoordinates] = useState({
+    latitude: null,
+    longitude: null,
+  });
+
   const [userInfo, setUserInfo] = useState({
     id: null,
     lastname: null,
@@ -29,14 +33,13 @@ function Provider({ children }) {
     CV: null,
     avatar: null,
   });
-  const [mySpace, setMySpace] = useState("profile");
 
+  const [mySpace, setMySpace] = useState("profile");
 
   const context = useMemo(
     () => ({
       searchValue,
       setSearchValue,
-
       filterCdd,
       setFilterCdd,
       filterCdi,
@@ -45,6 +48,12 @@ function Provider({ children }) {
       setFilterAlternance,
       filterInternship,
       setFilterInternship,
+      userCoordinates,
+      setUserCoordinates,
+      userInfo,
+      setUserInfo,
+      mySpace,
+      setMySpace,
     }),
     [
       searchValue,
@@ -57,15 +66,13 @@ function Provider({ children }) {
       setFilterAlternance,
       filterInternship,
       setFilterInternship,
-    ]
-
+      userCoordinates,
+      setUserCoordinates,
       userInfo,
       setUserInfo,
       mySpace,
       setMySpace,
-    }),
-    [searchValue, setSearchValue, userInfo, setUserInfo, mySpace, setMySpace]
-
+    ]
   );
 
   return <Context.Provider value={context}>{children}</Context.Provider>;
@@ -108,6 +115,5 @@ Provider.propTypes = {
     setUserInfo: propTypes.shape(UserInfoShape),
     mySpace: propTypes.string,
     setMySpace: propTypes.string,
-
   }).isRequired,
 };
