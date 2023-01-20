@@ -39,7 +39,7 @@ export default function BurgerMenu() {
         <Style>
           <Menu
             left
-            width="50vw"
+            width="25vw"
             isOpen={isOpen}
             onOpen={handleIsOpen}
             onClose={handleIsOpen}

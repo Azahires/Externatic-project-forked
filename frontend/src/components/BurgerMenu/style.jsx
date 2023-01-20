@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default styled.nav`
   .bm-burger-button {
     position: fixed;
-    width: 36px;
+    width: 33px;
     height: 30px;
     left: 1rem;
     top: 15px;
@@ -42,7 +42,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .bm-item-list {
     color: white;
     padding-top: 6rem;
-    width: 50vw;
+    width: 25vw;
     @media (max-width: 768px) {
       width: 100vw;
     }
