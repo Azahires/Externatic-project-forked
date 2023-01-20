@@ -7,7 +7,8 @@ export default styled.form`
   width: 200px;
   height: 50vh;
   margin: auto;
-  input {
+  input,
+  .error {
     border-radius: 10px;
     height: 50px;
     width: 300px;
@@ -26,5 +27,16 @@ export default styled.form`
   }
   input:hover {
     background-color: #c91961;
+  }
+
+  .noerror {
+    display: none;
+  }
+
+  .error {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #c91961;
+    font-weight: bold;
   }
 `;

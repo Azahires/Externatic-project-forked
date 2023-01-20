@@ -19,6 +19,23 @@ function Provider({ children }) {
     longitude: null,
   });
 
+  const [userInfo, setUserInfo] = useState({
+    id: null,
+    lastname: null,
+    firstname: null,
+    email: null,
+    phonenumber: null,
+    linkedinlink: null,
+    githublink: null,
+    city: null,
+    activeSearch: null,
+    postalcode: null,
+    CV: null,
+    avatar: null,
+  });
+
+  const [mySpace, setMySpace] = useState("profile");
+
   const context = useMemo(
     () => ({
       searchValue,
@@ -33,6 +50,10 @@ function Provider({ children }) {
       setFilterInternship,
       userCoordinates,
       setUserCoordinates,
+      userInfo,
+      setUserInfo,
+      mySpace,
+      setMySpace,
     }),
     [
       searchValue,
@@ -47,6 +68,10 @@ function Provider({ children }) {
       setFilterInternship,
       userCoordinates,
       setUserCoordinates,
+      userInfo,
+      setUserInfo,
+      mySpace,
+      setMySpace,
     ]
   );
 
@@ -57,10 +82,26 @@ export default Provider;
 
 export { Context };
 
+const UserInfoShape = {
+  id: propTypes.number,
+  lastname: propTypes.string,
+  firstname: propTypes.string,
+  email: propTypes.string,
+  phonenumber: propTypes.string,
+  linkedinlink: propTypes.string,
+  githublink: propTypes.string,
+  city: propTypes.string,
+  postalcode: propTypes.number,
+  activeSearch: propTypes.number,
+  CV: propTypes.string,
+  avatar: propTypes.string,
+};
+
 Provider.propTypes = {
   children: propTypes.shape({
     searchValue: propTypes.string,
     setSearchValue: propTypes.string,
+
     filterCdd: propTypes.bool,
     setFilterCdd: propTypes.bool,
     filterCdi: propTypes.bool,
@@ -69,5 +110,10 @@ Provider.propTypes = {
     setFilterAlternance: propTypes.bool,
     filterInternship: propTypes.bool,
     setFilterInternship: propTypes.bool,
+
+    userInfo: propTypes.shape(UserInfoShape),
+    setUserInfo: propTypes.shape(UserInfoShape),
+    mySpace: propTypes.string,
+    setMySpace: propTypes.string,
   }).isRequired,
 };
