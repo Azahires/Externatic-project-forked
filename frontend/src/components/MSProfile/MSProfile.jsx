@@ -2,7 +2,9 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../contexts/Context";
 import Style from "./style";
-import Avatar from "../../assets/avatar.jpg";
+import Avatar from "../../assets/avatar.svg";
+import LinkedIn from "../../assets/linkedin.svg";
+import GitHub from "../../assets/github.svg";
 
 export default function MSProfile() {
   const { userInfo } = useContext(Context);
@@ -18,11 +20,17 @@ export default function MSProfile() {
             <div className="socialMediaContainer">
               <a href={userInfo.linkedinlink} target="_blank" rel="noreferrer">
                 <button className="buttonSocialMediaLinkedin" type="button">
+                  <img
+                    className="linkedinLogo"
+                    src={LinkedIn}
+                    alt="Linkedin logo"
+                  />
                   LinkedIn
                 </button>
               </a>
               <a href={userInfo.githublink} target="_blank" rel="noreferrer">
                 <button className="buttonSocialMediaGitHub" type="button">
+                  <img className="githubLogo" src={GitHub} alt="GitHub logo" />
                   GitHub
                 </button>
               </a>
