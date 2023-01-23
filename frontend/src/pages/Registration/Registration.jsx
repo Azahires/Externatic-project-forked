@@ -24,6 +24,7 @@ export default function Registration() {
       .catch(() => {
         setError("error");
       });
+    console.log(onSubmit);
   };
 
   const hchange = () => {
@@ -34,13 +35,13 @@ export default function Registration() {
     <Style onSubmit={handleSubmit(onSubmit)} onChange={hchange}>
       <input
         type="text"
-        placeholder="Last name"
+        placeholder="First name"
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...register("lastname", { required: true, maxLength: 100 })}
       />
       <input
         type="text"
-        placeholder="First name"
+        placeholder="Last name"
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...register("firstname", { required: true, maxLength: 80 })}
       />

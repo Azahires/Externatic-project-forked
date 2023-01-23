@@ -192,7 +192,13 @@ export default function UpdateAccount() {
         onChange={hChange}
       />
       <p>Télécharger un CV:</p>
-      <input type="file" name="CV" placeholder="Votre CV" ref={CVRef} />
+      <input
+        type="file"
+        name="CV"
+        placeholder="Votre CV"
+        ref={CVRef}
+        classeName="btn-files"
+      />
       <input className="btn" type="submit" value="Modifier son profil" />
       <p className={error}>
         Une erreur est survenue, veuillez vérifier les champs et vous assurez

@@ -3,16 +3,14 @@ import styled from "styled-components";
 export default styled.nav`
   display: flex;
   justify-content: space-between;
+  height: 30vh;
   button {
     cursor: pointer;
     width: 100%;
-    height: 6vh;
+    height: 5vh;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
-    background: #c91961;
     border: none;
-    border-bottom: 3px solid #c91961;
     letter-spacing: 0.125rem;
     text-align: center;
     position: relative;

@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export default styled.form`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: auto;
+  background-image: linear-gradient(120deg, #f7f6f5 0%, #c91961 100%);
   input,
   .error,
   textarea {
+    border: none;
     border-radius: 10px;
     height: 50px;
     width: 300px;
@@ -21,8 +21,10 @@ export default styled.form`
   input[type="file"] {
     height: initial;
     width: initial;
-    margin: 10px auto;
+    margin: 2% auto;
     border-radius: initial;
+    background: none;
+    border: none;
   }
 
   input[type="radio"] {
@@ -46,12 +48,12 @@ export default styled.form`
     width: 310px;
   }
   .btn:hover {
-    background-color: #c91961;
-    color: black;
+    font-family: JostBold;
+    color: #c91961;
   }
-  input:hover,
-  textarea:hover {
-    background-color: #c91961;
+  input:hover {
+    font-family: JostBold;
+    color: #c91961;
   }
 
   .noerror,
@@ -69,5 +71,14 @@ export default styled.form`
 
   p {
     text-align: center;
+    font-family: Jost;
+  }
+  input::-webkit-input-placeholder {
+    color: #c91961;
+  }
+  textarea:hover {
+    border: 2px solid;
+    font-family: JostBold;
+    color: #c91961;
   }
 `;
