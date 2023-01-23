@@ -32,6 +32,7 @@ function Provider({ children }) {
     postalcode: null,
     CV: null,
     avatar: null,
+    biography: null,
   });
 
   const [mySpace, setMySpace] = useState("profile");
@@ -66,8 +67,6 @@ function Provider({ children }) {
       setFilterAlternance,
       filterInternship,
       setFilterInternship,
-      userCoordinates,
-      setUserCoordinates,
       userInfo,
       setUserInfo,
       mySpace,
@@ -95,13 +94,13 @@ const UserInfoShape = {
   activeSearch: propTypes.number,
   CV: propTypes.string,
   avatar: propTypes.string,
+  biography: propTypes.string,
 };
 
 Provider.propTypes = {
   children: propTypes.shape({
     searchValue: propTypes.string,
     setSearchValue: propTypes.string,
-
     filterCdd: propTypes.bool,
     setFilterCdd: propTypes.bool,
     filterCdi: propTypes.bool,
@@ -110,7 +109,6 @@ Provider.propTypes = {
     setFilterAlternance: propTypes.bool,
     filterInternship: propTypes.bool,
     setFilterInternship: propTypes.bool,
-
     userInfo: propTypes.shape(UserInfoShape),
     setUserInfo: propTypes.shape(UserInfoShape),
     mySpace: propTypes.string,

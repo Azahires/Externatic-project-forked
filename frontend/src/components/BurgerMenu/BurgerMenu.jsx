@@ -96,6 +96,15 @@ export default function BurgerMenu() {
               type="button"
               onClick={() => {
                 closeSideBar();
+                navigate("/team");
+              }}
+            >
+              Notre équipe
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                closeSideBar();
                 navigate("/about");
               }}
             >
