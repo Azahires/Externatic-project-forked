@@ -12,6 +12,13 @@ function Provider({ children }) {
   const [filterCdi, setFilterCdi] = useState(false);
   const [filterAlternance, setFilterAlternance] = useState(false);
   const [filterInternship, setFilterInternship] = useState(false);
+
+  /* useState du composant UserGeolocation */
+  const [userCoordinates, setUserCoordinates] = useState({
+    latitude: null,
+    longitude: null,
+  });
+
   const [userInfo, setUserInfo] = useState({
     id: null,
     lastname: null,
@@ -27,6 +34,7 @@ function Provider({ children }) {
     avatar: null,
     biography: null,
   });
+
   const [mySpace, setMySpace] = useState("profile");
 
   const context = useMemo(
@@ -41,6 +49,8 @@ function Provider({ children }) {
       setFilterAlternance,
       filterInternship,
       setFilterInternship,
+      userCoordinates,
+      setUserCoordinates,
       userInfo,
       setUserInfo,
       mySpace,
