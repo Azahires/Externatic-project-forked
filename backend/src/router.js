@@ -26,6 +26,14 @@ router.post("/offers", offerControllers.add);
 router.put("/offers/:id", offerControllers.edit);
 router.delete("/offers/:id", offerControllers.destroy);
 
+const consultantControllers = require("./controllers/consultantControllers");
+
+router.get("/team", consultantControllers.browse);
+router.get("/team/:id", consultantControllers.read);
+router.put("/team/:id", consultantControllers.edit);
+router.post("/team", consultantControllers.add);
+router.delete("/team/:id", consultantControllers.destroy);
+
 router.get("/users", userControllers.browse);
 router.get("/users/:id", userControllers.read);
 router.post("/users", validateUserCreation, hashPassword, userControllers.add);

@@ -58,7 +58,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 export const BurgerMenuContainer = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
   width: 100vw;
-  height: 60px;
+  height: 6vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,7 +67,7 @@ export const BurgerMenuContainer = styled.div`
 export const LeftSection = styled.div`
   display: flex;
   width: 40vw;
-  height: 60px;
+  height: 6vh;
   font-family: "Jost", sans-serif;
   button {
     font-family: "Jost", sans-serif;

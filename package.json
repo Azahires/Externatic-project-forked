@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/WildCodeSchool/2022-09-JS-Lille-project-3-g2-externatic/issues"
   },
-  "homepage": "https://github.com/WildCodeSchool/2022-09-JS-Lille-project-3-g2-externatic#readme"
+  "homepage": "https://github.com/WildCodeSchool/2022-09-JS-Lille-project-3-g2-externatic#readme",
+  "dependencies": {
+    "swiper": "^8.4.5"
+  }
 }
