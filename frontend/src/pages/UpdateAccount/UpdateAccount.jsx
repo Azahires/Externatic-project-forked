@@ -40,28 +40,28 @@ export default function UpdateAccount() {
         setError("error");
         setModifValidation(false);
       });
-    if (avatarRef.current.files[0]) {
-      const avatarform = new FormData();
-      avatarform.append("avatar", avatarRef.current.files[0]);
+    if (CVRef.current.files[0]) {
+      const CV = new FormData();
+      CV.append("CV", CVRef.current.files[0]);
       api
-        .post("/avatar", avatarform)
+        .put(`/cv/${userInfo.id}`, CV)
         .then(({ data }) => {
           setModification("modification");
-          setUserInfo({ ...userInfo, avatar: data });
+          setUserInfo({ ...userInfo, CV: data });
         })
         .catch(() => {
           setError("error");
           setModifValidation(false);
         });
     }
-    if (CVRef.current.files[0]) {
-      const CV = new FormData();
-      CV.append("CV", CVRef.current.files[0]);
+    if (avatarRef.current.files[0]) {
+      const avatarform = new FormData();
+      avatarform.append("avatar", avatarRef.current.files[0]);
       api
-        .post("/cv", CV)
+        .put(`/avatar/${userInfo.id}`, avatarform)
         .then(({ data }) => {
           setModification("modification");
-          setUserInfo({ ...userInfo, CV: data });
+          setUserInfo({ ...userInfo, avatar: data });
         })
         .catch(() => {
           setError("error");
