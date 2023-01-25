@@ -47,6 +47,23 @@ const edit = (req, res) => {
     });
 };
 
+const editFile = (req, res) => {
+  const { newname, fieldname } = req.file;
+  const id = parseInt(req.params.id, 10);
+  models.user
+    .updateFile(fieldname, newname, id)
+    .then(([result]) => {
+      if (result.affectedRows === 0) {
+        res.sendStatus(404);
+      } else {
+        res.send(newname).status(204);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
 const add = (req, res) => {
   const user = req.body;
   models.user
@@ -85,4 +102,5 @@ module.exports = {
   edit,
   add,
   destroy,
+  editFile,
 };
