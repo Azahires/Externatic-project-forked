@@ -9,7 +9,6 @@ import Connexion from "@pages/Connexion/Connexion";
 import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
 import MySpace from "@pages/MySpace/MySpace";
 import { useContext } from "react";
-import UpdateAccount from "@pages/UpdateAccount/UpdateAccount";
 import Team from "@pages/Team/Team";
 import { Context } from "./contexts/Context";
 import Style from "./style";
@@ -31,7 +30,6 @@ export default function App() {
           path="/account"
           element={userInfo.email ? <MySpace /> : <Connexion />}
         />
-        <Route path="/account/update" element={<UpdateAccount />} />
       </Routes>
     </Style>
   );

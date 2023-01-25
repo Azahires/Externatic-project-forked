@@ -188,6 +188,7 @@ export default styled.div`
   .checkboxContainer {
     display: flex;
     font-size: 1.2rem;
+    margin-bottom: 1.5rem;
   }
   label {
     padding-left: 0.5rem;
@@ -202,5 +203,105 @@ export default styled.div`
   }
   a {
     text-decoration: none;
+  }
+
+  #visible,
+  .visible {
+    display: inherit;
+  }
+  #hidden,
+  .hidden {
+    display: none;
+  }
+
+  .formPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40vw;
+    height: 75vh;
+    padding: 2vh 0;
+    background-color: #ecf0f1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    input,
+    .error {
+      border-radius: 10px;
+      height: 2rem;
+      width: 300px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input[type="file"] {
+      height: initial;
+      width: initial;
+      margin: 10px auto;
+      border-radius: initial;
+    }
+
+    input[type="radio"] {
+      height: initial;
+      width: initial;
+      display: initial;
+      margin: 10px auto;
+    }
+
+    fieldset {
+      text-align: center;
+    }
+
+    input:hover {
+      background-color: #c91961;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .bioPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+    height: 20vh;
+    padding: 2vh 0;
+    textarea {
+      border-radius: 10px;
+      height: 100%;
+      width: 100%;
+      resize: none;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-family: "Jost";
+    }
+    textarea:hover {
+      background-color: #c91961;
+    }
+  }
+
+  .searchbutton {
+    margin: auto auto 1rem auto;
+  }
+
+  a {
+    color: #c91961;
+  }
+
+  input[name="CV"] {
+    margin-bottom: 1.5rem;
+  }
+  .noerror {
+    display: none;
+  }
+  .error {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #c91961;
+    font-weight: bold;
   }
 `;

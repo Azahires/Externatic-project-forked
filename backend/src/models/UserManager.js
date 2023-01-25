@@ -21,7 +21,7 @@ class UserManager extends AbstractManager {
 
   update(user) {
     return this.connection.query(
-      `update ${this.table} set lastname= ?, firstname=?, email= ?, phonenumber=?, linkedinlink=?, githublink=?, city=?, postalcode=?, activeSearch=?, biography=?  where id = ?`,
+      `update ${this.table} set lastname= ?, firstname=?, email= ?, phonenumber=?, linkedinlink=?, githublink=?, city=?, postalcode=?, activeSearch=?, biography=?, avatar=?, CV=?  where id = ?`,
       [
         user.lastname,
         user.firstname,
@@ -33,8 +33,17 @@ class UserManager extends AbstractManager {
         user.postalcode,
         user.activeSearch,
         user.biography,
+        user.avatar,
+        user.CV,
         user.id,
       ]
+    );
+  }
+
+  updateFile(fieldname, file, id) {
+    return this.connection.query(
+      `update ${this.table} set ${fieldname}= ? where id = ?`,
+      [file, id]
     );
   }
 }
