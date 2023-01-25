@@ -69,6 +69,7 @@ export default function DisplayOffers() {
             searchValue.toLowerCase()
           );
         })
+        .slice(0, 3)
         .map((offer) => {
           return (
             <OfferCard

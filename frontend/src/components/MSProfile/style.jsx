@@ -281,6 +281,7 @@ export default styled.div`
     }
     textarea:hover {
       background-color: #c91961;
+      color: #ecf0f1;
     }
   }
 

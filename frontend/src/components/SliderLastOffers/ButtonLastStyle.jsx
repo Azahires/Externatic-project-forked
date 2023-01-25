@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export default styled.div`
+  a {
+    text-decoration: none;
+  }
+
   .flex-container {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
   }
 
   button {
