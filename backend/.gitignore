@@ -2,3 +2,5 @@ node_modules
 .env
 package-lock.json
 uploads
+public/assets/connecteduserfiles/useravatar*
+public/assets/connecteduserfiles/userCV*
