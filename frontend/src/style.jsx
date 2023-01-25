@@ -5,6 +5,7 @@ import JostBold from "@assets/Jost/static/Jost-Bold.ttf";
 export default styled.div`
   width: 100vw;
   overflow: hidden;
+  background-color: #fff5f8;
 
   @font-face {
     font-family: Jost;

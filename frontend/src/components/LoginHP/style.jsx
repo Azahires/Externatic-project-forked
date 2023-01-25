@@ -16,12 +16,21 @@ export default styled.div`
     font-family: "Jost", sans-serif;
     background-color: white;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      height: 45vh;
+      width: 80vw;
+      margin-bottom: 2rem;
+    }
   }
   .loginhpText {
     font-size: 1.3rem;
     text-align: center;
     padding-bottom: 1rem;
     line-height: 1.8rem;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
   }
   em {
     font-size: 1.5rem;
@@ -44,6 +53,11 @@ export default styled.div`
     text-align: center;
     position: relative;
     transition: all 0.35s;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      width: 60vw;
+      height: 5vh;
+      margin-top: 1rem;
+    }
   }
   .loginhpButton span {
     position: relative;
@@ -69,6 +83,9 @@ export default styled.div`
     text-transform: uppercase;
     color: #c91961;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      font-size: 1.5rem;
+    }
   }
 `;

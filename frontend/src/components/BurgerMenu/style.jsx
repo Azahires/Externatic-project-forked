@@ -62,12 +62,16 @@ export const BurgerMenuContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2rem;
 `;
 
 export const LeftSection = styled.div`
   display: flex;
   width: 40vw;
   height: 6vh;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    width: 20vw;
+  }
   font-family: "Jost", sans-serif;
   button {
     font-family: "Jost", sans-serif;
@@ -94,8 +98,17 @@ export const MiddleSection = styled.div`
   justify-content: center;
   width: 20vw;
   font-family: "Jost", sans-serif;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    display: 20vw;
+  }
   img {
     height: 30px;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      height: 17px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
 
@@ -104,9 +117,15 @@ export const RightSection = styled.div`
   width: 40vw;
   justify-content: flex-end;
   padding-right: 1rem;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    width: 60vw;
+  }
+
   button {
     font-family: "Jost", sans-serif;
-    padding: 8px 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 1rem;
     cursor: pointer;
     font-size: 1rem;
@@ -123,6 +142,11 @@ export const RightSection = styled.div`
   }
   .visible {
     display: inherit;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      width: 35vw;
+      height: 5vh;
+      font-size: 0.6rem;
+    }
   }
   .hidden {
     display: none;

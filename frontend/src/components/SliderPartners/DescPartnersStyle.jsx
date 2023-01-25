@@ -7,6 +7,15 @@ export default styled.div`
     align-items: center;
     color: black;
     margin-top: 3rem;
+    font-size: 2rem;
+    background-image: linear-gradient(
+      90deg,
+      rgba(201, 25, 97, 0.4) 0%,
+      rgba(201, 25, 97, 0.4) 100%
+    );
+    background-size: 15% 8px;
+    background-repeat: no-repeat;
+    background-position: center 100%;
   }
 
   p {

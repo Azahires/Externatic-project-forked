@@ -10,8 +10,13 @@ export default styled.div`
     text-decoration: none;
     color: white;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     margin: 2em;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      margin: 0;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
   }
 
   .info-content,
@@ -20,6 +25,9 @@ export default styled.div`
     text-decoration: none;
     color: white;
     margin: auto;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      margin: none;
+    }
   }
 
   .info-content,

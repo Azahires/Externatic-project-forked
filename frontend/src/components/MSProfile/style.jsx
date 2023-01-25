@@ -200,4 +200,7 @@ export default styled.div`
     flex-direction: row;
     padding-top: 1.5rem;
   }
+  a {
+    text-decoration: none;
+  }
 `;
