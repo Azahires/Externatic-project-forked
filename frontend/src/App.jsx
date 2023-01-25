@@ -10,6 +10,7 @@ import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
 import MySpace from "@pages/MySpace/MySpace";
 import { useContext } from "react";
 import UpdateAccount from "@pages/UpdateAccount/UpdateAccount";
+import Team from "@pages/Team/Team";
 import { Context } from "./contexts/Context";
 import Style from "./style";
 
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/offers" element={<Offers />} />
         <Route path="/offers/:id" element={<Offer />} />
         <Route path="/about" element={<Whoweare />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/signin" element={<Registration />} />
         <Route path="/login" element={<Connexion />} />
         <Route
