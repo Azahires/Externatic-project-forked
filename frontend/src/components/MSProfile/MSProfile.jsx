@@ -363,10 +363,10 @@ export default function MSProfile() {
                       name="activeSearch"
                       value="1"
                       onClick={() => {
-                        setUserInfo({ ...userInfo, activeSearch: true });
+                        setUserInfo({ ...userInfo, activeSearch: 1 });
                         setSearchVisibility(true);
                       }}
-                      checked={userInfo.activeSearch === true}
+                      checked={userInfo.activeSearch === 1}
                       // eslint-disable-next-line react/jsx-props-no-spreading
                       {...register("activeSearch", { required: false })}
                     />
@@ -381,10 +381,10 @@ export default function MSProfile() {
                       name="activeSearch"
                       value="0"
                       onClick={() => {
-                        setUserInfo({ ...userInfo, activeSearch: false });
+                        setUserInfo({ ...userInfo, activeSearch: 0 });
                         setSearchVisibility(true);
                       }}
-                      checked={userInfo.activeSearch === false}
+                      checked={userInfo.activeSearch === 0}
                       // eslint-disable-next-line react/jsx-props-no-spreading
                       {...register("activeSearch", { required: false })}
                     />
