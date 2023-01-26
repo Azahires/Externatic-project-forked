@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
-import useApi from "@services/useApi";
+import useApi from "../../services/useApi";
 import { Context } from "../../contexts/Context";
 import Style from "./style";
 
@@ -24,7 +24,6 @@ export default function Registration() {
       .catch(() => {
         setError("error");
       });
-    console.log(onSubmit);
   };
 
   const hchange = () => {
