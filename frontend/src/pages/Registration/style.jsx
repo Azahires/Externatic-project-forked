@@ -4,10 +4,11 @@ export default styled.form`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 200px;
+  width: 20em;
   margin: auto;
   input,
   .error {
+    border: none;
     border-radius: 10px;
     height: 50px;
     width: 300px;
@@ -22,12 +23,15 @@ export default styled.form`
   }
   .btn:hover {
     background-color: #c91961;
-    color: black;
+    color: #f6f1f1;
   }
   input:hover {
-    background-color: #c91961;
+    border: 2px solid #c91961;
+    font-family: JostBold;
   }
-
+  input::-webkit-input-placeholder {
+    color: #c91961;
+  }
   .noerror {
     display: none;
   }
