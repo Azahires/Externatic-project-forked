@@ -18,6 +18,7 @@ const {
   verifyToken,
 } = require("./services/authentification");
 const { renameAndMoveFile, moveFiles } = require("./services/filemanipulation");
+const { sendApplicationMail } = require("./services/sendEmail");
 
 router.get("/offers", offerControllers.browse);
 router.get("/offers/:id", offerControllers.read);
@@ -53,4 +54,6 @@ router.delete("/users/:id", userControllers.destroy);
 
 router.post("/login", verifyUser, verifyPassword, moveFiles);
 router.get("/account", verifyToken);
+
+router.post("/mailing", sendApplicationMail);
 module.exports = router;
