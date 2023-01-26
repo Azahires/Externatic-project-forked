@@ -11,7 +11,7 @@ export default function MySpace() {
   return (
     <Style>
       <MSNavbar />
-      <MSProfile className={mySpace === "profile" ? "hidden" : "hidden"} />
+      <MSProfile className={mySpace === "profile" ? "visible" : "hidden"} />
       <MSFavorites className={mySpace === "favorites" ? "visible" : "hidden"} />
       <MSApplications
         className={mySpace === "applications" ? "visible" : "hidden"}
