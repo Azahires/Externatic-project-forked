@@ -21,7 +21,7 @@ export default styled.div`
     :hover .textMoreInformation {
       color: white;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 90vw;
       height: 40vh;
       margin-bottom: 3rem;
@@ -54,7 +54,7 @@ export default styled.div`
     justify-content: space-between;
     height: 12vh;
     width: 25vw;
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       height: 12vh;
       width: 90vw;
     }
@@ -68,7 +68,7 @@ export default styled.div`
     flex-direction: column;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 45vw;
     }
   }
@@ -79,6 +79,9 @@ export default styled.div`
     font-size: 1.2rem;
     font-weight: bold;
     color: black;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      font-size: 1rem;
+    }
   }
   .textContractType,
   .textLocation,
@@ -86,6 +89,9 @@ export default styled.div`
     font-size: 1.2rem;
     font-weight: 500;
     color: #c91961;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      font-size: 1rem;
+    }
   }
   .textPublicationDate {
     padding-left: 0.5rem;
@@ -100,7 +106,7 @@ export default styled.div`
     font-size: 1.2rem;
     color: black;
     border-bottom: 2px solid black;
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 90vw;
     }
   }
@@ -117,7 +123,7 @@ export default styled.div`
     align-items: center;
     background-color: white;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 90vw;
     }
   }

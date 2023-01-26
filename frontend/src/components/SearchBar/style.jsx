@@ -3,6 +3,12 @@ import styled from "styled-components";
 export default styled.div`
   input {
     width: 50rem;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 95vw;
+      border: 1px solid black;
+      border-radius: 5px;
+      color: black;
+    }
   }
 
   button {

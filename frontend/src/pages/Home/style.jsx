@@ -5,7 +5,7 @@ export default styled.div`
     display: flex;
     justify-content: space-around;
     margin-top: 3rem;
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       flex-direction: column;
     }
   }
