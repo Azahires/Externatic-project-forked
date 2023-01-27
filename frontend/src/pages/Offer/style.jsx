@@ -16,13 +16,16 @@ export default styled.div`
     align-items: center;
     text-align: justify;
     padding: 0 5vw;
+    background-color: #ffffffa1;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ecf0f1' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   }
   #offerinfo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    border: 3px solid ${mainColor};
+    color: #c91162;
     width: 100%;
     padding: 2rem;
     box-sizing: border-box;
@@ -43,13 +46,13 @@ export default styled.div`
   h3 {
     font-size: 1.6rem;
     text-align: left;
-    width: 100%;
     margin: 2rem 0 0 0;
     padding: 0.5rem 1rem;
-    border-top: 2px dashed ${mainColor};
-    border-bottom: 2px dashed ${mainColor};
     font-family: "JostBold";
     box-sizing: border-box;
+    color: #c91162;
+    border: 2px solid #c91162;
+    border-radius: 10px;
   }
 
   p {
@@ -57,6 +60,7 @@ export default styled.div`
     width: 100%;
     font-size: 1.2rem;
     margin: 1rem 0;
+    font-family: Jost;
   }
   b {
     font-family: "JostBold";
@@ -75,7 +79,6 @@ export default styled.div`
     margin: 1rem 0;
   }
   .consultantPart {
-    width: 100%;
     .picturepart {
       display: flex;
       align-items: center;
@@ -88,6 +91,7 @@ export default styled.div`
     }
     li {
       list-style-type: none;
+      font-family: Jost;
     }
     .conspicture {
       width: 7rem;
@@ -98,6 +102,10 @@ export default styled.div`
       opacity: 0.9;
       border-radius: 10px;
     }
+    a {
+      text-decoration: none;
+      color: #c91162;
+    }
   }
   .lastmessage {
     margin-top: 3rem;
@@ -105,8 +113,7 @@ export default styled.div`
     font-weight: bold;
     text-align: center;
     font-size: 1.3rem;
-    border-top: 2px dotted ${mainColor};
-    border-bottom: 2px dotted ${mainColor};
+    color: #c91162;
     padding: 1rem 0;
   }
   .firstcontainer {
@@ -134,18 +141,18 @@ export default styled.div`
       font-size: 2.2rem;
       font-family: "JostBold";
       padding: 1rem;
-      border: 3px solid ${mainColor};
+      border: 1px solid ${mainColor};
       cursor: pointer;
       border-radius: 20px;
     }
 
     button:hover {
-      color: white;
+      color: #c91162;
       transition: color 0.5s cubic-bezier(0.33, 1, 0.68, 1);
     }
 
     button::before {
-      background-color: ${mainColor};
+      background-color: white;
       content: "";
       position: absolute;
       z-index: -1;

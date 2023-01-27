@@ -223,16 +223,20 @@ export default styled.div`
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     input,
     .error {
-      border-radius: 10px;
+      color: grey;
+      font-family: JostBold;
+      border: none;
       height: 2rem;
       width: 300px;
       margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 10px;
     }
 
     input[type="file"] {
+      border: none;
       height: initial;
       width: initial;
       margin: 10px auto;
@@ -245,13 +249,13 @@ export default styled.div`
       display: initial;
       margin: 10px auto;
     }
+    input:hover {
+      font-family: JostBold;
+      color: #c91961;
+    }
 
     fieldset {
       text-align: center;
-    }
-
-    input:hover {
-      background-color: #c91961;
     }
 
     p {
@@ -275,9 +279,6 @@ export default styled.div`
       margin-bottom: 1rem;
       font-size: 1.2rem;
       font-family: "Jost";
-    }
-    textarea:hover {
-      background-color: #c91961;
     }
   }
 
