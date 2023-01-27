@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
-import useApi from "@services/useApi";
+import useApi from "../../services/useApi";
 import { Context } from "../../contexts/Context";
 import Style from "./style";
 
@@ -34,13 +34,13 @@ export default function Registration() {
     <Style onSubmit={handleSubmit(onSubmit)} onChange={hchange}>
       <input
         type="text"
-        placeholder="Last name"
+        placeholder="First name"
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...register("lastname", { required: true, maxLength: 100 })}
       />
       <input
         type="text"
-        placeholder="First name"
+        placeholder="Last name"
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...register("firstname", { required: true, maxLength: 80 })}
       />
