@@ -370,9 +370,7 @@ export default function MSProfile() {
                       // eslint-disable-next-line react/jsx-props-no-spreading
                       {...register("activeSearch", { required: false })}
                     />
-                    <label htmlFor="activeSearch">
-                      En recherche active d'un poste
-                    </label>
+                    <label htmlFor="activeSearch">En recherche active</label>
                   </div>
                   <div className="checkbox2">
                     <input
@@ -388,9 +386,7 @@ export default function MSProfile() {
                       // eslint-disable-next-line react/jsx-props-no-spreading
                       {...register("activeSearch", { required: false })}
                     />
-                    <label htmlFor="passiveSearch">
-                      Ouvert aux opportunités
-                    </label>
+                    <label htmlFor="passiveSearch">En recherche passive</label>
                   </div>
                 </div>
               </fieldset>
