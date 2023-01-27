@@ -14,7 +14,8 @@ export default styled.div`
     width: 38vw;
     height: 20vh;
     font-family: "Jost", sans-serif;
-    background-color: whitesmoke;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   }
   .presentationText {
     font-size: 1.3rem;

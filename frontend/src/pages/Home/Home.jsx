@@ -1,6 +1,7 @@
+import PresentationHP from "@components/PresentationHP/PresentationHP";
 import DisplayOffers from "@components/DisplayOffers/DisplayOffers";
 import LoginHP from "@components/LoginHP/LoginHP";
-import PresentationHP from "@components/PresentationHP/PresentationHP";
+import Footer from "@components/Footer/Footer";
 import Partners from "../../components/SliderPartners/Partners";
 import ButtonLast from "../../components/SliderLastOffers/ButtonLast";
 import DescPartnes from "../../components/SliderPartners/DescPartnes";
@@ -22,6 +23,7 @@ export default function Home() {
         <ButtonLast />
         <DescPartnes />
         <Partners />
+        <Footer />
       </Style>
     </div>
   );

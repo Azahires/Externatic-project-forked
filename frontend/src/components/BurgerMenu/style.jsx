@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default styled.nav`
   .bm-burger-button {
     position: fixed;
-    width: 36px;
+    width: 33px;
     height: 30px;
     left: 1rem;
     top: 15px;
@@ -42,7 +42,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .bm-item-list {
     color: white;
     padding-top: 6rem;
-    width: 50vw;
+    width: 25vw;
     @media (max-width: 768px) {
       width: 100vw;
     }
@@ -58,7 +58,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 export const BurgerMenuContainer = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
   width: 100vw;
-  height: 60px;
+  height: 6vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,7 +67,7 @@ export const BurgerMenuContainer = styled.div`
 export const LeftSection = styled.div`
   display: flex;
   width: 40vw;
-  height: 60px;
+  height: 6vh;
   font-family: "Jost", sans-serif;
   button {
     font-family: "Jost", sans-serif;
@@ -80,6 +80,12 @@ export const LeftSection = styled.div`
     border: none;
     cursor: pointer;
     padding-bottom: 2rem;
+  }
+  .visible {
+    display: inherit !important; /* Validated by LB */
+  }
+  .hidden {
+    display: none !important;
   }
 `;
 
@@ -114,5 +120,19 @@ export const RightSection = styled.div`
   button:hover {
     background-color: white;
     color: #c91961;
+  }
+  .visible {
+    display: inherit;
+  }
+  .hidden {
+    display: none;
+  }
+  p {
+    margin: auto 0;
+    font-size: 1.2rem;
+    color: #c91961;
+    em {
+      font-style: italic;
+    }
   }
 `;

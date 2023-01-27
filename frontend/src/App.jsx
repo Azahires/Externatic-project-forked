@@ -7,9 +7,14 @@ import Whoweare from "@pages/Whoweare/Whoweare";
 import Registration from "@pages/Registration/Registration";
 import Connexion from "@pages/Connexion/Connexion";
 import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
+import MySpace from "@pages/MySpace/MySpace";
+import { useContext } from "react";
+import Team from "@pages/Team/Team";
+import { Context } from "./contexts/Context";
 import Style from "./style";
 
 export default function App() {
+  const { userInfo } = useContext(Context);
   return (
     <Style>
       <BurgerMenu />
@@ -18,8 +23,13 @@ export default function App() {
         <Route path="/offers" element={<Offers />} />
         <Route path="/offers/:id" element={<Offer />} />
         <Route path="/about" element={<Whoweare />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/signin" element={<Registration />} />
         <Route path="/login" element={<Connexion />} />
+        <Route
+          path="/account"
+          element={userInfo.email ? <MySpace /> : <Connexion />}
+        />
       </Routes>
     </Style>
   );
