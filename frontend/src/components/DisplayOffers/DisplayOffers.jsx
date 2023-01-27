@@ -13,7 +13,10 @@ export default function DisplayOffers() {
     filterCdi,
     filterAlternance,
     filterInternship,
+    userCoordinates,
+    kilometer,
   } = useContext(Context);
+
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/offers`).then(({ data }) => {
       const data2 = data;
@@ -26,6 +29,17 @@ export default function DisplayOffers() {
     });
   }, []);
 
+  function getDistance(xOffer, yOffer) {
+    const yUser = userCoordinates.latitude;
+    const xUser = userCoordinates.longitude;
+
+    const dX = xUser - xOffer;
+    const dY = yUser - yOffer;
+    const dYKm = dY * 110.574;
+    const dXKm = dX * 111.32 * Math.cos(dY);
+    const distKm = Math.sqrt(dXKm ** 2 + dYKm ** 2);
+    return distKm;
+  }
   return (
     <Style>
       {offers
@@ -66,6 +80,9 @@ export default function DisplayOffers() {
             searchValue.toLowerCase()
           );
         })
+        .filter(
+          (offer) => getDistance(offer.longitude, offer.latitude) < kilometer
+        )
         .map((offer) => {
           return (
             <OfferCard
