@@ -5,7 +5,7 @@ import { Context } from "../../contexts/Context";
 import Style from "./style";
 
 export default function MSFavorites() {
-  const { mySpace } = useContext(Context);
+  const { mySpace, userInfo } = useContext(Context);
   const [userFavOffers, setUserFavOffers] = useState();
   const api = useApi();
 
@@ -26,6 +26,7 @@ export default function MSFavorites() {
               offersdata
                 .filter((offer) =>
                   favoritedata
+                    .filter((favorite) => favorite.user_id === userInfo.id)
                     .map((favorite) => favorite.offer_id)
                     .includes(offer.id)
                 )

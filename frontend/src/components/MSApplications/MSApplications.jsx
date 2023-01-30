@@ -5,7 +5,7 @@ import { Context } from "../../contexts/Context";
 import Style from "./style";
 
 export default function MSApplications() {
-  const { mySpace } = useContext(Context);
+  const { mySpace, userInfo } = useContext(Context);
   const [userOffers, setUserOffers] = useState();
   const api = useApi();
 
@@ -26,6 +26,9 @@ export default function MSApplications() {
               offersdata
                 .filter((offer) =>
                   applicationdata
+                    .filter(
+                      (application) => application.user_id === userInfo.id
+                    )
                     .map((application) => application.offer_id)
                     .includes(offer.id)
                 )
