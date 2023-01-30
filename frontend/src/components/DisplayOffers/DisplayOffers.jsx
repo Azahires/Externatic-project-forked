@@ -81,7 +81,13 @@ export default function DisplayOffers() {
           return latinize(offer.title.toLowerCase()).includes(
             searchValue.toLowerCase()
           );
+        }).sort((a, b) => {
+          return (
+            Date.parse(a.publication_date) - Date.parse(b.publication_date)
+          );
         })
+        .reverse()
+        .slice(0, limit)
         .filter(
           (offer) => getDistance(offer.longitude, offer.latitude) < kilometer
         )
