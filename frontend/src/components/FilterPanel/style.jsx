@@ -6,4 +6,7 @@ export default styled.div`
     justify-content: flex-end;
     margin-bottom: 2rem;
   }
+  #volume {
+    accent-color: #c91961;
+  }
 `;

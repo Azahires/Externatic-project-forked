@@ -13,9 +13,11 @@ export default function FilterPanel() {
     setFilterAlternance,
     filterInternship,
     setFilterInternship,
+    userCoordinates /* ATTENTION À CE STATE */,
     setUserCoordinates,
+    kilometer,
+    setKilometer,
   } = useContext(Context);
-
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -41,6 +43,9 @@ export default function FilterPanel() {
   };
   const hInternshipChange = (event) => {
     setFilterInternship(event.target.checked);
+  };
+  const hkilometerChange = (event) => {
+    setKilometer(event.target.value);
   };
   return (
     <Style>
@@ -78,6 +83,16 @@ export default function FilterPanel() {
             value="Stage"
           />
           <label htmlFor="filters">Stage</label>
+          <input
+            type="range"
+            id="volume"
+            name="volume"
+            min="0"
+            max="1000"
+            value={kilometer}
+            onChange={hkilometerChange}
+          ></input>
+          <label htmlFor="volume">Kilomètres {kilometer}</label>
         </form>
       </Centered>
     </Style>
