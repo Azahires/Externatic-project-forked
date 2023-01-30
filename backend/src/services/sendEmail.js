@@ -3,14 +3,13 @@ const transporter = require("./mailer");
 const sendApplicationMail = (req, res) => {
   const { userInfo, consultant, offer } = req.body;
   const searchType = userInfo.activeSearch ? "active" : "passive";
-  const [avatarExtension] = userInfo.avatar.split(".").slice(-1);
   const [CVExtension] = userInfo.CV.split(".").slice(-1);
   transporter.sendMail(
     {
       from: "externatic59@gmail.com",
       to: "externatic59@gmail.com",
       subject: `Nouvelle candidature sur l'offre ${offer.title}`,
-      text: `Bonjour ${consultant.firstname} ${consultant.name}, une nouvelle candidature a été envoyée pour l'offre ${offer.title} publiée le ${offer.publication_date}, localisée à ${offer.location}. Vous trouverez ci-dessous les informations concernant le candidat et son CV. Si son profil correspond au besoin de l'entreprise, nous vous invitons à prendre contact avec le candidat pour poursuivre le process de candidature.
+      text: `Bonjour ${consultant.firstname} ${consultant.name}, une nouvelle candidature a été envoyée pour l'offre ${offer.title} publiée le ${offer.publication_date}, localisée à ${offer.location}. Vous trouverez ci-dessous les informations concernant le candidat et son CV en pièce jointe. Si son profil correspond au besoin de l'entreprise, nous vous invitons à prendre contact avec le candidat pour poursuivre le process de candidature.
       Nom: ${userInfo.lastname}
       Prénom: ${userInfo.firstname}
       Mail: ${userInfo.email}
@@ -100,7 +99,7 @@ const sendApplicationMail = (req, res) => {
             </p>
             <p>
               Vous trouverez ci-dessous les informations concernant le candidat et
-              son CV.
+              son CV en pièce jointe.
             </p>
             <ul class="candidateinfo">
               <li>
@@ -167,26 +166,22 @@ const sendApplicationMail = (req, res) => {
       attachments: [
         {
           filename: "externatic.jpg",
-          path: "http://localhost:5000/assets/images/externatic.jpg",
+          path: `http://localhost:${process.env.APP_PORT}/assets/images/externatic.jpg`,
           cid: "logoexternatic@nodemailer.com", // same cid value as in the html img src
         },
         {
           filename: "github.jpg",
-          path: "http://localhost:5000/assets/images/github.jpg",
+          path: `http://localhost:${process.env.APP_PORT}/assets/images/github.jpg`,
           cid: "logogithub@nodemailer.com", // same cid value as in the html img src
         },
         {
           filename: "logo-linkedin-pink.jpg",
-          path: "http://localhost:5000/assets/images/logo-linkedin-pink.jpg",
+          path: `http://localhost:${process.env.APP_PORT}/assets/images/logo-linkedin-pink.jpg`,
           cid: "logolinkedin@nodemailer.com", // same cid value as in the html img src
         },
         {
           filename: `${userInfo.firstname} ${userInfo.lastname} - CV`,
-          path: `http://localhost:5000/assets/connecteduserfiles/userCV.${CVExtension}`, // stream this file
-        },
-        {
-          filename: `${userInfo.firstname} ${userInfo.lastname} - avatar`,
-          path: `http://localhost:5000/assets/connecteduserfiles/useravatar.${avatarExtension}`, // stream this file
+          path: `http://localhost:${process.env.APP_PORT}/assets/connecteduserfiles/userCV.${CVExtension}`, // stream this file
         },
       ],
     },

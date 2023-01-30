@@ -100,3 +100,7 @@ export default function DisplayOffers() {
     </Style>
   );
 }
+
+DisplayOffers.propTypes = {
+  limit: propTypes.number.isRequired,
+};
