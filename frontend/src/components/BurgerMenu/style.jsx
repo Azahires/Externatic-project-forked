@@ -71,7 +71,7 @@ export const BurgerMenuContainer = styled.div`
 export const LeftSection = styled.div`
   display: flex;
   width: 40vw;
-  height: 10vh;
+  height: 6vh;
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
     width: 20vw;
   }
@@ -113,6 +113,11 @@ export const MiddleSection = styled.div`
       align-items: center;
     }
   }
+
+  button {
+    border: none;
+    background: none;
+  }
 `;
 
 export const RightSection = styled.div`
@@ -138,6 +143,8 @@ export const RightSection = styled.div`
     border-radius: 5px;
     font-weight: bold;
     text-transform: uppercase;
+    width: 8vw;
+    height: 4vh;
   }
   button:hover {
     background-color: white;

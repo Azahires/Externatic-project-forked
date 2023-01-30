@@ -3,6 +3,11 @@ import styled from "styled-components";
 export default styled.div`
   input {
     width: 50rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    border: 1px solid #c91961;
+    border-radius: 5px;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 95vw;
       border: 1px solid black;

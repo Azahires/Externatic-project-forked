@@ -30,19 +30,22 @@ export default styled.div`
   }
   .UserAvatar {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 35vh;
-    width: 21vw;
+    width: 25vw;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
       height: 25vh;
     }
     .AvatarImg {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 300px;
+      max-height: 300px;
       border-radius: 36% 64% 32% 68% / 44% 30% 70% 56%;
+      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+        max-width: 200px;
+        max-height: 200px;
+      }
     }
   }
   .socialMediaContainer {
@@ -51,7 +54,7 @@ export default styled.div`
     justify-content: space-evenly;
     align-items: center;
     height: 34vh;
-    width: 20vw;
+    width: 15vw;
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
@@ -201,7 +204,7 @@ export default styled.div`
     border-radius: 5px;
     margin: 1rem;
     width: 50vw;
-    height: auto;
+    height: 35vh;
     margin-top: 3rem;
     background-color: whitesmoke;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
@@ -215,7 +218,7 @@ export default styled.div`
     font-family: "Jost", sans-serif;
     font-size: 1.5rem;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     color: #c91961;
     font-weight: bold;
   }
