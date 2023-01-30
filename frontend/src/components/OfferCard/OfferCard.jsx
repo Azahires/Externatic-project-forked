@@ -12,12 +12,28 @@ export default function OfferCard({
   return (
     <Style>
       <Link to={`/offers/${id}`}>
-        <h2>{title}</h2>
-        <p>
-          {contracttype} - {location}
-        </p>
-        <p>Date de publication: {publicationdate}</p>
-        <p>En savoir plus</p>
+        <div className="offerCardContainer">
+          <div className="titleOfferCardContainer">
+            <h2 className="titleOfferCard">{title}</h2>
+          </div>
+          <div className="informationOfferCardContainer">
+            <div className="contractType">
+              <h3>📝 Contrat</h3>
+              <p className="textContractType">{contracttype}</p>
+            </div>
+            <div className="location">
+              <h3>📍 Localisation</h3>
+              <p className="textLocation">{location}</p>
+            </div>
+          </div>
+          <div className="publicationDateContainer">
+            <h3>🗓️ Date de publication :</h3>
+            <p className="textPublicationDate">{publicationdate}</p>
+          </div>
+          <div className="moreInformationContainer">
+            <p className="textMoreInformation">En savoir plus</p>
+          </div>
+        </div>
       </Link>
     </Style>
   );

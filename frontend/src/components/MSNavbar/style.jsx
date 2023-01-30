@@ -19,6 +19,12 @@ export default styled.nav`
     transition: all 0.35s;
     font-family: "JostBold";
     margin: 0;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 30vw;
+      height: 10vh;
+      border: 1px solid white;
+      letter-spacing: 0;
+    }
   }
   .active {
     background-color: #ecf0f1;
@@ -31,10 +37,17 @@ export default styled.nav`
     background-color: #c91961;
     color: white;
     border: 3px solid white;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      border: 1px solid white;
+    }
   }
 
   span {
     font-size: 1.5rem;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      font-size: 1rem;
+      text-align: justify;
+    }
   }
 
   .MSNavbarContainer {
@@ -45,8 +58,11 @@ export default styled.nav`
     opacity: 0.95;
     display: flex;
     justify-content: space-around;
-    /* border-top: 3px solid #c91961;
-    border-bottom: 3px solid #c91961; */
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+      height: 25vh;
+      flex-direction: column;
+    }
   }
   .HelloUser {
     width: 20vw;
@@ -56,6 +72,11 @@ export default styled.nav`
     align-items: center;
     color: white;
     font-size: 2rem;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+      text-align: center;
+      height: 10vh;
+    }
   }
   .EMuser {
     text-transform: uppercase;
@@ -68,5 +89,17 @@ export default styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .buttonResponsive {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+      display: flex;
+      justify-content: space-around;
+      height: 10vh;
+    }
   }
 `;
