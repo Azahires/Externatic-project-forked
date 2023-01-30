@@ -23,11 +23,22 @@ export default function MSApplications() {
           .get("/applications")
           .then(({ data: applicationdata }) => {
             setUserOffers(
-              offersdata.filter((offer) =>
-                applicationdata
-                  .map((application) => application.offer_id)
-                  .includes(offer.id)
-              )
+              offersdata
+                .filter((offer) =>
+                  applicationdata
+                    .map((application) => application.offer_id)
+                    .includes(offer.id)
+                )
+                .map((offer) => {
+                  return {
+                    ...offer,
+                    applicationdate: applicationdata
+                      .filter(
+                        (application) => application.offer_id === offer.id
+                      )
+                      .map((application) => application.application_date),
+                  };
+                })
             );
           })
           .catch((err) => console.error(err));
@@ -54,6 +65,7 @@ export default function MSApplications() {
                 location={offer.location}
                 id={offer.id}
                 key={offer.id}
+                applicationdate={offer.applicationdate}
               />
             );
           })}

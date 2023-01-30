@@ -16,12 +16,12 @@ export default function SearchBar() {
         <form>
           <input
             type="text"
-            placeholder="Developpeur JavaScript, php, python ?"
+            placeholder="Développeur JavaScript, PHP, Python ?"
             value={searchValue}
             onChange={handleSearchValue}
           />
           <button className="searchButton" type="button">
-            Search
+            Rechercher
           </button>
         </form>
       </Centered>

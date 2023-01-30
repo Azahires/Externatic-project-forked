@@ -1,8 +1,8 @@
 import OfferCard from "@components/OfferCard/OfferCard";
 import { useState, useEffect, useContext } from "react";
 import useApi from "@services/useApi";
-import latinize from "latinize";
 import propTypes from "prop-types";
+import latinize from "latinize";
 import Style from "./style";
 import { Context } from "../../contexts/Context";
 
@@ -14,6 +14,8 @@ export default function DisplayOffers({ limit }) {
     filterCdi,
     filterAlternance,
     filterInternship,
+    userCoordinates,
+    kilometer,
   } = useContext(Context);
 
   const api = useApi();
@@ -29,6 +31,18 @@ export default function DisplayOffers({ limit }) {
       setOffers(data2);
     });
   }, []);
+
+  function getDistance(xOffer, yOffer) {
+    const yUser = userCoordinates.latitude;
+    const xUser = userCoordinates.longitude;
+
+    const dX = xUser - xOffer;
+    const dY = yUser - yOffer;
+    const dYKm = dY * 110.574;
+    const dXKm = dX * 111.32 * Math.cos(dY);
+    const distKm = Math.sqrt(dXKm ** 2 + dYKm ** 2);
+    return distKm;
+  }
 
   return (
     <Style>
@@ -77,6 +91,9 @@ export default function DisplayOffers({ limit }) {
         })
         .reverse()
         .slice(0, limit)
+        .filter(
+          (offer) => getDistance(offer.longitude, offer.latitude) < kilometer
+        )
         .map((offer) => {
           return (
             <OfferCard

@@ -34,13 +34,13 @@ export default function Registration() {
     <Style onSubmit={handleSubmit(onSubmit)} onChange={hchange}>
       <input
         type="text"
-        placeholder="First name"
+        placeholder="Prénom"
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...register("lastname", { required: true, maxLength: 100 })}
       />
       <input
         type="text"
-        placeholder="Last name"
+        placeholder="Nom"
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...register("firstname", { required: true, maxLength: 80 })}
       />

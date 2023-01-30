@@ -12,11 +12,12 @@ function Provider({ children }) {
   const [filterCdi, setFilterCdi] = useState(false);
   const [filterAlternance, setFilterAlternance] = useState(false);
   const [filterInternship, setFilterInternship] = useState(false);
+  const [kilometer, setKilometer] = useState(1000);
 
   /* useState du composant UserGeolocation */
   const [userCoordinates, setUserCoordinates] = useState({
-    latitude: null,
-    longitude: null,
+    latitude: 50.6301254,
+    longitude: 3.01388937,
   });
 
   const [userInfo, setUserInfo] = useState({
@@ -36,6 +37,7 @@ function Provider({ children }) {
   });
   const [userApplications, setUserApplications] = useState([]);
   const [mySpace, setMySpace] = useState("profile");
+  const [applicationTime, setApplicationTime] = useState({});
 
   const context = useMemo(
     () => ({
@@ -51,12 +53,16 @@ function Provider({ children }) {
       setFilterInternship,
       userCoordinates,
       setUserCoordinates,
+      kilometer,
+      setKilometer,
       userInfo,
       setUserInfo,
       mySpace,
       setMySpace,
       userApplications,
       setUserApplications,
+      applicationTime,
+      setApplicationTime,
     }),
     [
       searchValue,
@@ -69,12 +75,18 @@ function Provider({ children }) {
       setFilterAlternance,
       filterInternship,
       setFilterInternship,
+      userCoordinates,
+      setUserCoordinates,
+      kilometer,
+      setKilometer,
       userInfo,
       setUserInfo,
       mySpace,
       setMySpace,
       userApplications,
       setUserApplications,
+      applicationTime,
+      setApplicationTime,
     ]
   );
 
@@ -107,6 +119,10 @@ const UserApplicationShape = {
   application_date: propTypes.string,
 };
 
+const ApplicationTimeShape = {
+  date: propTypes.string,
+  time: propTypes.string,
+};
 Provider.propTypes = {
   children: propTypes.shape({
     searchValue: propTypes.string,
@@ -127,5 +143,7 @@ Provider.propTypes = {
     setUserApplications: propTypes.arrayOf(
       propTypes.shape(UserApplicationShape)
     ),
+    applicationTime: propTypes.shape(ApplicationTimeShape),
+    setApplicationTime: propTypes.shape(ApplicationTimeShape),
   }).isRequired,
 };

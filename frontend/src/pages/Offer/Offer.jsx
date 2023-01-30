@@ -6,11 +6,15 @@ import logolinkedin from "../../assets/logo-linkedin.svg";
 import Style from "./style";
 
 export default function Offer() {
-  const { userInfo, userApplications, setUserApplications } =
-    useContext(Context);
+  const {
+    userInfo,
+    userApplications,
+    setUserApplications,
+    applicationTime,
+    setApplicationTime,
+  } = useContext(Context);
   const [offer, setOffer] = useState({});
   const [consultant, setConsultant] = useState({});
-  const [applicationTime, setApplicationTime] = useState({});
   const { id } = useParams();
   const api = useApi();
 

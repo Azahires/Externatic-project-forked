@@ -124,9 +124,6 @@ export default function BurgerMenu() {
         </button>
       </MiddleSection>
       <RightSection>
-        <p className={userInfo.email ? "visible" : "hidden"}>
-          Connecté en tant que {userInfo.firstname} {userInfo.lastname}{" "}
-        </p>
         <button
           type="button"
           className={!userInfo.email ? "visible" : "hidden"}
