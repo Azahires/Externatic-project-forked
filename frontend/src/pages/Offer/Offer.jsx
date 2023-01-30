@@ -10,6 +10,8 @@ export default function Offer() {
     userInfo,
     userApplications,
     setUserApplications,
+    userFavorites,
+    setUserFavorites,
     applicationTime,
     setApplicationTime,
   } = useContext(Context);
@@ -55,6 +57,14 @@ export default function Offer() {
             });
           })
           .catch((err) => console.error(err));
+        api
+          .get("/favorites")
+          .then(({ data }) => {
+            setUserFavorites(
+              data.filter((favorite) => favorite.user_id === userInfo.id)
+            );
+          })
+          .catch((err) => console.error(err));
       })
       .catch((err) => console.error(err));
   }, []);
@@ -90,6 +100,54 @@ export default function Offer() {
             });
         })
         .catch((err) => console.error(err));
+    }
+  };
+
+  const haddfavorite = () => {
+    if (!userInfo.email) {
+      navigate("/login");
+    } else {
+      api
+        .post("/favorites", {
+          user_id: userInfo.id,
+          offer_id: offer.id,
+        })
+        .then(({ data }) => {
+          setUserFavorites([...userFavorites, data]);
+          api
+            .post("/mailingfavorite", { userInfo, consultant, offer })
+            .then(() => {
+              setUserFavorites([...userFavorites, data]);
+              // ajouter changement coeur
+              // console.log("favori ajouté");
+            })
+            .catch((err) => {
+              console.error(err);
+            });
+        })
+        .catch((err) => console.error(err));
+    }
+  };
+
+  const hdeletefavorite = () => {
+    if (!userInfo.email) {
+      navigate("/login");
+    } else {
+      api
+        .post("/deletefavorites", {
+          user_id: userInfo.id,
+          offer_id: offer.id,
+        })
+        .then(({ data: removefav }) => {
+          setUserFavorites([
+            userFavorites.filter((favorite) => favorite !== removefav.offer_id),
+          ]);
+          // ajouter changement coeur
+          // console.log("favori retiré");
+        })
+        .catch((err) => {
+          console.error(err);
+        });
     }
   };
 
@@ -219,6 +277,22 @@ export default function Offer() {
               </div>
             </div>
           </>
+        )}
+        {userInfo.email ? (
+          <div>
+            {userFavorites.filter((element) => element.offer_id === offer.id)
+              .length ? (
+              <button type="button" onClick={hdeletefavorite}>
+                Retirer des favoris
+              </button>
+            ) : (
+              <button type="button" onClick={haddfavorite}>
+                Ajout au favori
+              </button>
+            )}
+          </div>
+        ) : (
+          ""
         )}
       </div>
     </Style>
