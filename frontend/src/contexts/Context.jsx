@@ -12,6 +12,7 @@ function Provider({ children }) {
   const [filterCdi, setFilterCdi] = useState(false);
   const [filterAlternance, setFilterAlternance] = useState(false);
   const [filterInternship, setFilterInternship] = useState(false);
+  const [kilometer, setKilometer] = useState(1000);
 
   /* useState du composant UserGeolocation */
   const [userCoordinates, setUserCoordinates] = useState({
@@ -51,6 +52,8 @@ function Provider({ children }) {
       setFilterInternship,
       userCoordinates,
       setUserCoordinates,
+      kilometer,
+      setKilometer,
       userInfo,
       setUserInfo,
       mySpace,
@@ -67,6 +70,10 @@ function Provider({ children }) {
       setFilterAlternance,
       filterInternship,
       setFilterInternship,
+      userCoordinates,
+      setUserCoordinates,
+      kilometer,
+      setKilometer,
       userInfo,
       setUserInfo,
       mySpace,
