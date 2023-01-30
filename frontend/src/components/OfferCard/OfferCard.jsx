@@ -18,7 +18,7 @@ export default function OfferCard({
           <div className="titleOfferCardContainer">
             <h2 className="titleOfferCard">
               {title}{" "}
-              {applicationdate ? (
+              {applicationdate.length ? (
                 <p className="applicationDate">
                   Date candidature: {applicationdate2}
                 </p>
@@ -56,9 +56,9 @@ OfferCard.propTypes = {
   location: PropTypes.string.isRequired,
   publicationdate: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
-  applicationdate: PropTypes.string,
+  applicationdate: PropTypes.arrayOf(PropTypes.string),
 };
 
 OfferCard.defaultProps = {
-  applicationdate: "",
+  applicationdate: [],
 };
