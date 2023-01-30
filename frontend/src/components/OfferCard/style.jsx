@@ -43,7 +43,7 @@ export default styled.div`
   }
 
   .titleOfferCard {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     text-align: center;
     color: white;
@@ -140,5 +140,10 @@ export default styled.div`
     background-size: 100% 8px;
     background-repeat: no-repeat;
     background-position: 0 100%;
+  }
+
+  .applicationDate {
+    font-size: 1rem;
+    margin-top: 0.3rem;
   }
 `;
