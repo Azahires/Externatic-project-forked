@@ -17,7 +17,6 @@ export default function DisplayOffers() {
     kilometer,
   } = useContext(Context);
 
-
   const api = useApi();
 
   useEffect(() => {

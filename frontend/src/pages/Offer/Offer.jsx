@@ -1,8 +1,11 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useApi from "@services/useApi";
+import { FaHeartBroken } from "react-icons/fa";
+import { AiFillHeart } from "react-icons/ai";
 import { Context } from "../../contexts/Context";
 import logolinkedin from "../../assets/logo-linkedin.svg";
+
 import Style from "./style";
 
 export default function Offer() {
@@ -11,6 +14,7 @@ export default function Offer() {
   const [consultant, setConsultant] = useState({});
   const { id } = useParams();
   const api = useApi();
+  const [fav, setFav] = useState(false);
 
   useEffect(() => {
     api.get(`/offers/${id}`).then(async ({ data: offerdata }) => {
@@ -43,6 +47,11 @@ export default function Offer() {
           console.error(err);
         });
     }
+  };
+
+  const hClick = (e) => {
+    e.preventDefault();
+    setFav(!fav);
   };
 
   return (
@@ -158,6 +167,10 @@ export default function Offer() {
           <div className="secondcontainer">
             <button type="button" onClick={hsendMail}>
               Candidater
+            </button>
+            <button type="button" onClick={hClick}>
+              {fav ? <FaHeartBroken /> : <AiFillHeart />}
+              Ajouter cette offre a vos favoris
             </button>
           </div>
         </div>
