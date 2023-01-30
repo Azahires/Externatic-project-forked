@@ -29,25 +29,6 @@ export default styled.div`
     background-color: #c91961;
   }
 
-  input {
-    height: 30px;
-    width: 30px;
-    border: 3px solid #c91961;
-    border-radius: 5px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    -o-appearance: none;
-    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
-      height: 20px;
-      width: 20px;
-    }
-  }
-  label[for="filters"] {
-    /* @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    } */
-  }
   #volume {
     accent-color: #c91961;
   }

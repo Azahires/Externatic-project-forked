@@ -43,6 +43,7 @@ export default function DisplayOffers({ limit }) {
     const distKm = Math.sqrt(dXKm ** 2 + dYKm ** 2);
     return distKm;
   }
+
   return (
     <Style>
       {offers
