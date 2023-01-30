@@ -48,4 +48,7 @@ export default styled.div`
       padding-right: 1rem;
     } */
   }
+  #volume {
+    accent-color: #c91961;
+  }
 `;
