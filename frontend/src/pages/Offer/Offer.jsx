@@ -1,8 +1,11 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useApi from "@services/useApi";
+import { FaHeartBroken } from "react-icons/fa";
+import { AiFillHeart } from "react-icons/ai";
 import { Context } from "../../contexts/Context";
 import logolinkedin from "../../assets/logo-linkedin.svg";
+
 import Style from "./style";
 
 export default function Offer() {
@@ -279,17 +282,19 @@ export default function Offer() {
           </>
         )}
         {userInfo.email ? (
-          <div>
-            {userFavorites.filter((element) => element.offer_id === offer.id)
-              .length ? (
-              <button type="button" onClick={hdeletefavorite}>
-                Retirer des favoris
-              </button>
-            ) : (
-              <button type="button" onClick={haddfavorite}>
-                Ajout au favori
-              </button>
-            )}
+          <div className="firstcontainer">
+            <div className="secondcontainer">
+              {userFavorites.filter((element) => element.offer_id === offer.id)
+                .length ? (
+                <button type="button" onClick={hdeletefavorite}>
+                  <FaHeartBroken /> Retirer des favoris
+                </button>
+              ) : (
+                <button type="button" onClick={haddfavorite}>
+                  <AiFillHeart /> Ajouter aux favoris
+                </button>
+              )}{" "}
+            </div>
           </div>
         ) : (
           ""
