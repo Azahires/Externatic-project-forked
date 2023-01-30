@@ -10,6 +10,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import Style from "./style";
 
 export default function Home() {
+  const limit = 3;
   return (
     <div>
       <Style>
@@ -19,7 +20,7 @@ export default function Home() {
           <PresentationHP />
         </div>
         <DescOffers />
-        <DisplayOffers />
+        <DisplayOffers limit={limit} />
         <ButtonLast />
         <DescPartnes />
         <Partners />

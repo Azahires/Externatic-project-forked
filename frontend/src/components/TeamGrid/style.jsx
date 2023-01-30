@@ -96,6 +96,10 @@ export default styled.div`
   .imageConsultant {
     height: 20vh;
     width: 11vw;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      height: 25vh;
+      width: 50vw;
+    }
   }
   .consultantDiv {
     position: relative;
