@@ -2,10 +2,11 @@ import OfferCard from "@components/OfferCard/OfferCard";
 import { useState, useEffect, useContext } from "react";
 import useApi from "@services/useApi";
 import latinize from "latinize";
+import propTypes from "prop-types";
 import Style from "./style";
 import { Context } from "../../contexts/Context";
 
-export default function DisplayOffers() {
+export default function DisplayOffers({ limit }) {
   const [offers, setOffers] = useState([]);
   const {
     searchValue,
@@ -69,6 +70,13 @@ export default function DisplayOffers() {
             searchValue.toLowerCase()
           );
         })
+        .sort((a, b) => {
+          return (
+            Date.parse(a.publication_date) - Date.parse(b.publication_date)
+          );
+        })
+        .reverse()
+        .slice(0, limit)
         .map((offer) => {
           return (
             <OfferCard
@@ -84,3 +92,7 @@ export default function DisplayOffers() {
     </Style>
   );
 }
+
+DisplayOffers.propTypes = {
+  limit: propTypes.number.isRequired,
+};

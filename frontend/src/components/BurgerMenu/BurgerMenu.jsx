@@ -114,9 +114,14 @@ export default function BurgerMenu() {
         </Style>
       </LeftSection>
       <MiddleSection>
-        <a href="/">
+        <button
+          type="button"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
           <img src={externaticLogo} alt="Logo" />
-        </a>
+        </button>
       </MiddleSection>
       <RightSection>
         <p className={userInfo.email ? "visible" : "hidden"}>

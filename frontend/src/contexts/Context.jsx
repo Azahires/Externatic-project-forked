@@ -34,7 +34,7 @@ function Provider({ children }) {
     avatar: null,
     biography: null,
   });
-
+  const [userApplications, setUserApplications] = useState([]);
   const [mySpace, setMySpace] = useState("profile");
 
   const context = useMemo(
@@ -55,6 +55,8 @@ function Provider({ children }) {
       setUserInfo,
       mySpace,
       setMySpace,
+      userApplications,
+      setUserApplications,
     }),
     [
       searchValue,
@@ -71,6 +73,8 @@ function Provider({ children }) {
       setUserInfo,
       mySpace,
       setMySpace,
+      userApplications,
+      setUserApplications,
     ]
   );
 
@@ -97,6 +101,12 @@ const UserInfoShape = {
   biography: propTypes.string,
 };
 
+const UserApplicationShape = {
+  user_id: propTypes.number,
+  offer_id: propTypes.number,
+  application_date: propTypes.string,
+};
+
 Provider.propTypes = {
   children: propTypes.shape({
     searchValue: propTypes.string,
@@ -113,5 +123,9 @@ Provider.propTypes = {
     setUserInfo: propTypes.shape(UserInfoShape),
     mySpace: propTypes.string,
     setMySpace: propTypes.string,
+    userApplications: propTypes.arrayOf(propTypes.shape(UserApplicationShape)),
+    setUserApplications: propTypes.arrayOf(
+      propTypes.shape(UserApplicationShape)
+    ),
   }).isRequired,
 };
