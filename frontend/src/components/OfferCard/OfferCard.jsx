@@ -8,13 +8,24 @@ export default function OfferCard({
   publicationdate,
   location,
   id,
+  applicationdate,
 }) {
+  const applicationdate2 = new Date(applicationdate).toLocaleDateString();
   return (
     <Style>
       <Link to={`/offers/${id}`}>
         <div className="offerCardContainer">
           <div className="titleOfferCardContainer">
-            <h2 className="titleOfferCard">{title}</h2>
+            <h2 className="titleOfferCard">
+              {title}{" "}
+              {applicationdate.length ? (
+                <p className="applicationDate">
+                  Date candidature: {applicationdate2}
+                </p>
+              ) : (
+                ""
+              )}
+            </h2>
           </div>
           <div className="informationOfferCardContainer">
             <div className="contractType">
@@ -45,4 +56,9 @@ OfferCard.propTypes = {
   location: PropTypes.string.isRequired,
   publicationdate: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  applicationdate: PropTypes.arrayOf(PropTypes.string),
+};
+
+OfferCard.defaultProps = {
+  applicationdate: [],
 };
