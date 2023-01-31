@@ -416,6 +416,7 @@ export default function MSProfile() {
             )}
             <div className="buttonupdate">
               <input
+                className="input-cv"
                 id={CVVisibility ? "visible" : "hidden"}
                 type="file"
                 name="CV"

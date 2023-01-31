@@ -1,8 +1,11 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useApi from "@services/useApi";
+import { FaHeartBroken } from "react-icons/fa";
+import { AiFillHeart } from "react-icons/ai";
 import { Context } from "../../contexts/Context";
 import logolinkedin from "../../assets/logo-linkedin.svg";
+
 import Style from "./style";
 
 export default function Offer() {
@@ -17,6 +20,7 @@ export default function Offer() {
   const [consultant, setConsultant] = useState({});
   const { id } = useParams();
   const api = useApi();
+  const [fav, setFav] = useState(false);
 
   useEffect(() => {
     api
@@ -91,6 +95,11 @@ export default function Offer() {
         })
         .catch((err) => console.error(err));
     }
+  };
+
+  const hClick = (e) => {
+    e.preventDefault();
+    setFav(!fav);
   };
 
   return (
