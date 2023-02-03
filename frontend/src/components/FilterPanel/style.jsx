@@ -9,4 +9,15 @@ export default styled.div`
   #volume {
     accent-color: #c91961;
   }
+
+  .kilometer {
+    margin-left: 0.5rem;
+  }
+
+  .kmInput {
+    width: 2rem;
+    border: none;
+    background-color: #c91961;
+    border-radius: 5px;
+  }
 `;

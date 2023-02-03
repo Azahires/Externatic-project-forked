@@ -13,7 +13,6 @@ export default function FilterPanel() {
     setFilterAlternance,
     filterInternship,
     setFilterInternship,
-    userCoordinates /* ATTENTION À CE STATE */,
     setUserCoordinates,
     kilometer,
     setKilometer,
@@ -91,8 +90,16 @@ export default function FilterPanel() {
             max="1000"
             value={kilometer}
             onChange={hkilometerChange}
-          ></input>
-          <label htmlFor="volume">Kilomètres {kilometer}</label>
+          />
+          <input
+            type="text"
+            className="kmInput"
+            value={kilometer}
+            onChange={hkilometerChange}
+          />
+          <label className="kilometer" htmlFor="volume">
+            Kilomètres
+          </label>
         </form>
       </Centered>
     </Style>

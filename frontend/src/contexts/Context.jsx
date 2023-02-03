@@ -16,8 +16,8 @@ function Provider({ children }) {
 
   /* useState du composant UserGeolocation */
   const [userCoordinates, setUserCoordinates] = useState({
-    latitude: null,
-    longitude: null,
+    latitude: 48.866667,
+    longitude: 2.333333,
   });
 
   const [userInfo, setUserInfo] = useState({

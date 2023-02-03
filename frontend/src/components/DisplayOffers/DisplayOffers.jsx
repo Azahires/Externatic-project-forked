@@ -17,8 +17,19 @@ export default function DisplayOffers() {
     kilometer,
   } = useContext(Context);
 
-
   const api = useApi();
+
+  function getDistance(xOffer, yOffer) {
+    const yUser = userCoordinates.latitude;
+    const xUser = userCoordinates.longitude;
+
+    const dX = xUser - xOffer;
+    const dY = yUser - yOffer;
+    const dYKm = dY * 110.574;
+    const dXKm = dX * 111.32 * Math.cos(dY);
+    const distKm = Math.sqrt(dXKm ** 2 + dYKm ** 2);
+    return distKm;
+  }
 
   useEffect(() => {
     api.get("/offers").then(({ data }) => {
@@ -32,17 +43,6 @@ export default function DisplayOffers() {
     });
   }, []);
 
-  function getDistance(xOffer, yOffer) {
-    const yUser = userCoordinates.latitude;
-    const xUser = userCoordinates.longitude;
-
-    const dX = xUser - xOffer;
-    const dY = yUser - yOffer;
-    const dYKm = dY * 110.574;
-    const dXKm = dX * 111.32 * Math.cos(dY);
-    const distKm = Math.sqrt(dXKm ** 2 + dYKm ** 2);
-    return distKm;
-  }
   return (
     <Style>
       {offers
