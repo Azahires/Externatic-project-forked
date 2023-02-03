@@ -116,10 +116,11 @@ export default styled.div`
     color: #c91162;
     padding: 1rem 0;
   }
+
   .firstcontainer {
     transition: all 0.3s ease-out;
     width: 25%;
-    margin: 2.5rem 0rem;
+    margin: 1rem 0rem;
     box-shadow: 5px 5px 20px lightgrey, -5px 5px 20px lightgrey;
     border-radius: 20px;
     .secondcontainer {
