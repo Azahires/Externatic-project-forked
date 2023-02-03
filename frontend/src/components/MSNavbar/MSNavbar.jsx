@@ -18,38 +18,40 @@ export default function MSNavbar() {
             </em>{" "}
           </h1>
         </div>
-        <div className="ButtonProfile">
-          <button
-            type="button"
-            onClick={() => {
-              setMySpace("profile");
-            }}
-            className={mySpace === "profile" ? "active" : "passive"}
-          >
-            <span>Mon profil</span>
-          </button>
-        </div>
-        <div className="ButtonFavorites">
-          <button
-            type="button"
-            onClick={() => {
-              setMySpace("favorites");
-            }}
-            className={mySpace === "favorites" ? "active" : "passive"}
-          >
-            <span>Mes favoris</span>
-          </button>
-        </div>
-        <div className="ButtonCandidatures">
-          <button
-            type="button"
-            onClick={() => {
-              setMySpace("applications");
-            }}
-            className={mySpace === "applications" ? "active" : "passive"}
-          >
-            <span>Mes candidatures</span>
-          </button>
+        <div className="buttonResponsive">
+          <div className="ButtonProfile">
+            <button
+              type="button"
+              onClick={() => {
+                setMySpace("profile");
+              }}
+              className={mySpace === "profile" ? "active" : "passive"}
+            >
+              <span>Mon profil</span>
+            </button>
+          </div>
+          <div className="ButtonFavorites">
+            <button
+              type="button"
+              onClick={() => {
+                setMySpace("favorites");
+              }}
+              className={mySpace === "favorites" ? "active" : "passive"}
+            >
+              <span>Mes favoris</span>
+            </button>
+          </div>
+          <div className="ButtonCandidatures">
+            <button
+              type="button"
+              onClick={() => {
+                setMySpace("applications");
+              }}
+              className={mySpace === "applications" ? "active" : "passive"}
+            >
+              <span>Mes candidatures</span>
+            </button>
+          </div>
         </div>
       </div>
     </Style>

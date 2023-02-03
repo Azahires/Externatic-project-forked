@@ -1,9 +1,15 @@
 ## Concept
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+This template is the result of the third project managed during the Wild Code School developers training session, which took place during septembre 2022 and february 2023.
 
-## Setup & Use
+The aim of this project was to develop a full stack web application, following the React-Express-MySQL stack, as learned in Wild Code School. This project was developed by four students in partnership with an IT recruitment agency named Externatic.
+
+The result is a jobboard which enable candidates to discover the offers published by Externatic and create a personnal account on the application. 
+
+By using this account, candidates can update their personnal information and upload a CV and an avatar. By doing so, logged candidates can apply directly to the online offers. 
+
+This last action triggers the sending of an email to the adviser in charge of the offer, who can contact the candidate if his/her profil matches with the entreprise's needs.
+
 
 ### Project Initialization
 
@@ -11,6 +17,7 @@ It's pre-configured with a set of tools which'll help students produce industry-
 - Clone this repo, enter it
 - Run command `npm run setup`
 - _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+- Run command `npm run migrate` if you want to get acces to the pre-configured database.
 
 ### Available Commands
 
@@ -22,8 +29,6 @@ It's pre-configured with a set of tools which'll help students produce industry-
 - `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
 - `fix` : Fixes linter errors (run it if `lint` growls on your code !)
 
-## FAQ
-
 ### Tools
 
 - _Concurrently_ : Allows for several commands to run concurrently in the same CLI
@@ -33,3 +38,11 @@ It's pre-configured with a set of tools which'll help students produce industry-
 - _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
 - _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
 - _Nodemon_ : Allows to restart the server everytime a .js file is udated
+
+## Team
+
+This project was developed by:
+- Nedim AMAJOUD - https://github.com/Soocom
+- Florian BARTIER - https://github.com/FlorianBartier
+- Romain HADDAD - https://github.com/Azahires
+- Hervé SWIERGIEL - https://github.com/hswiergiel

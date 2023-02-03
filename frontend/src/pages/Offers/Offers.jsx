@@ -4,11 +4,12 @@ import SearchBar from "@components/SearchBar/SearchBar";
 import Style from "./style";
 
 export default function Offers() {
+  const limit = 100;
   return (
     <Style>
       <SearchBar />
       <FilterPanel />
-      <DisplayOffers />
+      <DisplayOffers limit={limit} />
     </Style>
   );
 }

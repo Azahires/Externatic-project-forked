@@ -35,8 +35,10 @@ function Provider({ children }) {
     avatar: null,
     biography: null,
   });
-
+  const [userApplications, setUserApplications] = useState([]);
+  const [userFavorites, setUserFavorites] = useState([]);
   const [mySpace, setMySpace] = useState("profile");
+  const [applicationTime, setApplicationTime] = useState({});
 
   const context = useMemo(
     () => ({
@@ -58,6 +60,12 @@ function Provider({ children }) {
       setUserInfo,
       mySpace,
       setMySpace,
+      userApplications,
+      setUserApplications,
+      applicationTime,
+      setApplicationTime,
+      userFavorites,
+      setUserFavorites,
     }),
     [
       searchValue,
@@ -78,6 +86,12 @@ function Provider({ children }) {
       setUserInfo,
       mySpace,
       setMySpace,
+      userApplications,
+      setUserApplications,
+      applicationTime,
+      setApplicationTime,
+      userFavorites,
+      setUserFavorites,
     ]
   );
 
@@ -104,6 +118,21 @@ const UserInfoShape = {
   biography: propTypes.string,
 };
 
+const UserApplicationShape = {
+  user_id: propTypes.number,
+  offer_id: propTypes.number,
+  application_date: propTypes.string,
+};
+
+const UserFavoriteShape = {
+  user_id: propTypes.number,
+  offer_id: propTypes.number,
+};
+
+const ApplicationTimeShape = {
+  date: propTypes.string,
+  time: propTypes.string,
+};
 Provider.propTypes = {
   children: propTypes.shape({
     searchValue: propTypes.string,
@@ -120,5 +149,13 @@ Provider.propTypes = {
     setUserInfo: propTypes.shape(UserInfoShape),
     mySpace: propTypes.string,
     setMySpace: propTypes.string,
+    userApplications: propTypes.arrayOf(propTypes.shape(UserApplicationShape)),
+    setUserApplications: propTypes.arrayOf(
+      propTypes.shape(UserApplicationShape)
+    ),
+    userFavorites: propTypes.arrayOf(propTypes.shape(UserFavoriteShape)),
+    setUserFavorites: propTypes.arrayOf(propTypes.shape(UserFavoriteShape)),
+    applicationTime: propTypes.shape(ApplicationTimeShape),
+    setApplicationTime: propTypes.shape(ApplicationTimeShape),
   }).isRequired,
 };

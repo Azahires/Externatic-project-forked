@@ -7,7 +7,12 @@ export default styled.div`
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 79vh;
+    height: 75vh;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
   }
   .MSProfileLeftContainer {
     display: flex;
@@ -18,18 +23,29 @@ export default styled.div`
     height: 79vh;
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: auto;
+      height: auto;
+    }
   }
   .UserAvatar {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 35vh;
-    width: 21vw;
+    width: 25vw;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+      height: 25vh;
+    }
     .AvatarImg {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 300px;
+      max-height: 300px;
       border-radius: 36% 64% 32% 68% / 44% 30% 70% 56%;
+      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+        max-width: 200px;
+        max-height: 200px;
+      }
     }
   }
   .socialMediaContainer {
@@ -38,9 +54,15 @@ export default styled.div`
     justify-content: space-evenly;
     align-items: center;
     height: 34vh;
-    width: 20vw;
+    width: 15vw;
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+      height: 10vh;
+      display: flex;
+      flex-direction: row;
+    }
   }
   .buttonSocialMediaLinkedin,
   .buttonSocialMediaGitHub {
@@ -49,6 +71,9 @@ export default styled.div`
     align-items: center;
     width: 11vw;
     height: 6vh;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 40vw;
+    }
   }
 
   .buttonSocialMediaLinkedin {
@@ -60,13 +85,22 @@ export default styled.div`
     font-size: 1.5rem;
     border: none;
     cursor: pointer;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      font-size: 1.2rem;
+    }
   }
   .linkedinLogo {
     height: 43px;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      height: 30px;
+    }
   }
 
   .githubLogo {
     height: 39px;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      height: 25px;
+    }
   }
   .buttonSocialMediaGitHub {
     background-color: #c91961;
@@ -77,6 +111,9 @@ export default styled.div`
     font-size: 1.5rem;
     border: none;
     cursor: pointer;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      font-size: 1.2rem;
+    }
   }
   .UserInformations {
     display: flex;
@@ -90,12 +127,20 @@ export default styled.div`
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     padding-top: 1rem;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+      font-size: 1.2rem;
+      height: auto;
+    }
   }
   .UserField {
     font-size: 1.7rem;
     color: #c91961;
     font-weight: bold;
     text-transform: uppercase;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      font-size: 1.4rem;
+    }
   }
   li {
     color: black;
@@ -114,6 +159,10 @@ export default styled.div`
     border: none;
     font-weight: bold;
     border-radius: 10px;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 70vw;
+      height: 6vh;
+    }
   }
   .updateIBio,
   .updateResearch {
@@ -128,6 +177,10 @@ export default styled.div`
     font-weight: bold;
     border-radius: 10px;
     margin-bottom: 1rem;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 70vw;
+      height: 6vh;
+    }
   }
   .MSProfileRightContainer {
     display: flex;
@@ -137,6 +190,10 @@ export default styled.div`
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     border-left: 2px solid #c91961;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+      height: auto;
+    }
   }
   .myBiography {
     display: flex;
@@ -147,9 +204,13 @@ export default styled.div`
     border-radius: 5px;
     margin: 1rem;
     width: 50vw;
-    height: auto;
+    height: 35vh;
     margin-top: 3rem;
     background-color: whitesmoke;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 90vw;
+      height: auto;
+    }
   }
   .myBiographyTitle,
   .myResearchTitle,
@@ -157,12 +218,18 @@ export default styled.div`
     font-family: "Jost", sans-serif;
     font-size: 1.5rem;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     color: #c91961;
     font-weight: bold;
   }
   .myResearchTitle {
     margin-bottom: 1.5rem;
+  }
+
+  .avatarlabel {
+    font-weight: bold;
+    color: #c91961;
+    margin: 0;
   }
   .textBiography {
     display: flex;
@@ -184,24 +251,49 @@ export default styled.div`
     width: 50vw;
     height: auto;
     background-color: whitesmoke;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 90vw;
+      height: auto;
+    }
   }
   .checkboxContainer {
     display: flex;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      padding-left: 2rem;
+      width: 90vw;
+    }
   }
   label {
     padding-left: 0.5rem;
   }
   .checkbox1 {
     padding-right: 8rem;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      padding: 0;
+    }
   }
   .avatarContainer {
     display: flex;
     flex-direction: row;
     padding-top: 1.5rem;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+    }
   }
-
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
   #visible,
   .visible {
     display: inherit;
@@ -223,20 +315,26 @@ export default styled.div`
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     input,
     .error {
-      border-radius: 10px;
+      color: grey;
+      font-family: JostBold;
+      border: none;
       height: 2rem;
       width: 300px;
       margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 10px;
+      margin: 0rem;
     }
 
     input[type="file"] {
+      border: none;
       height: initial;
       width: initial;
       margin: 10px auto;
       border-radius: initial;
+      margin: 0rem;
     }
 
     input[type="radio"] {
@@ -245,13 +343,13 @@ export default styled.div`
       display: initial;
       margin: 10px auto;
     }
+    input:hover {
+      font-family: JostBold;
+      color: #c91961;
+    }
 
     fieldset {
       text-align: center;
-    }
-
-    input:hover {
-      background-color: #c91961;
     }
 
     p {

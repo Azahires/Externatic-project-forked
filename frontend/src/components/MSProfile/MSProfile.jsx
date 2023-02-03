@@ -105,7 +105,9 @@ export default function MSProfile() {
     if (userInfo.avatar) {
       const [avatarExtension] = userInfo.avatar.split(".").slice(-1);
       fetch(
-        `http://localhost:5000/assets/connecteduserfiles/useravatar.${avatarExtension}`
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/assets/connecteduserfiles/useravatar.${avatarExtension}`
       )
         .then((res) => {
           setAvatarUrl(res.url);
@@ -117,7 +119,9 @@ export default function MSProfile() {
     if (userInfo.CV) {
       const [CVExtension] = userInfo.CV.split(".").slice(-1);
       fetch(
-        `http://localhost:5000/assets/connecteduserfiles/userCV.${CVExtension}`
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/assets/connecteduserfiles/userCV.${CVExtension}`
       )
         .then(async (res) => {
           await setCVurl(`${res.url}?${hash}`);
@@ -412,6 +416,7 @@ export default function MSProfile() {
             )}
             <div className="buttonupdate">
               <input
+                className="input-cv"
                 id={CVVisibility ? "visible" : "hidden"}
                 type="file"
                 name="CV"

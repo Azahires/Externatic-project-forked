@@ -13,7 +13,7 @@ export default styled.div`
     background-color: #c91961;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ecf0f1' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     opacity: 0.95;
-    height: 33vh;
+    height: 29.7vh;
     @media (max-width: 1000px) {
       height: auto;
       flex-direction: column;
@@ -96,6 +96,10 @@ export default styled.div`
   .imageConsultant {
     height: 20vh;
     width: 11vw;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      height: 25vh;
+      width: 50vw;
+    }
   }
   .consultantDiv {
     position: relative;

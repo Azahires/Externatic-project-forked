@@ -1,11 +1,12 @@
 import OfferCard from "@components/OfferCard/OfferCard";
 import { useState, useEffect, useContext } from "react";
 import useApi from "@services/useApi";
+import propTypes from "prop-types";
 import latinize from "latinize";
 import Style from "./style";
 import { Context } from "../../contexts/Context";
 
-export default function DisplayOffers() {
+export default function DisplayOffers({ limit }) {
   const [offers, setOffers] = useState([]);
   const {
     searchValue,
@@ -43,6 +44,17 @@ export default function DisplayOffers() {
     });
   }, []);
 
+  function getDistance(xOffer, yOffer) {
+    const yUser = userCoordinates.latitude;
+    const xUser = userCoordinates.longitude;
+
+    const dX = xUser - xOffer;
+    const dY = yUser - yOffer;
+    const dYKm = dY * 110.574;
+    const dXKm = dX * 111.32 * Math.cos(dY);
+    const distKm = Math.sqrt(dXKm ** 2 + dYKm ** 2);
+    return distKm;
+  }
   return (
     <Style>
       {offers
@@ -83,6 +95,13 @@ export default function DisplayOffers() {
             searchValue.toLowerCase()
           );
         })
+        .sort((a, b) => {
+          return (
+            Date.parse(a.publication_date) - Date.parse(b.publication_date)
+          );
+        })
+        .reverse()
+        .slice(0, limit)
         .filter(
           (offer) => getDistance(offer.longitude, offer.latitude) < kilometer
         )
@@ -101,3 +120,7 @@ export default function DisplayOffers() {
     </Style>
   );
 }
+
+DisplayOffers.propTypes = {
+  limit: propTypes.number.isRequired,
+};
