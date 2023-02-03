@@ -1,8 +1,14 @@
 ## Concept
 
-Ce template est conçu pour servir de base à tous les projets (P2/P3) suivants la stack React-Node-MySQL telle qu'enseignée à la Wild Code School. Il est préconfiguré avec un ensemble d'outils qui aideront les élèves à produire un code correspondant mieux aux standards du monde du travail et plus facile à maintenir, tout en restant simple à utiliser.
+Ce template est le résultat du troisième projet qui a été développé durant une session de formation Développeurs web de la Wild Code School, qui a eu lieu de septembre 2022 à février 2023.
 
-## Installation & Utilisation
+Le but de ce projet était de développer une application full stack, en suivant la stack React-Node-MySQL telle qu'enseignée à la Wild Code School. Ce projet a été développé par quatre étudiants, en partenariat avec un cabinet de recrutement spécialisé dans l'IT, Externatic.
+
+Le résultat du projet est un jobboard qui permet aux candidats de découvrir les offres publiées par Externatic et de créer un compte personnel sur l'application.
+
+En utilisant ce compte, les candidats peuvent mettre à jour leurs informations personnelles et télécharger un CV ainsi qu'un avatar. Ce faisant, les candidats connectés peuvent directement postuler aux offres en ligne.
+
+Cette dernière action déclenche l'envoi d'un email au consultant en charge de l'annonce, qui peut ensuite contacter le candidat si son profil correspond aux besoins de l'entreprise. 
 
 ### Pour commencer un projet
 
@@ -10,17 +16,18 @@ Ce template est conçu pour servir de base à tous les projets (P2/P3) suivants 
 - Cloner ce dépôt, se rendre à l'intérieur
 - Lancer la commande `npm run setup`
 - _NB: Pour exécuter le backend, un fichier d'environnement avec les données de connexion d'une BdD valide est nécesaire. Un modèle se trouve dans `backend/.env.sample`_
+- Lancer la commande ` npm run migrate` si vous souhaitez accéder à la base de données pré configurée
 
 ### Liste des commandes et signification
 
 - `setup` : Initialisation du frontend et du backend ainsi que des outils
+- `migrate` : Lance le script de migration de la base de données
 - `dev` : Démarrage des deux serveurs (frontend + backend) dans un même terminal
 - `dev-front` : Démarrage d'un serveur React pour le frontend
 - `dev-back` : Démarrage d'un serveur Express pour le backend
 - `lint` : Exécute des outils de validation de code (sera exécutée automatiquement à chaque _commit_)
 - `fix` : Fixe les erreurs de formatage (à lancer si `lint` ne passe pas)
 
-## Pour plus d'informations
 
 ### Listing des outils utilisés
 
@@ -32,18 +39,10 @@ Ce template est conçu pour servir de base à tous les projets (P2/P3) suivants 
 - _Standard Airbnb_ : L'un des "standards" les plus connus, même s'il n'est pas officiellement lié à ES/JS
 - _Nodemon_ : Outil permettant de relancer un serveur à chaque fois qu'un des fichiers est modifié
 
-### Reste à faire
+## Team
 
-Prettier:
-
-- corriger la config front/back pour qu'elle suive le même standard qu'ESLint
-
-Testing:
-
-- ajouter des tests unitaires sur le front et le back, avec les commandes associées
-
-Vérifications:
-
-- s'assurer que les principaux outils utilisés lors de la formation sont compatibles avec ce template
-- deploiements ? Compatible avec Netlify/Vercel/Heroku ?
-- fonctionnement avec yarn/pnpm
+Cette application a été développée par:
+- Nedim AMAJOUD - https://github.com/Soocom
+- Florian BARTIER - https://github.com/FlorianBartier
+- Romain HADDAD - https://github.com/Azahires
+- Hervé SWIERGIEL - https://github.com/hswiergiel

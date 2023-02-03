@@ -115,9 +115,10 @@ export default styled.div`
     color: #c91162;
     padding: 1rem 0;
   }
+
   .firstcontainer {
     width: 40%;
-    margin: 2.5rem 0rem;
+    margin: 1rem 0rem;
     box-shadow: 1px 1px 10px white, -1px 1px 10px white;
     border-radius: 20px;
     transition: all 0.10s ease-out;

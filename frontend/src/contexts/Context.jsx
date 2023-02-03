@@ -36,6 +36,7 @@ function Provider({ children }) {
     biography: null,
   });
   const [userApplications, setUserApplications] = useState([]);
+  const [userFavorites, setUserFavorites] = useState([]);
   const [mySpace, setMySpace] = useState("profile");
   const [applicationTime, setApplicationTime] = useState({});
 
@@ -63,6 +64,8 @@ function Provider({ children }) {
       setUserApplications,
       applicationTime,
       setApplicationTime,
+      userFavorites,
+      setUserFavorites,
     }),
     [
       searchValue,
@@ -87,6 +90,8 @@ function Provider({ children }) {
       setUserApplications,
       applicationTime,
       setApplicationTime,
+      userFavorites,
+      setUserFavorites,
     ]
   );
 
@@ -119,6 +124,11 @@ const UserApplicationShape = {
   application_date: propTypes.string,
 };
 
+const UserFavoriteShape = {
+  user_id: propTypes.number,
+  offer_id: propTypes.number,
+};
+
 const ApplicationTimeShape = {
   date: propTypes.string,
   time: propTypes.string,
@@ -143,6 +153,8 @@ Provider.propTypes = {
     setUserApplications: propTypes.arrayOf(
       propTypes.shape(UserApplicationShape)
     ),
+    userFavorites: propTypes.arrayOf(propTypes.shape(UserFavoriteShape)),
+    setUserFavorites: propTypes.arrayOf(propTypes.shape(UserFavoriteShape)),
     applicationTime: propTypes.shape(ApplicationTimeShape),
     setApplicationTime: propTypes.shape(ApplicationTimeShape),
   }).isRequired,

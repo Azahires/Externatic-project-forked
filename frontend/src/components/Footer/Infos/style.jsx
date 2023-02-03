@@ -10,7 +10,7 @@ export default styled.div`
     text-decoration: none;
     color: white;
     align-items: center;
-    width: 100vw;
+    width: 98vw;
     margin: 2em;
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
       margin: 0;

@@ -7,7 +7,7 @@ export default styled.div`
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 79vh;
+    height: 75vh;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       display: flex;
       flex-direction: column;
@@ -225,6 +225,12 @@ export default styled.div`
   .myResearchTitle {
     margin-bottom: 1.5rem;
   }
+
+  .avatarlabel {
+    font-weight: bold;
+    color: #c91961;
+    margin: 0;
+  }
   .textBiography {
     display: flex;
     align-items: center;
@@ -285,7 +291,9 @@ export default styled.div`
   a {
     text-decoration: none;
   }
-
+  a:hover {
+    text-decoration: underline;
+  }
   #visible,
   .visible {
     display: inherit;
@@ -317,6 +325,7 @@ export default styled.div`
       justify-content: center;
       align-items: center;
       border-radius: 10px;
+      margin: 0rem;
     }
 
     input[type="file"] {
@@ -325,6 +334,7 @@ export default styled.div`
       width: initial;
       margin: 10px auto;
       border-radius: initial;
+      margin: 0rem;
     }
 
     input[type="radio"] {

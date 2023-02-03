@@ -44,7 +44,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     padding-top: 6rem;
     width: 25vw;
     @media (max-width: 768px) {
-      width: 100vw;
+      width: 99vw;
     }
   }
 
@@ -57,7 +57,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 export const BurgerMenuContainer = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
-  width: 100vw;
+  width: 98vw;
   height: 6vh;
   display: flex;
   align-items: center;
