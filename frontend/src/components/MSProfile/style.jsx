@@ -221,6 +221,12 @@ export default styled.div`
   .myResearchTitle {
     margin-bottom: 1.5rem;
   }
+
+  .avatarlabel {
+    font-weight: bold;
+    color: #c91961;
+    margin: 0;
+  }
   .textBiography {
     display: flex;
     align-items: center;
@@ -281,7 +287,9 @@ export default styled.div`
   a {
     text-decoration: none;
   }
-
+  a:hover {
+    text-decoration: underline;
+  }
   #visible,
   .visible {
     display: inherit;
@@ -303,20 +311,26 @@ export default styled.div`
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     input,
     .error {
-      border-radius: 10px;
+      color: grey;
+      font-family: JostBold;
+      border: none;
       height: 2rem;
       width: 300px;
       margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 10px;
+      margin: 0rem;
     }
 
     input[type="file"] {
+      border: none;
       height: initial;
       width: initial;
       margin: 5px auto;
       border-radius: initial;
+      margin: 0rem;
     }
 
     input[type="radio"] {
@@ -330,6 +344,10 @@ export default styled.div`
     }
     input[type="number"] {
       margin: 5px;
+    }
+    input:hover {
+      font-family: JostBold;
+      color: #c91961;
     }
 
     fieldset {
@@ -365,7 +383,6 @@ export default styled.div`
     }
     textarea:hover {
       background-color: #c91961;
-      color: #ecf0f1;
     }
   }
 

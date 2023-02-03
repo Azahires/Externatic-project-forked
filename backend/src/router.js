@@ -17,8 +17,13 @@ const {
   verifyUser,
   verifyToken,
 } = require("./services/authentification");
+const applicationControllers = require("./controllers/applicationControllers");
+const favoriteControllers = require("./controllers/favoriteControllers");
 const { renameAndMoveFile, moveFiles } = require("./services/filemanipulation");
-const { sendApplicationMail } = require("./services/sendEmail");
+const {
+  sendApplicationMail,
+  sendFavoriteMail,
+} = require("./services/sendEmail");
 
 router.get("/offers", offerControllers.browse);
 router.get("/offers/:id", offerControllers.read);
@@ -52,8 +57,16 @@ router.put(
 router.put("/users/:id", validateUserModification, userControllers.edit);
 router.delete("/users/:id", userControllers.destroy);
 
+router.get("/applications", applicationControllers.browse);
+router.post("/applications", applicationControllers.add);
+
+router.get("/favorites", favoriteControllers.browse);
+router.post("/favorites", favoriteControllers.add);
+router.post("/deletefavorites", favoriteControllers.destroy);
+
 router.post("/login", verifyUser, verifyPassword, moveFiles);
 router.get("/account", verifyToken);
 
 router.post("/mailing", sendApplicationMail);
+router.post("/mailingfavorite", sendFavoriteMail);
 module.exports = router;

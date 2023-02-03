@@ -109,4 +109,7 @@ export default function DisplayOffers({ limit }) {
     </Style>
   );
 }
-DisplayOffers.propTypes = { limit: propTypes.number.isRequired };
+
+DisplayOffers.propTypes = {
+  limit: propTypes.number.isRequired,
+};
