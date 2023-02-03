@@ -57,18 +57,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 export const BurgerMenuContainer = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
-<<<<<<< HEAD
   width: 100vw;
   height: 10vh;
-=======
-  width: 98vw;
-  height: 6vh;
->>>>>>> 0ec2be6c1a4c9a0f0dbe1f29fe2ce90717a98b18
   display: flex;
   align-items: center;
   justify-content: space-between;
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
-    height: 8vh;
+    height: 10vh;
   }
 `;
 
@@ -136,27 +131,6 @@ export const RightSection = styled.div`
     width: 60vw;
   }
 
-  /* button {
-    font-family: "Jost", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1rem;
-    cursor: pointer;
-    font-size: 1rem;
-    border: 2px solid #c91961;
-    background-color: #c91961;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 8vw;
-    height: 4vh;
-  }
-  button:hover {
-    background-color: white;
-    color: #c91961;
-  } */
   button {
     font-family: "Jost", sans-serif;
     width: 10vw;
@@ -180,7 +154,6 @@ export const RightSection = styled.div`
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 70vw;
       height: 5vh;
-      margin-top: 1rem;
     }
   }
   button span {

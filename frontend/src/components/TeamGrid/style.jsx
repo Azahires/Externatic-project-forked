@@ -5,6 +5,9 @@ export default styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+    }
   }
   .mainDiv {
     display: flex;

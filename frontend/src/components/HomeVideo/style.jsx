@@ -16,6 +16,7 @@ export default styled.div`
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
       height: auto;
+      border: none;
     }
   }
   video {
@@ -26,7 +27,7 @@ export default styled.div`
     z-index: -100;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
-      height: 60vh;
+      height: auto;
       filter: blur(1px) grayscale();
     }
   }
