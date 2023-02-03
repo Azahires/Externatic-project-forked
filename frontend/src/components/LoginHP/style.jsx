@@ -44,11 +44,11 @@ export default styled.div`
   .loginhpButton {
     cursor: pointer;
     width: 12vw;
-    height: 5vh;
     line-height: 2.5rem;
     font-size: 1.125rem;
-    font-weight: bold;
+    text-transform: uppercase;
     text-decoration: none;
+    margin-top: 1rem;
     color: #fff;
     background-color: #c91961;
     border: 3px solid #c91961;

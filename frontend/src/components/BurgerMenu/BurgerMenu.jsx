@@ -131,7 +131,7 @@ export default function BurgerMenu() {
             navigate("/signin");
           }}
         >
-          S'inscrire
+          <span>S'inscrire</span>
         </button>
         <button
           type="button"
@@ -140,14 +140,14 @@ export default function BurgerMenu() {
             navigate("/login");
           }}
         >
-          Se connecter
+          <span>Se connecter</span>
         </button>
         <button
           type="button"
           className={userInfo.email ? "visible" : "hidden"}
           onClick={hLogOut}
         >
-          Deconnexion
+          <span>Deconnexion</span>
         </button>
       </RightSection>
     </BurgerMenuContainer>

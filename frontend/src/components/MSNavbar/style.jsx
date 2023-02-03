@@ -5,19 +5,17 @@ export default styled.nav`
   justify-content: space-between;
   button {
     cursor: pointer;
-    width: 100%;
+    width: auto;
     height: 6vh;
-    font-size: 1.5rem;
-    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.125rem;
     color: #fff;
     background: #c91961;
     border: none;
-    border-bottom: 3px solid #c91961;
+    border-bottom: 2px solid #c91961;
     letter-spacing: 0.125rem;
     text-align: center;
-    position: relative;
-    transition: all 0.35s;
-    font-family: "JostBold";
+    font-family: "Jost", sans-serif;
     margin: 0;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 30vw;
@@ -30,19 +28,19 @@ export default styled.nav`
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     color: #c91961;
-    border: none;
-    text-decoration: underline;
+    border: 2px solid black;
   }
   .passive {
     background-color: #c91961;
     color: white;
-    border: 3px solid white;
+    border: 2px solid white;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       border: 1px solid white;
     }
   }
 
   span {
+    padding: 0.5rem;
     font-size: 1.5rem;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       font-size: 1rem;

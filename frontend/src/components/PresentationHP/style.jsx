@@ -42,12 +42,13 @@ export default styled.div`
   }
   .presentationButton {
     width: 12vw;
-    height: 5vh;
     line-height: 2.5rem;
     font-size: 1.125rem;
-    font-weight: bold;
+    margin-top: 1rem;
+    text-transform: uppercase;
     text-decoration: none;
-    color: #c91961;
+    color: #fff;
+    background-color: #c91961;
     border: 3px solid #c91961;
     border-radius: 5px;
     letter-spacing: 0.125rem;
@@ -70,11 +71,11 @@ export default styled.div`
     left: 0;
     width: 0;
     height: 100%;
-    background: #c91961;
+    background: white;
     transition: all 0.35s;
   }
   .presentationButton:hover {
-    color: #fff;
+    color: #c91961;
   }
   .presentationButton:hover:after {
     width: 100%;

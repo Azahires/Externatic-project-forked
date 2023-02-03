@@ -8,7 +8,7 @@ function ButtonLast() {
       <Link to="/offers">
         <div className="flex-container">
           <button type="button" className="Button-1">
-            Voir toutes nos offres
+            <span>Voir toutes nos offres</span>
           </button>
         </div>
       </Link>

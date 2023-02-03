@@ -6,7 +6,7 @@ export default styled.nav`
     width: 33px;
     height: 30px;
     left: 1rem;
-    top: 15px;
+    top: 30px;
   }
 
   /* Color/shape of burger icon bars */
@@ -41,7 +41,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   /* Wrapper for item list */
   .bm-item-list {
     color: white;
-    padding-top: 6rem;
+    padding-top: 5rem;
     width: 25vw;
     @media (max-width: 768px) {
       width: 100vw;
@@ -58,11 +58,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 export const BurgerMenuContainer = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
   width: 100vw;
-  height: 6vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
     height: 8vh;
   }
@@ -71,7 +70,7 @@ export const BurgerMenuContainer = styled.div`
 export const LeftSection = styled.div`
   display: flex;
   width: 40vw;
-  height: 6vh;
+  height: 10vh;
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
     width: 20vw;
   }
@@ -100,12 +99,13 @@ export const MiddleSection = styled.div`
   display: flex;
   justify-content: center;
   width: 20vw;
+  height: 10vh;
   font-family: "Jost", sans-serif;
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
     display: 20vw;
   }
   img {
-    height: 30px;
+    height: 35px;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       height: 15px;
       display: flex;
@@ -123,13 +123,15 @@ export const MiddleSection = styled.div`
 export const RightSection = styled.div`
   display: flex;
   width: 40vw;
+  height: 10vh;
   justify-content: flex-end;
-  padding-right: 1rem;
+  align-items: center;
+  padding-right: 2rem;
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
     width: 60vw;
   }
 
-  button {
+  /* button {
     font-family: "Jost", sans-serif;
     display: flex;
     justify-content: center;
@@ -149,7 +151,53 @@ export const RightSection = styled.div`
   button:hover {
     background-color: white;
     color: #c91961;
+  } */
+  button {
+    font-family: "Jost", sans-serif;
+    width: 10vw;
+    height: 5vh;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #c91961;
+    border: 3px solid #c91961;
+    border-radius: 5px;
+    letter-spacing: 0.125rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.35s;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 70vw;
+      height: 5vh;
+      margin-top: 1rem;
+    }
   }
+  button span {
+    position: relative;
+    z-index: 2;
+  }
+  button:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    transition: all 0.35s;
+  }
+  button:hover {
+    color: #c91961;
+  }
+  button:hover:after {
+    width: 100%;
+  }
+
   .visible {
     display: inherit;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {

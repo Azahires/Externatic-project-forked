@@ -7,7 +7,7 @@ export default styled.div`
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 79vh;
+    height: 75vh;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       display: flex;
       flex-direction: column;
@@ -20,7 +20,6 @@ export default styled.div`
     align-items: center;
     justify-content: space-evenly;
     width: 40vw;
-    height: 79vh;
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
@@ -69,8 +68,9 @@ export default styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 11vw;
-    height: 6vh;
+    font-size: 1.125rem;
+    width: 10vw;
+    height: 5vh;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 40vw;
     }
@@ -80,9 +80,8 @@ export default styled.div`
     background-color: #c91961;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ecf0f1' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     opacity: 0.95;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
-    font-size: 1.5rem;
     border: none;
     cursor: pointer;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
@@ -90,14 +89,14 @@ export default styled.div`
     }
   }
   .linkedinLogo {
-    height: 43px;
+    height: 40px;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       height: 30px;
     }
   }
 
   .githubLogo {
-    height: 39px;
+    height: 36px;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       height: 25px;
     }
@@ -106,9 +105,8 @@ export default styled.div`
     background-color: #c91961;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ecf0f1' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     opacity: 0.95;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
-    font-size: 1.5rem;
     border: none;
     cursor: pointer;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
@@ -150,15 +148,14 @@ export default styled.div`
   }
   .updateInformations {
     cursor: pointer;
-    height: 2.5rem;
+    height: 5vh;
     width: 15rem;
     font-family: "Jost", sans-serif;
-    font-size: 1rem;
+    font-size: 1.125rem;
     background-color: #c91961;
     color: white;
     border: none;
-    font-weight: bold;
-    border-radius: 10px;
+    border-radius: 5px;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 70vw;
       height: 6vh;
@@ -167,15 +164,14 @@ export default styled.div`
   .updateIBio,
   .updateResearch {
     cursor: pointer;
-    height: 2.5rem;
+    height: 5vh;
     width: 12rem;
     font-family: "Jost", sans-serif;
-    font-size: 1rem;
+    font-size: 1.125rem;
     background-color: #c91961;
     color: white;
     border: none;
-    font-weight: bold;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 1rem;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 70vw;
@@ -204,7 +200,7 @@ export default styled.div`
     border-radius: 5px;
     margin: 1rem;
     width: 50vw;
-    height: 35vh;
+    height: auto;
     margin-top: 3rem;
     background-color: whitesmoke;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
@@ -302,7 +298,7 @@ export default styled.div`
     justify-content: space-around;
     width: 40vw;
     height: 75vh;
-    padding: 2vh 0;
+    padding-top: 0.5rem;
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     input,
@@ -319,7 +315,7 @@ export default styled.div`
     input[type="file"] {
       height: initial;
       width: initial;
-      margin: 10px auto;
+      margin: 5px auto;
       border-radius: initial;
     }
 
@@ -327,7 +323,13 @@ export default styled.div`
       height: initial;
       width: initial;
       display: initial;
-      margin: 10px auto;
+      margin: 5px auto;
+    }
+    input[type="text"] {
+      margin: 5px;
+    }
+    input[type="number"] {
+      margin: 5px;
     }
 
     fieldset {
@@ -336,6 +338,7 @@ export default styled.div`
 
     input:hover {
       background-color: #c91961;
+      color: white;
     }
 
     p {
