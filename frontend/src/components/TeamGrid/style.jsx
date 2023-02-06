@@ -84,7 +84,7 @@ export default styled.div`
   .pSecondBloc,
   .pThirdBloc,
   .fourthBloc {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
     color: #c91961;

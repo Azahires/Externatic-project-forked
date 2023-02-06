@@ -52,7 +52,7 @@ export default function TeamGrid() {
           <img className="checkImg" src={CheckLogo} alt="Check" />
           <p className="pFourthBloc">
             Plus de <em>94%</em>
-            <br /> de période d’essais validées
+            <br /> de période d’essai validée
           </p>
         </div>
       </div>
