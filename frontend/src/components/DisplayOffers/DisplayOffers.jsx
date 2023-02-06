@@ -34,13 +34,13 @@ export default function DisplayOffers({ limit }) {
 
   useEffect(() => {
     api.get("/offers").then(({ data }) => {
-      const data2 = data;
-      for (let i = 0; i < data2.length; i += 1) {
-        data2[i].publication_date = new Date(
-          data2[i].publication_date
+      const newData = data;
+      for (let i = 0; i < newData.length; i += 1) {
+        newData[i].publication_date = new Date(
+          newData[i].publication_date
         ).toLocaleDateString("fr");
       }
-      setOffers(data2);
+      setOffers(newData);
     });
   }, []);
 
