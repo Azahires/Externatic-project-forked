@@ -21,6 +21,11 @@ export default styled.div`
       width: 80vw;
       margin-bottom: 2rem;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      height: auto;
+      width: 90vw;
+      margin-top: 3rem;
+    }
   }
   .presentationText {
     font-size: 1.3rem;
@@ -59,6 +64,10 @@ export default styled.div`
       width: 70vw;
       height: 5vh;
       margin-top: 1rem;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      height: auto;
+      width: 40vw;
     }
   }
   .presentationButton span {

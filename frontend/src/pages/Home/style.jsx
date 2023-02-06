@@ -9,5 +9,8 @@ export default styled.div`
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       flex-direction: column;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      flex-direction: column;
+    }
   }
 `;

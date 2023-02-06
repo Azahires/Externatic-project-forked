@@ -13,6 +13,12 @@ export default styled.div`
       flex-direction: column;
       height: auto;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: auto;
+    }
   }
   .MSProfileLeftContainer {
     display: flex;
@@ -23,6 +29,10 @@ export default styled.div`
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: auto;
+      height: auto;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: auto;
       height: auto;
     }
@@ -37,13 +47,24 @@ export default styled.div`
       width: 100vw;
       height: 25vh;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 70vw;
+      height: auto;
+      padding-top: 1rem;
+    }
+
     .AvatarImg {
       max-width: 300px;
       max-height: 300px;
       border-radius: 36% 64% 32% 68% / 44% 30% 70% 56%;
+      border: 10px solid #c91961;
       @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
         max-width: 200px;
         max-height: 200px;
+      }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        max-width: 400px;
+        max-height: 400px;
       }
     }
   }
@@ -62,6 +83,11 @@ export default styled.div`
       display: flex;
       flex-direction: row;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 30vw;
+      display: flex;
+      flex-direction: column;
+    }
   }
   .buttonSocialMediaLinkedin,
   .buttonSocialMediaGitHub {
@@ -73,6 +99,10 @@ export default styled.div`
     height: 5vh;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 40vw;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 25vw;
+      font-size: 1.4rem;
     }
   }
 
@@ -130,6 +160,12 @@ export default styled.div`
       font-size: 1.2rem;
       height: auto;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 100vw;
+      font-size: 2rem;
+      height: auto;
+      padding-top: 3rem;
+    }
   }
   .UserField {
     font-size: 1.7rem;
@@ -160,6 +196,11 @@ export default styled.div`
       width: 70vw;
       height: 6vh;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 40vw;
+      height: 6vh;
+      font-size: 1.4rem;
+    }
   }
   .updateIBio,
   .updateResearch {
@@ -177,6 +218,11 @@ export default styled.div`
       width: 70vw;
       height: 6vh;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 40vw;
+      height: 6vh;
+      font-size: 1.4rem;
+    }
   }
   .MSProfileRightContainer {
     display: flex;
@@ -187,6 +233,10 @@ export default styled.div`
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     border-left: 2px solid #c91961;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+      height: auto;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: 100vw;
       height: auto;
     }
@@ -207,6 +257,10 @@ export default styled.div`
       width: 90vw;
       height: auto;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 90vw;
+      height: auto;
+    }
   }
   .myBiographyTitle,
   .myResearchTitle,
@@ -217,7 +271,11 @@ export default styled.div`
     padding-top: 1.5rem;
     color: #c91961;
     font-weight: bold;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      font-size: 1.8rem;
+    }
   }
+
   .myResearchTitle {
     margin-bottom: 1.5rem;
   }
@@ -235,6 +293,9 @@ export default styled.div`
     margin: 1rem;
     line-height: 1.5rem;
   }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    font-size: 1.5rem;
+  }
   .myResearch,
   .myCV {
     display: flex;
@@ -248,6 +309,10 @@ export default styled.div`
     height: auto;
     background-color: whitesmoke;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 90vw;
+      height: auto;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: 90vw;
       height: auto;
     }

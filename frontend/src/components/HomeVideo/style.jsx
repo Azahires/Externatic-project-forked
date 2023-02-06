@@ -18,6 +18,12 @@ export default styled.div`
       height: auto;
       border: none;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 100vw;
+      height: auto;
+      border: none;
+      margin-bottom: none;
+    }
   }
   video {
     position: absolute;
@@ -28,6 +34,11 @@ export default styled.div`
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
       height: auto;
+      filter: blur(1px) grayscale();
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 100vw;
+      height: 100vh;
       filter: blur(1px) grayscale();
     }
   }
@@ -62,6 +73,11 @@ export default styled.div`
       padding-bottom: 2rem;
       padding-top: 2rem;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      font-size: 6rem;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+    }
   }
 
   @keyframes textclip {
@@ -76,6 +92,10 @@ export default styled.div`
     text-shadow: 1px 1px 2px #c91961;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      font-size: 3.5rem;
       padding-bottom: 2rem;
     }
   }

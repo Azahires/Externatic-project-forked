@@ -112,6 +112,9 @@ export const MiddleSection = styled.div`
       justify-content: center;
       align-items: center;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      height: 25px;
+    }
   }
 
   button {
@@ -182,6 +185,11 @@ export const RightSection = styled.div`
       width: 35vw;
       height: 5vh;
       font-size: 0.6rem;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 18vw;
+      height: 5vh;
+      font-size: 0.8rem;
     }
   }
   .hidden {

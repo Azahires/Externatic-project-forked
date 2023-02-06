@@ -35,6 +35,9 @@ export default styled.div`
       align-items: center;
       margin-bottom: 2rem;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 70vw;
+    }
   }
 
   .searchButton {
@@ -57,6 +60,9 @@ export default styled.div`
       width: 30vw;
       height: 5vh;
       margin-top: 1rem;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 35vw;
     }
   }
   .searchButton span {

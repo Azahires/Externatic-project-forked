@@ -23,6 +23,12 @@ export default styled.nav`
       border: 1px solid white;
       letter-spacing: 0;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 20vw;
+      height: 7.5vh;
+      border: 1px solid white;
+      letter-spacing: 0;
+    }
   }
   .active {
     background-color: #ecf0f1;
@@ -46,6 +52,12 @@ export default styled.nav`
       font-size: 1rem;
       text-align: justify;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      font-size: 1rem;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      font-size: 1.5rem;
+    }
   }
 
   .MSNavbarContainer {
@@ -61,6 +73,10 @@ export default styled.nav`
       height: 25vh;
       flex-direction: column;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 100vw;
+      height: 15vh;
+    }
   }
   .HelloUser {
     width: 20vw;
@@ -74,6 +90,12 @@ export default styled.nav`
       width: 100vw;
       text-align: center;
       height: 10vh;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 30vw;
+      height: 15vh;
+      text-align: justify;
+      padding-left: 1rem;
     }
   }
   .EMuser {
@@ -98,6 +120,12 @@ export default styled.nav`
       display: flex;
       justify-content: space-around;
       height: 10vh;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 70vw;
+      display: flex;
+      justify-content: space-around;
+      height: 15vh;
     }
   }
 `;

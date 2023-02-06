@@ -51,6 +51,12 @@ export default styled.div`
       height: 5vh;
       margin-top: 1rem;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 50vw;
+      height: 5vh;
+      margin-top: 1rem;
+      font-size: 1.4rem;
+    }
   }
   button span {
     position: relative;
