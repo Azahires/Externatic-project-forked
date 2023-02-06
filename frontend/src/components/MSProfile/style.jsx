@@ -214,7 +214,7 @@ export default styled.div`
     font-family: "Jost", sans-serif;
     font-size: 1.5rem;
     text-align: center;
-    padding-top: 0.5rem;
+    padding-top: 1.5rem;
     color: #c91961;
     font-weight: bold;
   }
