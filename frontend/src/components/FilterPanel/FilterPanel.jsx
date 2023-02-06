@@ -91,7 +91,15 @@ export default function FilterPanel() {
             value={kilometer}
             onChange={hkilometerChange}
           />
-          <label htmlFor="volume">Kilomètres {kilometer}</label>
+          <input
+            type="text"
+            className="kmInput"
+            value={kilometer}
+            onChange={hkilometerChange}
+          />
+          <label className="kilometer" htmlFor="volume">
+            Kilomètres
+          </label>
         </form>
       </Centered>
     </Style>

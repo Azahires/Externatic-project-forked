@@ -15,7 +15,6 @@ export default styled.div`
       color: black;
     }
   }
-
   button {
     width: 10rem;
     margin-left: 0.1rem;
@@ -35,7 +34,6 @@ export default styled.div`
     background-color: white;
     color: #c91961;
   }
-
   form {
     display: flex;
     justify-content: center;

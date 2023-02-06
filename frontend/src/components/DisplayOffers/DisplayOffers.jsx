@@ -20,18 +20,6 @@ export default function DisplayOffers({ limit }) {
 
   const api = useApi();
 
-  useEffect(() => {
-    api.get("/offers").then(({ data }) => {
-      const data2 = data;
-      for (let i = 0; i < data2.length; i += 1) {
-        data2[i].publication_date = new Date(
-          data2[i].publication_date
-        ).toLocaleDateString("fr");
-      }
-      setOffers(data2);
-    });
-  }, []);
-
   function getDistance(xOffer, yOffer) {
     const yUser = userCoordinates.latitude;
     const xUser = userCoordinates.longitude;
@@ -43,6 +31,18 @@ export default function DisplayOffers({ limit }) {
     const distKm = Math.sqrt(dXKm ** 2 + dYKm ** 2);
     return distKm;
   }
+
+  useEffect(() => {
+    api.get("/offers").then(({ data }) => {
+      const newData = data;
+      for (let i = 0; i < newData.length; i += 1) {
+        newData[i].publication_date = new Date(
+          newData[i].publication_date
+        ).toLocaleDateString("fr");
+      }
+      setOffers(newData);
+    });
+  }, []);
 
   return (
     <Style>
