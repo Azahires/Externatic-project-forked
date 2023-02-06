@@ -7,7 +7,6 @@ export default styled.div`
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 75vh;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       display: flex;
       flex-direction: column;
