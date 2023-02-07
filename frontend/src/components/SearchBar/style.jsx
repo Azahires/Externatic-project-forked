@@ -18,7 +18,6 @@ export default styled.div`
       width: 90vw;
       border: 1px solid black;
       border-radius: 5px;
-      margin-top: 2rem;
     }
     ::placeholder {
       color: white;
@@ -33,7 +32,7 @@ export default styled.div`
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       flex-direction: column;
       align-items: center;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: 70vw;
@@ -57,9 +56,9 @@ export default styled.div`
     position: relative;
     transition: all 0.35s;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
-      width: 30vw;
+      width: 35vw;
       height: 5vh;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: 35vw;

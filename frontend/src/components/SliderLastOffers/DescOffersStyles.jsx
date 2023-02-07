@@ -18,6 +18,7 @@ export default styled.div`
     background-repeat: no-repeat;
     background-position: center 100%;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      margin-top: 1rem;
       font-size: 1.7rem;
       background-image: linear-gradient(
         90deg,

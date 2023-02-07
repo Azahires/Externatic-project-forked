@@ -28,6 +28,7 @@ export default function Connexion() {
 
   return (
     <Style onSubmit={handleSubmit(onSubmit)}>
+      <h1>Connexion</h1>
       <input
         type="text"
         placeholder="Email"

@@ -1,5 +1,6 @@
 import Style from "./style";
 import backgroundVideo from "../../assets/home.mp4";
+import ArrowDown from "../../assets/arrowdown.svg";
 
 export default function HomeVideo() {
   return (
@@ -13,6 +14,11 @@ export default function HomeVideo() {
           Nous cassons les codes
           <br /> du recrutement informatique.
         </p>
+        <div className="scroll-container">
+          <a href="#scroll">
+            <img className="arrow-down" src={ArrowDown} alt="arrow down" />
+          </a>
+        </div>
       </div>
     </Style>
   );

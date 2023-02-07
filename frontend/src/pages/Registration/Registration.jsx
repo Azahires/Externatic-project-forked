@@ -33,6 +33,7 @@ export default function Registration() {
   return (
     <Style>
       <form onSubmit={handleSubmit(onSubmit)} onChange={hchange}>
+        <h1>Inscription</h1>
         <input
           type="text"
           placeholder="Prénom"

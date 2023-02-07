@@ -44,7 +44,7 @@ export default styled.div`
     width: 25vw;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
-      height: 25vh;
+      height: 30vh;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: 70vw;
@@ -56,7 +56,7 @@ export default styled.div`
       max-width: 300px;
       max-height: 300px;
       border-radius: 36% 64% 32% 68% / 44% 30% 70% 56%;
-      border: 10px solid #c91961;
+      border: 5px solid #c91961;
       @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
         max-width: 200px;
         max-height: 200px;
@@ -78,7 +78,7 @@ export default styled.div`
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
-      height: 10vh;
+      height: 5vh;
       display: flex;
       flex-direction: row;
     }
@@ -157,6 +157,7 @@ export default styled.div`
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
       font-size: 1.2rem;
+      line-height: 2rem;
       height: auto;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -346,6 +347,7 @@ export default styled.div`
       display: flex;
       flex-direction: column;
       width: 100vw;
+      padding-top: 0;
     }
   }
   a {
@@ -395,6 +397,8 @@ export default styled.div`
       margin: 5px auto;
       border-radius: initial;
       margin: 0rem;
+      color: black;
+      font-family: Jost;
     }
 
     input[type="radio"] {
@@ -402,12 +406,18 @@ export default styled.div`
       width: initial;
       display: initial;
       margin: 5px auto;
+      color: black;
+      font-family: Jost;
     }
     input[type="text"] {
       margin: 5px;
+      color: black;
+      font-family: Jost;
     }
     input[type="number"] {
       margin: 5px;
+      color: black;
+      font-family: Jost;
     }
     input:hover {
       font-family: JostBold;
@@ -436,6 +446,14 @@ export default styled.div`
     width: 40vw;
     height: 20vh;
     padding: 2vh 0;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 80vw;
+      height: 20vh;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 80vw;
+      height: 20vh;
+    }
     textarea {
       border-radius: 10px;
       height: 100%;
@@ -469,5 +487,13 @@ export default styled.div`
     font-size: 0.9rem;
     color: #c91961;
     font-weight: bold;
+  }
+  .formPart {
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 100vw;
+    }
   }
 `;

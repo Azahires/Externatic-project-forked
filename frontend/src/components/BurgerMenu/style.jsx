@@ -46,6 +46,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
     @media (max-width: 768px) {
       width: 99vw;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 50vw;
+    }
   }
 
   /* Individual item */
@@ -65,6 +68,9 @@ export const BurgerMenuContainer = styled.div`
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
     height: 10vh;
   }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    height: 10vh;
+  }
 `;
 
 export const LeftSection = styled.div`
@@ -72,7 +78,10 @@ export const LeftSection = styled.div`
   width: 40vw;
   height: 10vh;
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
-    width: 20vw;
+    width: 10vw;
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    width: 10vw;
   }
   font-family: "Jost", sans-serif;
   button {
@@ -102,7 +111,7 @@ export const MiddleSection = styled.div`
   height: 10vh;
   font-family: "Jost", sans-serif;
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
-    display: 20vw;
+    display: 40vw;
   }
   img {
     height: 35px;
@@ -131,7 +140,7 @@ export const RightSection = styled.div`
   align-items: center;
   padding-right: 2rem;
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
-    width: 60vw;
+    width: 50vw;
   }
 
   button {
@@ -187,9 +196,9 @@ export const RightSection = styled.div`
       font-size: 0.6rem;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-      width: 18vw;
+      width: auto;
       height: 5vh;
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   }
   .hidden {

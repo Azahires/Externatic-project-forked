@@ -31,7 +31,7 @@ export default styled.div`
     font-size: 1.3rem;
     text-align: center;
     padding-bottom: 1rem;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       font-size: 1rem;
       line-height: 2rem;
@@ -94,7 +94,7 @@ export default styled.div`
     text-transform: uppercase;
     color: #c91961;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       font-size: 1.2rem;
     }

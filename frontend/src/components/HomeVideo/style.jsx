@@ -6,23 +6,24 @@ export default styled.div`
     overflow: hidden;
     width: 100vw;
     height: 90vh;
-    margin-bottom: 3rem;
-    border-bottom: 4px solid #c91961;
-    border-top: 4px solid #c91961;
+    margin-bottom: 5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
-      height: auto;
-      border: none;
+      height: 25vh;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: 100vw;
       height: auto;
       border: none;
-      margin-bottom: none;
     }
   }
   video {
@@ -70,8 +71,8 @@ export default styled.div`
     padding-bottom: 3rem;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       font-size: 3rem;
-      padding-bottom: 2rem;
-      padding-top: 2rem;
+      padding-bottom: 0;
+      padding-top: 1rem;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       font-size: 6rem;
@@ -91,12 +92,20 @@ export default styled.div`
     color: white;
     text-shadow: 1px 1px 2px #c91961;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
-      font-size: 2rem;
-      padding-bottom: 2rem;
+      font-size: 1.5rem;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       font-size: 3.5rem;
       padding-bottom: 2rem;
+    }
+  }
+  .arrow-down {
+    height: 10vh;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      display: none;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      display: none;
     }
   }
 `;
