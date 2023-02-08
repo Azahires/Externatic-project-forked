@@ -5,6 +5,9 @@ export default styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+    }
   }
   .mainDiv {
     display: flex;
@@ -81,7 +84,7 @@ export default styled.div`
   .pSecondBloc,
   .pThirdBloc,
   .fourthBloc {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
     color: #c91961;

@@ -230,7 +230,7 @@ export default function MSProfile() {
           encType="multipart/form-data"
         >
           <label htmlFor="avatar" className="avatarlabel">
-            Ajouter un avatar:
+            Ajouter un avatar :
           </label>
           <input
             type="file"

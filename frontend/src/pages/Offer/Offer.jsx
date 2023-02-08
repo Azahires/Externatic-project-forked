@@ -163,7 +163,7 @@ export default function Offer() {
           <h2>
             {offer.contract_type} - {offer.location}
           </h2>
-          <h2>Date de publication: {offer.publication_date}</h2>
+          <h2>Date de publication : {offer.publication_date}</h2>
         </div>
         {offer.entreprise_description && (
           <>

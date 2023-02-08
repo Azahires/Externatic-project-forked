@@ -3,8 +3,8 @@ import Style from "./style";
 export default function LoginHP() {
   return (
     <Style>
-      <div className="loginhpContainer">
-        <h1 className="typing-demo">Rejoignez-nous ! 🚀</h1>
+      <div className="loginhpContainer" id="scroll">
+        <h1 className>Rejoignez-nous ! 🚀</h1>
         <p className="loginhpText">
           Accédez <em>rapidement</em> et <em>gratuitement</em> à notre réseau de
           plus de 300 entreprises et commencez à postuler dés maintenant ! Vous

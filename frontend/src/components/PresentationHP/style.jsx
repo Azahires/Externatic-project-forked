@@ -21,12 +21,17 @@ export default styled.div`
       width: 80vw;
       margin-bottom: 2rem;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      height: auto;
+      width: 90vw;
+      margin-top: 3rem;
+    }
   }
   .presentationText {
     font-size: 1.3rem;
     text-align: center;
     padding-bottom: 1rem;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       font-size: 1rem;
       line-height: 2rem;
@@ -42,12 +47,13 @@ export default styled.div`
   }
   .presentationButton {
     width: 12vw;
-    height: 5vh;
     line-height: 2.5rem;
     font-size: 1.125rem;
-    font-weight: bold;
+    margin-top: 1rem;
+    text-transform: uppercase;
     text-decoration: none;
-    color: #c91961;
+    color: #fff;
+    background-color: #c91961;
     border: 3px solid #c91961;
     border-radius: 5px;
     letter-spacing: 0.125rem;
@@ -58,6 +64,10 @@ export default styled.div`
       width: 70vw;
       height: 5vh;
       margin-top: 1rem;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      height: auto;
+      width: 40vw;
     }
   }
   .presentationButton span {
@@ -70,11 +80,11 @@ export default styled.div`
     left: 0;
     width: 0;
     height: 100%;
-    background: #c91961;
+    background: white;
     transition: all 0.35s;
   }
   .presentationButton:hover {
-    color: #fff;
+    color: #c91961;
   }
   .presentationButton:hover:after {
     width: 100%;
@@ -84,7 +94,7 @@ export default styled.div`
     text-transform: uppercase;
     color: #c91961;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       font-size: 1.2rem;
     }

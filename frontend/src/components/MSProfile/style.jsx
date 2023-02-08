@@ -7,11 +7,16 @@ export default styled.div`
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 75vh;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       display: flex;
       flex-direction: column;
       height: auto;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: auto;
     }
   }
   .MSProfileLeftContainer {
@@ -20,10 +25,13 @@ export default styled.div`
     align-items: center;
     justify-content: space-evenly;
     width: 40vw;
-    height: 79vh;
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: auto;
+      height: auto;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: auto;
       height: auto;
     }
@@ -36,15 +44,26 @@ export default styled.div`
     width: 25vw;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
-      height: 25vh;
+      height: 30vh;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 70vw;
+      height: auto;
+      padding-top: 1rem;
+    }
+
     .AvatarImg {
       max-width: 300px;
       max-height: 300px;
       border-radius: 36% 64% 32% 68% / 44% 30% 70% 56%;
+      border: 5px solid #c91961;
       @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
         max-width: 200px;
         max-height: 200px;
+      }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        max-width: 400px;
+        max-height: 400px;
       }
     }
   }
@@ -59,9 +78,14 @@ export default styled.div`
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
-      height: 10vh;
+      height: 5vh;
       display: flex;
       flex-direction: row;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 30vw;
+      display: flex;
+      flex-direction: column;
     }
   }
   .buttonSocialMediaLinkedin,
@@ -69,10 +93,15 @@ export default styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 11vw;
-    height: 6vh;
+    font-size: 1.125rem;
+    width: 10vw;
+    height: 5vh;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 40vw;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 25vw;
+      font-size: 1.4rem;
     }
   }
 
@@ -80,9 +109,8 @@ export default styled.div`
     background-color: #c91961;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ecf0f1' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     opacity: 0.95;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
-    font-size: 1.5rem;
     border: none;
     cursor: pointer;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
@@ -90,14 +118,14 @@ export default styled.div`
     }
   }
   .linkedinLogo {
-    height: 43px;
+    height: 40px;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       height: 30px;
     }
   }
 
   .githubLogo {
-    height: 39px;
+    height: 36px;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       height: 25px;
     }
@@ -106,9 +134,8 @@ export default styled.div`
     background-color: #c91961;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ecf0f1' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     opacity: 0.95;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
-    font-size: 1.5rem;
     border: none;
     cursor: pointer;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
@@ -130,7 +157,14 @@ export default styled.div`
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 100vw;
       font-size: 1.2rem;
+      line-height: 2rem;
       height: auto;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 100vw;
+      font-size: 2rem;
+      height: auto;
+      padding-top: 3rem;
     }
   }
   .UserField {
@@ -150,36 +184,44 @@ export default styled.div`
   }
   .updateInformations {
     cursor: pointer;
-    height: 2.5rem;
+    height: 5vh;
     width: 15rem;
     font-family: "Jost", sans-serif;
-    font-size: 1rem;
+    font-size: 1.125rem;
     background-color: #c91961;
     color: white;
     border: none;
-    font-weight: bold;
-    border-radius: 10px;
+    border-radius: 5px;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 70vw;
       height: 6vh;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 40vw;
+      height: 6vh;
+      font-size: 1.4rem;
     }
   }
   .updateIBio,
   .updateResearch {
     cursor: pointer;
-    height: 2.5rem;
+    height: 5vh;
     width: 12rem;
     font-family: "Jost", sans-serif;
-    font-size: 1rem;
+    font-size: 1.125rem;
     background-color: #c91961;
     color: white;
     border: none;
-    font-weight: bold;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 1rem;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 70vw;
       height: 6vh;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 40vw;
+      height: 6vh;
+      font-size: 1.4rem;
     }
   }
   .MSProfileRightContainer {
@@ -194,6 +236,10 @@ export default styled.div`
       width: 100vw;
       height: auto;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 100vw;
+      height: auto;
+    }
   }
   .myBiography {
     display: flex;
@@ -204,10 +250,14 @@ export default styled.div`
     border-radius: 5px;
     margin: 1rem;
     width: 50vw;
-    height: 35vh;
+    height: auto;
     margin-top: 3rem;
     background-color: whitesmoke;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 90vw;
+      height: auto;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: 90vw;
       height: auto;
     }
@@ -218,10 +268,14 @@ export default styled.div`
     font-family: "Jost", sans-serif;
     font-size: 1.5rem;
     text-align: center;
-    padding-top: 0.5rem;
+    padding-top: 1.5rem;
     color: #c91961;
     font-weight: bold;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      font-size: 1.8rem;
+    }
   }
+
   .myResearchTitle {
     margin-bottom: 1.5rem;
   }
@@ -239,6 +293,9 @@ export default styled.div`
     margin: 1rem;
     line-height: 1.5rem;
   }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    font-size: 1.5rem;
+  }
   .myResearch,
   .myCV {
     display: flex;
@@ -252,6 +309,10 @@ export default styled.div`
     height: auto;
     background-color: whitesmoke;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 90vw;
+      height: auto;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: 90vw;
       height: auto;
     }
@@ -286,6 +347,7 @@ export default styled.div`
       display: flex;
       flex-direction: column;
       width: 100vw;
+      padding-top: 0;
     }
   }
   a {
@@ -310,7 +372,7 @@ export default styled.div`
     justify-content: space-around;
     width: 40vw;
     height: 75vh;
-    padding: 2vh 0;
+    padding-top: 0.5rem;
     background-color: #ecf0f1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     input,
@@ -332,16 +394,30 @@ export default styled.div`
       border: none;
       height: initial;
       width: initial;
-      margin: 10px auto;
+      margin: 5px auto;
       border-radius: initial;
       margin: 0rem;
+      color: black;
+      font-family: Jost;
     }
 
     input[type="radio"] {
       height: initial;
       width: initial;
       display: initial;
-      margin: 10px auto;
+      margin: 5px auto;
+      color: black;
+      font-family: Jost;
+    }
+    input[type="text"] {
+      margin: 5px;
+      color: black;
+      font-family: Jost;
+    }
+    input[type="number"] {
+      margin: 5px;
+      color: black;
+      font-family: Jost;
     }
     input:hover {
       font-family: JostBold;
@@ -350,6 +426,11 @@ export default styled.div`
 
     fieldset {
       text-align: center;
+    }
+
+    input:hover {
+      background-color: #c91961;
+      color: white;
     }
 
     p {
@@ -365,6 +446,14 @@ export default styled.div`
     width: 40vw;
     height: 20vh;
     padding: 2vh 0;
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 80vw;
+      height: 20vh;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 80vw;
+      height: 20vh;
+    }
     textarea {
       border-radius: 10px;
       height: 100%;
@@ -398,5 +487,13 @@ export default styled.div`
     font-size: 0.9rem;
     color: #c91961;
     font-weight: bold;
+  }
+  .formPart {
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 100vw;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 100vw;
+    }
   }
 `;

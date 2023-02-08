@@ -34,6 +34,7 @@ export default styled.div`
   h1 {
     font-size: 2.3rem;
     font-family: "JostBold";
+    text-transform: uppercase;
   }
   h2 {
     font-size: 1.6rem;
@@ -52,6 +53,7 @@ export default styled.div`
     color: #c91162;
     border: 2px solid #c91162;
     border-radius: 10px;
+    text-transform: uppercase;
   }
 
   p {
@@ -78,6 +80,7 @@ export default styled.div`
     margin: 1rem 0;
   }
   .consultantPart {
+    padding-top: 2.5rem;
     .picturepart {
       display: flex;
       align-items: center;

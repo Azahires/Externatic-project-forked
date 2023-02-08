@@ -26,6 +26,11 @@ export default styled.div`
       height: 40vh;
       margin-bottom: 3rem;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 90vw;
+      height: 40vh;
+      margin-bottom: 3rem;
+    }
   }
 
   .titleOfferCardContainer {
@@ -41,12 +46,14 @@ export default styled.div`
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
   .titleOfferCard {
     font-size: 1.4rem;
     font-weight: bold;
     text-align: center;
     color: white;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      font-size: 2rem;
+    }
   }
 
   .informationOfferCardContainer {
@@ -56,6 +63,9 @@ export default styled.div`
     width: 25vw;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       height: 12vh;
+      width: 90vw;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: 90vw;
     }
   }
@@ -71,6 +81,9 @@ export default styled.div`
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 45vw;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 90vw;
+    }
   }
   .contractType {
     border-right: 2px solid black;
@@ -82,6 +95,9 @@ export default styled.div`
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       font-size: 1rem;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      font-size: 1.5rem;
+    }
   }
   .textContractType,
   .textLocation,
@@ -91,6 +107,9 @@ export default styled.div`
     color: #c91961;
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       font-size: 1rem;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      font-size: 1.5rem;
     }
   }
   .textPublicationDate {
@@ -109,6 +128,9 @@ export default styled.div`
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
       width: 90vw;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      width: 90vw;
+    }
   }
   .black {
     color: black;
@@ -124,6 +146,9 @@ export default styled.div`
     background-color: white;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23c91961' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+      width: 90vw;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       width: 90vw;
     }
   }
