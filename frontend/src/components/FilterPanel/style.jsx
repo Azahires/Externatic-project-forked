@@ -42,5 +42,6 @@ export default styled.div`
     border: none;
     background-color: #c91961;
     border-radius: 5px;
+    color: white;
   }
 `;
