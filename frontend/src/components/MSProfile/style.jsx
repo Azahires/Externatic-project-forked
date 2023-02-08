@@ -462,6 +462,7 @@ export default styled.div`
       margin-bottom: 1rem;
       font-size: 1.2rem;
       font-family: "Jost";
+      color: white;
     }
     textarea:hover {
       background-color: #c91961;
