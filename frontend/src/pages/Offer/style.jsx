@@ -6,19 +6,19 @@ export default styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  list-style: none;
+  text-decoration: none;
   #offer {
     border-radius: 20px;
     margin-top: 5vh;
-    width: 80vw;
+    width: 70vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     text-align: justify;
     padding: 0 5vw;
-    background-color: #ffffffa1;
-
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ecf0f1' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+   
   }
   #offerinfo {
     display: flex;
@@ -49,7 +49,6 @@ export default styled.div`
     margin: 2rem 0 0 0;
     padding: 0.5rem 1rem;
     font-family: "JostBold";
-    box-sizing: border-box;
     color: #c91162;
     border: 2px solid #c91162;
     border-radius: 10px;
@@ -118,33 +117,25 @@ export default styled.div`
   }
 
   .firstcontainer {
-    transition: all 0.3s ease-out;
-    width: 25%;
+    width: 40%;
     margin: 1rem 0rem;
-    box-shadow: 5px 5px 20px lightgrey, -5px 5px 20px lightgrey;
+    box-shadow: 1px 1px 10px white, -1px 1px 10px white;
     border-radius: 20px;
-    .secondcontainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      position: relative;
-      z-index: 0;
-      width: 100%;
-      border-radius: 20px;
-    }
-
-    button {
+    transition: all 0.10s ease-out;
+    
+  }
+   
+     button {
       width: 100%;
       transition: color 0.5s cubic-bezier(0.32, 0, 0.67, 0);
       background-color: transparent;
-      font-size: 2.2rem;
+      font-size: 1.7rem;
       font-family: "JostBold";
       padding: 1rem;
-      border: 1px solid ${mainColor};
+      border: 2px solid ${mainColor};
       cursor: pointer;
       border-radius: 20px;
+       
     }
 
     button:hover {
