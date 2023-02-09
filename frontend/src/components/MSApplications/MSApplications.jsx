@@ -68,7 +68,7 @@ export default function MSApplications() {
                 location={offer.location}
                 id={offer.id}
                 key={offer.id}
-                applicationdate={offer.applicationdate}
+                applicationdate={offer.applicationdate[0]}
               />
             );
           })}
