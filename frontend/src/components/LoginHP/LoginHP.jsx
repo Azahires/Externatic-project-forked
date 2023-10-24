@@ -4,7 +4,7 @@ export default function LoginHP() {
   return (
     <Style>
       <div className="loginhpContainer" id="scroll">
-        <h1 className>Rejoignez-nous ! 🚀</h1>
+        <h1>Rejoignez-nous ! 🚀</h1>
         <p className="loginhpText">
           Accédez <em>rapidement</em> et <em>gratuitement</em> à notre réseau de
           plus de 300 entreprises et commencez à postuler dés maintenant ! Vous
