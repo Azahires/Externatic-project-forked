@@ -15,6 +15,7 @@ export default function SearchBar() {
       <Centered>
         <form>
           <input
+            id="searchBar"
             type="text"
             placeholder="Développeur JavaScript, PHP, Python ?"
             value={searchValue}
