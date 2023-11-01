@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 import useApi from "@services/useApi";
 import { Context } from "../../contexts/Context";
 import Style, {
-  BurgerMenuContainer,
+  NavBarContainer,
   LeftSection,
   MiddleSection,
   RightSection,
 } from "./style";
 import externaticLogo from "../../assets/externatic.svg";
 
-export default function BurgerMenu() {
+export default function NavBar() {
   const [isOpen, setOpen] = useState(false);
   const { userInfo, setUserInfo } = useContext(Context);
   const api = useApi();
@@ -34,7 +34,7 @@ export default function BurgerMenu() {
   };
 
   return (
-    <BurgerMenuContainer>
+    <NavBarContainer>
       <LeftSection>
         <Style>
           <Menu
@@ -150,6 +150,6 @@ export default function BurgerMenu() {
           <span>Deconnexion</span>
         </button>
       </RightSection>
-    </BurgerMenuContainer>
+    </NavBarContainer>
   );
 }
