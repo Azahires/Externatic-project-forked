@@ -6,7 +6,7 @@ import Offer from "@pages/Offer/Offer";
 import Whoweare from "@pages/Whoweare/Whoweare";
 import Registration from "@pages/Registration/Registration";
 import Connexion from "@pages/Connexion/Connexion";
-import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
+import NavBar from "@components/NavBar/NavBar";
 import MySpace from "@pages/MySpace/MySpace";
 import { useContext } from "react";
 import Team from "@pages/Team/Team";
@@ -17,7 +17,7 @@ export default function App() {
   const { userInfo } = useContext(Context);
   return (
     <Style>
-      <BurgerMenu />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/offers" element={<Offers />} />

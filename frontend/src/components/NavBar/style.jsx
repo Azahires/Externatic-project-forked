@@ -58,7 +58,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 `;
 
-export const BurgerMenuContainer = styled.div`
+export const NavBarContainer = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
   width: 100vw;
   height: 10vh;
