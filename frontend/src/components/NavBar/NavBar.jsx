@@ -12,17 +12,18 @@ import Style, {
 import externaticLogo from "../../assets/externatic.svg";
 
 export default function NavBar() {
-  const [isOpen, setOpen] = useState(false);
   const { userInfo, setUserInfo } = useContext(Context);
+  const [isOpen, setOpen] = useState(false);
+  const navigate = useNavigate();
   const api = useApi();
+  
   const handleIsOpen = () => {
     setOpen(!isOpen);
   };
-  const closeSideBar = () => {
+  const handleCloseSideBar = () => {
     setOpen(false);
   };
-  const navigate = useNavigate();
-  const hLogOut = () => {
+  const handleLogOut = () => {
     api.defaults.headers.authorization = null;
     setUserInfo({
       lastname: null,
@@ -47,7 +48,7 @@ export default function NavBar() {
             <button
               type="button"
               onClick={() => {
-                closeSideBar();
+                handleCloseSideBar();
                 navigate("/");
               }}
             >
@@ -56,7 +57,7 @@ export default function NavBar() {
             <button
               type="button"
               onClick={() => {
-                closeSideBar();
+                handleCloseSideBar();
                 navigate("/account");
               }}
               className={userInfo.email ? "visible" : "hidden"}
@@ -66,7 +67,7 @@ export default function NavBar() {
             <button
               type="button"
               onClick={() => {
-                closeSideBar();
+                handleCloseSideBar();
                 navigate("/signin");
               }}
               className={!userInfo.email ? "visible" : "hidden"}
@@ -76,7 +77,7 @@ export default function NavBar() {
             <button
               type="button"
               onClick={() => {
-                closeSideBar();
+                handleCloseSideBar();
                 navigate("/login");
               }}
               className={!userInfo.email ? "visible" : "hidden"}
@@ -86,7 +87,7 @@ export default function NavBar() {
             <button
               type="button"
               onClick={() => {
-                closeSideBar();
+                handleCloseSideBar();
                 navigate("/offers");
               }}
             >
@@ -95,7 +96,7 @@ export default function NavBar() {
             <button
               type="button"
               onClick={() => {
-                closeSideBar();
+                handleCloseSideBar();
                 navigate("/team");
               }}
             >
@@ -104,7 +105,7 @@ export default function NavBar() {
             <button
               type="button"
               onClick={() => {
-                closeSideBar();
+                handleCloseSideBar();
                 navigate("/about");
               }}
             >
@@ -145,7 +146,7 @@ export default function NavBar() {
         <button
           type="button"
           className={userInfo.email ? "visible" : "hidden"}
-          onClick={hLogOut}
+          onClick={handleLogOut}
         >
           <span>Deconnexion</span>
         </button>
