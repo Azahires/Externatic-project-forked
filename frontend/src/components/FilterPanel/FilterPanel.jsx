@@ -19,10 +19,19 @@ export default function FilterPanel() {
   } = useContext(Context);
 
   const handleCheckboxChange = (filterType) => {
-    setFilterCdd(filterType === "CDD");
-    setFilterCdi(filterType === "CDI");
-    setFilterAlternance(filterType === "Alternance");
-    setFilterInternship(filterType === "Stage");
+    if (filterCdd || filterCdi || filterAlternance || filterInternship) {
+      setFilterCdd(filterType === "CDD" ? !filterCdd : false);
+      setFilterCdi(filterType === "CDI" ? !filterCdi : false);
+      setFilterAlternance(
+        filterType === "Alternance" ? !filterAlternance : false
+      );
+      setFilterInternship(filterType === "Stage" ? !filterInternship : false);
+    } else {
+      setFilterCdd(filterType === "CDD");
+      setFilterCdi(filterType === "CDI");
+      setFilterAlternance(filterType === "Alternance");
+      setFilterInternship(filterType === "Stage");
+    }
   };
 
   const handleKilometerChange = (event) => {
