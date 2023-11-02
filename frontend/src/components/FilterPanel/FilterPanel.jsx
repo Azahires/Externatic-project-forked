@@ -17,6 +17,18 @@ export default function FilterPanel() {
     kilometer,
     setKilometer,
   } = useContext(Context);
+
+  const handleCheckboxChange = (filterType) => {
+    setFilterCdd(filterType === "CDD");
+    setFilterCdi(filterType === "CDI");
+    setFilterAlternance(filterType === "Alternance");
+    setFilterInternship(filterType === "Stage");
+  };
+
+  const handleKilometerChange = (event) => {
+    setKilometer(event.target.value);
+  };
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -31,21 +43,6 @@ export default function FilterPanel() {
     );
   }, []);
 
-  const hCddChange = (event) => {
-    setFilterCdd(event.target.checked);
-  };
-  const hCdiChange = (event) => {
-    setFilterCdi(event.target.checked);
-  };
-  const hAlternanceChange = (event) => {
-    setFilterAlternance(event.target.checked);
-  };
-  const hInternshipChange = (event) => {
-    setFilterInternship(event.target.checked);
-  };
-  const hkilometerChange = (event) => {
-    setKilometer(event.target.value);
-  };
   return (
     <Style>
       <Centered>
@@ -53,7 +50,7 @@ export default function FilterPanel() {
           <input
             type="checkbox"
             checked={filterCdd}
-            onChange={hCddChange}
+            onChange={() => handleCheckboxChange("CDD")}
             id="filter-cdd"
             value="CDD"
           />
@@ -61,7 +58,7 @@ export default function FilterPanel() {
           <input
             type="checkbox"
             checked={filterCdi}
-            onChange={hCdiChange}
+            onChange={() => handleCheckboxChange("CDI")}
             id="filter-cdi"
             value="CDI"
           />
@@ -69,7 +66,7 @@ export default function FilterPanel() {
           <input
             type="checkbox"
             checked={filterAlternance}
-            onChange={hAlternanceChange}
+            onChange={() => handleCheckboxChange("Alternance")}
             id="filter-alternance"
             value="Alternance"
           />
@@ -77,7 +74,7 @@ export default function FilterPanel() {
           <input
             type="checkbox"
             checked={filterInternship}
-            onChange={hInternshipChange}
+            onChange={() => handleCheckboxChange("Stage")}
             id="filter-stage"
             value="Stage"
           />
@@ -89,13 +86,13 @@ export default function FilterPanel() {
             min="0"
             max="1000"
             value={kilometer}
-            onChange={hkilometerChange}
+            onChange={handleKilometerChange}
           />
           <input
             type="text"
             className="kmInput"
             value={kilometer}
-            onChange={hkilometerChange}
+            onChange={handleKilometerChange}
           />
           <label className="kilometer" htmlFor="volume">
             Kilomètres
