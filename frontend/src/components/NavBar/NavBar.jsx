@@ -16,7 +16,7 @@ export default function NavBar() {
   const [isOpen, setOpen] = useState(false);
   const navigate = useNavigate();
   const api = useApi();
-  
+
   const handleIsOpen = () => {
     setOpen(!isOpen);
   };

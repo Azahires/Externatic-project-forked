@@ -21,8 +21,8 @@ export default function DisplayOffers({ limit }) {
   const api = useApi();
 
   function getDistance(xOffer, yOffer) {
-    const yUser = userCoordinates.latitude;
     const xUser = userCoordinates.longitude;
+    const yUser = userCoordinates.latitude;
 
     const dX = xUser - xOffer;
     const dY = yUser - yOffer;
@@ -48,41 +48,40 @@ export default function DisplayOffers({ limit }) {
     <Style>
       {offers
         .filter((offer) => {
-          if (filterCdd === true) {
-            return (
-              offer.contract_type === "CDD" &&
-              latinize(offer.title.toLowerCase()).includes(
+          switch (true) {
+            case filterCdd === true:
+              return (
+                offer.contract_type === "CDD" &&
+                latinize(offer.title.toLowerCase()).includes(
+                  searchValue.toLowerCase()
+                )
+              );
+            case filterCdi === true:
+              return (
+                offer.contract_type === "CDI" &&
+                latinize(offer.title.toLowerCase()).includes(
+                  searchValue.toLowerCase()
+                )
+              );
+            case filterAlternance === true:
+              return (
+                offer.contract_type === "Alternance" &&
+                latinize(offer.title.toLowerCase()).includes(
+                  searchValue.toLowerCase()
+                )
+              );
+            case filterInternship === true:
+              return (
+                offer.contract_type === "Stage" &&
+                latinize(offer.title.toLowerCase()).includes(
+                  searchValue.toLowerCase()
+                )
+              );
+            default:
+              return latinize(offer.title.toLowerCase()).includes(
                 searchValue.toLowerCase()
-              )
-            );
+              );
           }
-          if (filterCdi === true) {
-            return (
-              offer.contract_type === "CDI" &&
-              latinize(offer.title.toLowerCase()).includes(
-                searchValue.toLowerCase()
-              )
-            );
-          }
-          if (filterAlternance === true) {
-            return (
-              offer.contract_type === "Alternance" &&
-              latinize(offer.title.toLowerCase()).includes(
-                searchValue.toLowerCase()
-              )
-            );
-          }
-          if (filterInternship === true) {
-            return (
-              offer.contract_type === "Stage" &&
-              latinize(offer.title.toLowerCase()).includes(
-                searchValue.toLowerCase()
-              )
-            );
-          }
-          return latinize(offer.title.toLowerCase()).includes(
-            searchValue.toLowerCase()
-          );
         })
         .sort((a, b) => {
           return (
