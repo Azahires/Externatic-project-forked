@@ -4,22 +4,23 @@ import { createContext, useMemo, useState } from "react";
 const Context = createContext();
 
 function Provider({ children }) {
-  /* useState du composant searchBar */
+  /* states de la recherche */
   const [searchValue, setSearchValue] = useState("");
 
-  /* useStates du composant filterPanel */
+  /* states des filtres */
   const [filterCdd, setFilterCdd] = useState(false);
   const [filterCdi, setFilterCdi] = useState(false);
   const [filterAlternance, setFilterAlternance] = useState(false);
   const [filterInternship, setFilterInternship] = useState(false);
   const [kilometer, setKilometer] = useState(1000);
 
-  /* useState du composant UserGeolocation */
+  /* state de la localisation */
   const [userCoordinates, setUserCoordinates] = useState({
     latitude: 48.866667,
     longitude: 2.333333,
   });
 
+  /* state des données personelles */
   const [userInfo, setUserInfo] = useState({
     id: null,
     lastname: null,
@@ -37,7 +38,11 @@ function Provider({ children }) {
   });
   const [userApplications, setUserApplications] = useState([]);
   const [userFavorites, setUserFavorites] = useState([]);
+
+  /* state navigation mon profil */
   const [mySpace, setMySpace] = useState("profile");
+
+  /* state de la date */
   const [applicationTime, setApplicationTime] = useState({});
 
   const context = useMemo(
