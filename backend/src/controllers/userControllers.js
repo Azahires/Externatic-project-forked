@@ -29,6 +29,21 @@ const read = (req, res) => {
     });
 };
 
+const add = (req, res) => {
+  const user = req.body;
+  models.user
+    .insert(user)
+    .then(([result]) => {
+      user.id = result.insertId;
+      delete user.hashedPassword;
+      const token = jwt.sign(user, process.env.JWT_SECRET);
+      res.status(201).send({ user, token });
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
 const edit = (req, res) => {
   const user = req.body;
   user.id = parseInt(req.params.id, 10);
@@ -64,22 +79,6 @@ const editFile = (req, res) => {
       res.sendStatus(500);
     });
 };
-const add = (req, res) => {
-  const user = req.body;
-  models.user
-    .insert(user)
-    .then(([result]) => {
-      user.id = result.insertId;
-      delete user.hashedPassword;
-      const token = jwt.sign(user, process.env.JWT_SECRET);
-      res.status(201).send({ user, token });
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
-};
-
 const destroy = (req, res) => {
   models.user
     .delete(req.params.id)
