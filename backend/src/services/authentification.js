@@ -27,7 +27,7 @@ const hashPassword = (req, res, next) => {
 const verifyUser = (req, res, next) => {
   const user = req.body;
   models.user
-    .getbyemail(user)
+    .getByEmail(user)
     .then(([users]) => {
       if (users[0] !== null) {
         [req.user] = users;

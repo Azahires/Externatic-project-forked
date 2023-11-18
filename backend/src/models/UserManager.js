@@ -12,7 +12,7 @@ class UserManager extends AbstractManager {
     );
   }
 
-  getbyemail(user) {
+  getByEmail(user) {
     return this.connection.query(
       `select * from ${this.table} where email = ?`,
       [user.email]
