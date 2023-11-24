@@ -7,7 +7,7 @@ const sendApplicationMail = (req, res) => {
   transporter.sendMail(
     {
       from: "externatic59@gmail.com",
-      to: "externatic59@gmail.com",
+      to: "romain.haddad@gmail.com",
       subject: `Nouvelle candidature sur l'offre ${offer.title}`,
       text: `Bonjour ${consultant.firstname} ${consultant.name}, une nouvelle candidature a été envoyée pour l'offre ${offer.title} publiée le ${offer.publication_date}, localisée à ${offer.location}. Vous trouverez ci-dessous les informations concernant le candidat et son CV en pièce jointe. Si son profil correspond au besoin de l'entreprise, nous vous invitons à prendre contact avec le candidat pour poursuivre le process de candidature.
       Nom: ${userInfo.lastname}
@@ -200,7 +200,7 @@ const sendFavoriteMail = (req, res) => {
   transporter.sendMail(
     {
       from: "externatic59@gmail.com",
-      to: "externatic59@gmail.com",
+      to: "romain.haddad@gmail.com",
       subject: `Ajout favoris - ${offer.title}`,
       text: `Bonjour ${consultant.firstname} ${consultant.name}, un utilisateur de la plateforme de recrutement Externatic a ajouté l'offre ${offer.title} publiée le ${offer.publication_date} et localisée à ${offer.location} à ses favoris. Vous trouverez ci-dessous les informations concernant le candidat.
       Nom: ${userInfo.lastname}
