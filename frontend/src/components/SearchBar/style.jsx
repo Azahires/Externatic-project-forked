@@ -57,7 +57,7 @@ export default styled.div`
     }
   }
 
-  .searchButton {
+  .newSearch {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,11 +82,11 @@ export default styled.div`
       width: 35vw;
     }
   }
-  .searchButton span {
+  .newSearch span {
     position: relative;
     z-index: 2;
   }
-  .searchButton:after {
+  .newSearch:after {
     position: absolute;
     content: "";
     left: 0;
@@ -95,10 +95,10 @@ export default styled.div`
     background: white;
     transition: all 0.35s;
   }
-  .searchButton:hover {
+  .newSearch:hover {
     color: #c91961;
   }
-  .searchButton:hover:after {
+  .newSearch:hover:after {
     width: 100%;
   }
 `;

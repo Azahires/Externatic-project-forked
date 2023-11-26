@@ -21,8 +21,8 @@ export default function SearchBar() {
             value={searchValue}
             onChange={handleSearchValue}
           />
-          <a href="/offers" className="searchButton">
-            <span>Rechercher</span>
+          <a href="/offers" className="newSearch">
+            <span>Nouvelle recherche</span>
           </a>
         </form>
       </Centered>
